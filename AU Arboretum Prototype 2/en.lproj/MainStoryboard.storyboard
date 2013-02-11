@@ -1,15 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="W7X-DK-Rwg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="dvn-eN-mwU">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Navigation Controller - Navigation Controller-->
+        <scene sceneID="7S1-lR-sAZ">
+            <objects>
+                <navigationController title="Navigation Controller" definesPresentationContext="YES" id="dvn-eN-mwU" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="efW-LR-4vA">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="W7X-DK-Rwg" kind="relationship" relationship="rootViewController" id="T7w-af-SvH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SL8-MP-c5D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1081" y="-417"/>
+        </scene>
+        <!--View Controller - Main Menu-->
         <scene sceneID="W8U-LD-iMq">
             <objects>
-                <viewController id="W7X-DK-Rwg" sceneMemberID="viewController">
+                <viewController title="Main Menu" id="W7X-DK-Rwg" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UUM-Uc-qut">
-                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                        <rect key="frame" x="0.0" y="64" width="768" height="960"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JIh-i4-zzx">
@@ -26,7 +41,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="2" kind="custom" id="xqB-71-D5G"/>
+                                    <segue destination="2" kind="push" id="Vfb-kD-ulB"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lwn-2s-loJ">
@@ -41,6 +56,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="2" kind="push" id="bKU-b5-eUQ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Or5-rp-kGs">
                                 <constraints>
@@ -54,6 +72,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="2" kind="push" id="hb1-56-tL5"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h5U-uM-435">
                                 <constraints>
@@ -67,6 +88,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="2" kind="push" id="DX8-93-5AP"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -84,29 +108,25 @@
                             <constraint firstItem="lwn-2s-loJ" firstAttribute="top" secondItem="UUM-Uc-qut" secondAttribute="top" constant="217" id="zmT-Ch-ij8"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Main Menu" id="5jd-na-crt"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eTu-Fc-VEE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-115" y="-417"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller - Map View-->
         <scene sceneID="4">
             <objects>
-                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
+                <viewController title="Map View" id="2" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5">
-                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                        <rect key="frame" x="0.0" y="64" width="768" height="960"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="MKl-KF-KG7">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="satellite" translatesAutoresizingMaskIntoConstraints="NO" id="MKl-KF-KG7">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="696" id="Aev-lo-BDF"/>
                                 </constraints>
                             </mapView>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s5p-AF-fsp">
-                                <items>
-                                    <navigationItem title="Title" id="dPn-C8-uE6"/>
-                                </items>
-                            </navigationBar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C0t-Ou-I8X">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="221" id="OHu-b6-zGD"/>
@@ -143,24 +163,21 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="MKl-KF-KG7" firstAttribute="trailing" secondItem="5" secondAttribute="trailing" type="default" id="9Pu-IS-uFT"/>
                             <constraint firstItem="yse-4e-HP4" firstAttribute="trailing" secondItem="KM6-sc-no1" secondAttribute="trailing" type="default" id="9qY-GK-8U5"/>
                             <constraint firstItem="8RQ-2w-0Kv" firstAttribute="centerX" secondItem="yse-4e-HP4" secondAttribute="centerX" type="default" id="Dti-oh-VRk"/>
-                            <constraint firstItem="s5p-AF-fsp" firstAttribute="top" secondItem="5" secondAttribute="top" type="default" id="MKx-Fz-q0Z"/>
-                            <constraint firstItem="s5p-AF-fsp" firstAttribute="trailing" secondItem="5" secondAttribute="trailing" type="default" id="O6W-Dl-6Jj"/>
                             <constraint firstItem="8RQ-2w-0Kv" firstAttribute="top" secondItem="yse-4e-HP4" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="QEM-Ed-QVj"/>
+                            <constraint firstAttribute="trailing" secondItem="C0t-Ou-I8X" secondAttribute="trailing" constant="34" id="S4l-bu-uq8"/>
+                            <constraint firstItem="MKl-KF-KG7" firstAttribute="leading" secondItem="5" secondAttribute="leading" type="default" id="SG9-xn-drS"/>
+                            <constraint firstItem="MKl-KF-KG7" firstAttribute="trailing" secondItem="5" secondAttribute="trailing" type="default" id="WIg-kV-RLE"/>
                             <constraint firstItem="yse-4e-HP4" firstAttribute="leading" secondItem="KM6-sc-no1" secondAttribute="leading" type="default" id="bgf-56-B0S"/>
-                            <constraint firstItem="C0t-Ou-I8X" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="eob-qi-dkG"/>
-                            <constraint firstItem="8RQ-2w-0Kv" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="257" id="fFe-Jq-soy"/>
-                            <constraint firstItem="MKl-KF-KG7" firstAttribute="top" secondItem="s5p-AF-fsp" secondAttribute="bottom" type="default" id="gxp-xe-gTe"/>
-                            <constraint firstItem="MKl-KF-KG7" firstAttribute="leading" secondItem="5" secondAttribute="leading" type="default" id="h4h-Cy-wAu"/>
-                            <constraint firstItem="s5p-AF-fsp" firstAttribute="leading" secondItem="5" secondAttribute="leading" type="default" id="hSM-2e-PaL"/>
                             <constraint firstAttribute="bottom" secondItem="C0t-Ou-I8X" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="ikq-3Y-6nJ"/>
+                            <constraint firstItem="8RQ-2w-0Kv" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="lb7-2h-69a"/>
                             <constraint firstAttribute="bottom" secondItem="8RQ-2w-0Kv" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="mQA-io-FWZ"/>
+                            <constraint firstItem="MKl-KF-KG7" firstAttribute="top" secondItem="5" secondAttribute="top" type="default" id="r5H-Rc-JPQ"/>
                             <constraint firstItem="KM6-sc-no1" firstAttribute="top" secondItem="C0t-Ou-I8X" secondAttribute="top" type="default" id="tDK-W4-Aaf"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Zt2-5G-hDi"/>
+                    <navigationItem key="navigationItem" title="Map View" id="Zt2-5G-hDi"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>
             </objects>
@@ -180,4 +197,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="hb1-56-tL5"/>
+    </inferredMetricsTieBreakers>
 </document>
