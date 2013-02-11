@@ -1,0 +1,470 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		46112DEE16C91F5F0068A853 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46112DED16C91F5F0068A853 /* UIKit.framework */; };
+		46112DF016C91F5F0068A853 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46112DEF16C91F5F0068A853 /* Foundation.framework */; };
+		46112DF216C91F5F0068A853 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46112DF116C91F5F0068A853 /* CoreGraphics.framework */; };
+		46112DF816C91F5F0068A853 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 46112DF616C91F5F0068A853 /* InfoPlist.strings */; };
+		46112DFA16C91F5F0068A853 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 46112DF916C91F5F0068A853 /* main.m */; };
+		46112DFE16C91F5F0068A853 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 46112DFD16C91F5F0068A853 /* AppDelegate.m */; };
+		46112E0016C91F5F0068A853 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 46112DFF16C91F5F0068A853 /* Default.png */; };
+		46112E0216C91F5F0068A853 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46112E0116C91F5F0068A853 /* Default@2x.png */; };
+		46112E0416C91F5F0068A853 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46112E0316C91F5F0068A853 /* Default-568h@2x.png */; };
+		46112E0716C91F5F0068A853 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46112E0516C91F5F0068A853 /* MainStoryboard.storyboard */; };
+		46112E0A16C91F5F0068A853 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46112E0916C91F5F0068A853 /* ViewController.m */; };
+		46112E1216C91F5F0068A853 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46112E1116C91F5F0068A853 /* SenTestingKit.framework */; };
+		46112E1316C91F5F0068A853 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46112DED16C91F5F0068A853 /* UIKit.framework */; };
+		46112E1416C91F5F0068A853 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46112DEF16C91F5F0068A853 /* Foundation.framework */; };
+		46112E1C16C91F5F0068A853 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 46112E1A16C91F5F0068A853 /* InfoPlist.strings */; };
+		46112E1F16C91F5F0068A853 /* AU_Arboretum_Prototype_2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 46112E1E16C91F5F0068A853 /* AU_Arboretum_Prototype_2Tests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		46112E1516C91F5F0068A853 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46112DE216C91F5F0068A853 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 46112DE916C91F5F0068A853;
+			remoteInfo = "AU Arboretum Prototype 2";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		46112DEA16C91F5F0068A853 /* AU Arboretum Prototype 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AU Arboretum Prototype 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		46112DED16C91F5F0068A853 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		46112DEF16C91F5F0068A853 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		46112DF116C91F5F0068A853 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		46112DF516C91F5F0068A853 /* AU Arboretum Prototype 2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AU Arboretum Prototype 2-Info.plist"; sourceTree = "<group>"; };
+		46112DF716C91F5F0068A853 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		46112DF916C91F5F0068A853 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		46112DFB16C91F5F0068A853 /* AU Arboretum Prototype 2-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AU Arboretum Prototype 2-Prefix.pch"; sourceTree = "<group>"; };
+		46112DFC16C91F5F0068A853 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		46112DFD16C91F5F0068A853 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		46112DFF16C91F5F0068A853 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		46112E0116C91F5F0068A853 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		46112E0316C91F5F0068A853 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		46112E0616C91F5F0068A853 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		46112E0816C91F5F0068A853 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		46112E0916C91F5F0068A853 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		46112E1016C91F5F0068A853 /* AU Arboretum Prototype 2Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AU Arboretum Prototype 2Tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		46112E1116C91F5F0068A853 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		46112E1916C91F5F0068A853 /* AU Arboretum Prototype 2Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AU Arboretum Prototype 2Tests-Info.plist"; sourceTree = "<group>"; };
+		46112E1B16C91F5F0068A853 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		46112E1D16C91F5F0068A853 /* AU_Arboretum_Prototype_2Tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AU_Arboretum_Prototype_2Tests.h; sourceTree = "<group>"; };
+		46112E1E16C91F5F0068A853 /* AU_Arboretum_Prototype_2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AU_Arboretum_Prototype_2Tests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		46112DE716C91F5F0068A853 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46112DEE16C91F5F0068A853 /* UIKit.framework in Frameworks */,
+				46112DF016C91F5F0068A853 /* Foundation.framework in Frameworks */,
+				46112DF216C91F5F0068A853 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46112E0C16C91F5F0068A853 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46112E1216C91F5F0068A853 /* SenTestingKit.framework in Frameworks */,
+				46112E1316C91F5F0068A853 /* UIKit.framework in Frameworks */,
+				46112E1416C91F5F0068A853 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		46112DE116C91F5F0068A853 = {
+			isa = PBXGroup;
+			children = (
+				46112DF316C91F5F0068A853 /* AU Arboretum Prototype 2 */,
+				46112E1716C91F5F0068A853 /* AU Arboretum Prototype 2Tests */,
+				46112DEC16C91F5F0068A853 /* Frameworks */,
+				46112DEB16C91F5F0068A853 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		46112DEB16C91F5F0068A853 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				46112DEA16C91F5F0068A853 /* AU Arboretum Prototype 2.app */,
+				46112E1016C91F5F0068A853 /* AU Arboretum Prototype 2Tests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		46112DEC16C91F5F0068A853 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				46112DED16C91F5F0068A853 /* UIKit.framework */,
+				46112DEF16C91F5F0068A853 /* Foundation.framework */,
+				46112DF116C91F5F0068A853 /* CoreGraphics.framework */,
+				46112E1116C91F5F0068A853 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		46112DF316C91F5F0068A853 /* AU Arboretum Prototype 2 */ = {
+			isa = PBXGroup;
+			children = (
+				46112DFC16C91F5F0068A853 /* AppDelegate.h */,
+				46112DFD16C91F5F0068A853 /* AppDelegate.m */,
+				46112E0516C91F5F0068A853 /* MainStoryboard.storyboard */,
+				46112E0816C91F5F0068A853 /* ViewController.h */,
+				46112E0916C91F5F0068A853 /* ViewController.m */,
+				46112DF416C91F5F0068A853 /* Supporting Files */,
+			);
+			path = "AU Arboretum Prototype 2";
+			sourceTree = "<group>";
+		};
+		46112DF416C91F5F0068A853 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				46112DF516C91F5F0068A853 /* AU Arboretum Prototype 2-Info.plist */,
+				46112DF616C91F5F0068A853 /* InfoPlist.strings */,
+				46112DF916C91F5F0068A853 /* main.m */,
+				46112DFB16C91F5F0068A853 /* AU Arboretum Prototype 2-Prefix.pch */,
+				46112DFF16C91F5F0068A853 /* Default.png */,
+				46112E0116C91F5F0068A853 /* Default@2x.png */,
+				46112E0316C91F5F0068A853 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		46112E1716C91F5F0068A853 /* AU Arboretum Prototype 2Tests */ = {
+			isa = PBXGroup;
+			children = (
+				46112E1D16C91F5F0068A853 /* AU_Arboretum_Prototype_2Tests.h */,
+				46112E1E16C91F5F0068A853 /* AU_Arboretum_Prototype_2Tests.m */,
+				46112E1816C91F5F0068A853 /* Supporting Files */,
+			);
+			path = "AU Arboretum Prototype 2Tests";
+			sourceTree = "<group>";
+		};
+		46112E1816C91F5F0068A853 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				46112E1916C91F5F0068A853 /* AU Arboretum Prototype 2Tests-Info.plist */,
+				46112E1A16C91F5F0068A853 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		46112DE916C91F5F0068A853 /* AU Arboretum Prototype 2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 46112E2216C91F5F0068A853 /* Build configuration list for PBXNativeTarget "AU Arboretum Prototype 2" */;
+			buildPhases = (
+				46112DE616C91F5F0068A853 /* Sources */,
+				46112DE716C91F5F0068A853 /* Frameworks */,
+				46112DE816C91F5F0068A853 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AU Arboretum Prototype 2";
+			productName = "AU Arboretum Prototype 2";
+			productReference = 46112DEA16C91F5F0068A853 /* AU Arboretum Prototype 2.app */;
+			productType = "com.apple.product-type.application";
+		};
+		46112E0F16C91F5F0068A853 /* AU Arboretum Prototype 2Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 46112E2516C91F5F0068A853 /* Build configuration list for PBXNativeTarget "AU Arboretum Prototype 2Tests" */;
+			buildPhases = (
+				46112E0B16C91F5F0068A853 /* Sources */,
+				46112E0C16C91F5F0068A853 /* Frameworks */,
+				46112E0D16C91F5F0068A853 /* Resources */,
+				46112E0E16C91F5F0068A853 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				46112E1616C91F5F0068A853 /* PBXTargetDependency */,
+			);
+			name = "AU Arboretum Prototype 2Tests";
+			productName = "AU Arboretum Prototype 2Tests";
+			productReference = 46112E1016C91F5F0068A853 /* AU Arboretum Prototype 2Tests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		46112DE216C91F5F0068A853 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Andrews University";
+			};
+			buildConfigurationList = 46112DE516C91F5F0068A853 /* Build configuration list for PBXProject "AU Arboretum Prototype 2" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 46112DE116C91F5F0068A853;
+			productRefGroup = 46112DEB16C91F5F0068A853 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				46112DE916C91F5F0068A853 /* AU Arboretum Prototype 2 */,
+				46112E0F16C91F5F0068A853 /* AU Arboretum Prototype 2Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		46112DE816C91F5F0068A853 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46112DF816C91F5F0068A853 /* InfoPlist.strings in Resources */,
+				46112E0016C91F5F0068A853 /* Default.png in Resources */,
+				46112E0216C91F5F0068A853 /* Default@2x.png in Resources */,
+				46112E0416C91F5F0068A853 /* Default-568h@2x.png in Resources */,
+				46112E0716C91F5F0068A853 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46112E0D16C91F5F0068A853 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46112E1C16C91F5F0068A853 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		46112E0E16C91F5F0068A853 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		46112DE616C91F5F0068A853 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46112DFA16C91F5F0068A853 /* main.m in Sources */,
+				46112DFE16C91F5F0068A853 /* AppDelegate.m in Sources */,
+				46112E0A16C91F5F0068A853 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46112E0B16C91F5F0068A853 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46112E1F16C91F5F0068A853 /* AU_Arboretum_Prototype_2Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		46112E1616C91F5F0068A853 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 46112DE916C91F5F0068A853 /* AU Arboretum Prototype 2 */;
+			targetProxy = 46112E1516C91F5F0068A853 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		46112DF616C91F5F0068A853 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				46112DF716C91F5F0068A853 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		46112E0516C91F5F0068A853 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				46112E0616C91F5F0068A853 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		46112E1A16C91F5F0068A853 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				46112E1B16C91F5F0068A853 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		46112E2016C91F5F0068A853 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		46112E2116C91F5F0068A853 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		46112E2316C91F5F0068A853 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AU Arboretum Prototype 2/AU Arboretum Prototype 2-Prefix.pch";
+				INFOPLIST_FILE = "AU Arboretum Prototype 2/AU Arboretum Prototype 2-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		46112E2416C91F5F0068A853 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AU Arboretum Prototype 2/AU Arboretum Prototype 2-Prefix.pch";
+				INFOPLIST_FILE = "AU Arboretum Prototype 2/AU Arboretum Prototype 2-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		46112E2616C91F5F0068A853 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AU Arboretum Prototype 2.app/AU Arboretum Prototype 2";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AU Arboretum Prototype 2/AU Arboretum Prototype 2-Prefix.pch";
+				INFOPLIST_FILE = "AU Arboretum Prototype 2Tests/AU Arboretum Prototype 2Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		46112E2716C91F5F0068A853 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AU Arboretum Prototype 2.app/AU Arboretum Prototype 2";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AU Arboretum Prototype 2/AU Arboretum Prototype 2-Prefix.pch";
+				INFOPLIST_FILE = "AU Arboretum Prototype 2Tests/AU Arboretum Prototype 2Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		46112DE516C91F5F0068A853 /* Build configuration list for PBXProject "AU Arboretum Prototype 2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46112E2016C91F5F0068A853 /* Debug */,
+				46112E2116C91F5F0068A853 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		46112E2216C91F5F0068A853 /* Build configuration list for PBXNativeTarget "AU Arboretum Prototype 2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46112E2316C91F5F0068A853 /* Debug */,
+				46112E2416C91F5F0068A853 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		46112E2516C91F5F0068A853 /* Build configuration list for PBXNativeTarget "AU Arboretum Prototype 2Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46112E2616C91F5F0068A853 /* Debug */,
+				46112E2716C91F5F0068A853 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 46112DE216C91F5F0068A853 /* Project object */;
+}
