@@ -17,7 +17,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SL8-MP-c5D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1081" y="-417"/>
+            <point key="canvasLocation" x="-977" y="-417"/>
         </scene>
         <!--View Controller - Main Menu-->
         <scene sceneID="W8U-LD-iMq">
@@ -181,7 +181,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="780" y="-417"/>
+            <point key="canvasLocation" x="812" y="-417"/>
         </scene>
     </scenes>
     <classes>
@@ -198,6 +198,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="hb1-56-tL5"/>
+        <segue reference="Vfb-kD-ulB"/>
     </inferredMetricsTieBreakers>
 </document>
