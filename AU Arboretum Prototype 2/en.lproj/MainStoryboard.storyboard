@@ -122,7 +122,7 @@
                         <rect key="frame" x="0.0" y="64" width="768" height="960"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="satellite" translatesAutoresizingMaskIntoConstraints="NO" id="MKl-KF-KG7">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="MKl-KF-KG7">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="696" id="Aev-lo-BDF"/>
                                 </constraints>
@@ -160,11 +160,14 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jGa-SR-rxg"/>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="jGa-SR-rxg" firstAttribute="top" secondItem="5" secondAttribute="top" constant="15" id="6Nl-jL-PZj"/>
                             <constraint firstItem="yse-4e-HP4" firstAttribute="trailing" secondItem="KM6-sc-no1" secondAttribute="trailing" type="default" id="9qY-GK-8U5"/>
                             <constraint firstItem="8RQ-2w-0Kv" firstAttribute="centerX" secondItem="yse-4e-HP4" secondAttribute="centerX" type="default" id="Dti-oh-VRk"/>
+                            <constraint firstAttribute="trailing" secondItem="jGa-SR-rxg" secondAttribute="trailing" constant="10" id="Kp9-8P-YOi"/>
                             <constraint firstItem="8RQ-2w-0Kv" firstAttribute="top" secondItem="yse-4e-HP4" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="QEM-Ed-QVj"/>
                             <constraint firstAttribute="trailing" secondItem="C0t-Ou-I8X" secondAttribute="trailing" constant="34" id="S4l-bu-uq8"/>
                             <constraint firstItem="MKl-KF-KG7" firstAttribute="leading" secondItem="5" secondAttribute="leading" type="default" id="SG9-xn-drS"/>
@@ -178,6 +181,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Map View" id="Zt2-5G-hDi"/>
+                    <connections>
+                        <outlet property="animSwitch" destination="jGa-SR-rxg" id="ozc-1R-8uQ"/>
+                        <outlet property="mapView" destination="MKl-KF-KG7" id="3k6-9L-3yx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>
             </objects>
@@ -190,6 +197,9 @@
         </class>
         <class className="ViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

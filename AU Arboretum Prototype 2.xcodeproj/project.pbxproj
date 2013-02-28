@@ -24,6 +24,14 @@
 		46112E1C16C91F5F0068A853 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 46112E1A16C91F5F0068A853 /* InfoPlist.strings */; };
 		46112E1F16C91F5F0068A853 /* AU_Arboretum_Prototype_2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 46112E1E16C91F5F0068A853 /* AU_Arboretum_Prototype_2Tests.m */; };
 		46112E2916C91F9D0068A853 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46112E2816C91F9D0068A853 /* MapKit.framework */; };
+		468FB7E716D31F5E001386C1 /* KPAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 468FB7DE16D31F5E001386C1 /* KPAnnotation.m */; };
+		468FB7E816D31F5E001386C1 /* KPAnnotationTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 468FB7E016D31F5E001386C1 /* KPAnnotationTree.m */; };
+		468FB7E916D31F5E001386C1 /* KPTreeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 468FB7E216D31F5E001386C1 /* KPTreeController.m */; };
+		468FB7EA16D31F5E001386C1 /* KPTreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 468FB7E416D31F5E001386C1 /* KPTreeNode.m */; };
+		468FB7EB16D31F5E001386C1 /* NSArray+BB.m in Sources */ = {isa = PBXBuildFile; fileRef = 468FB7E616D31F5E001386C1 /* NSArray+BB.m */; };
+		468FB7F116D32029001386C1 /* TestAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 468FB7F016D32029001386C1 /* TestAnnotation.m */; };
+		468FB7F416D32052001386C1 /* MyAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 468FB7F316D32052001386C1 /* MyAnnotation.m */; };
+		468FB80516D32473001386C1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 468FB80416D32473001386C1 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +68,21 @@
 		46112E1D16C91F5F0068A853 /* AU_Arboretum_Prototype_2Tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AU_Arboretum_Prototype_2Tests.h; sourceTree = "<group>"; };
 		46112E1E16C91F5F0068A853 /* AU_Arboretum_Prototype_2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AU_Arboretum_Prototype_2Tests.m; sourceTree = "<group>"; };
 		46112E2816C91F9D0068A853 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		468FB7DD16D31F5E001386C1 /* KPAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPAnnotation.h; sourceTree = "<group>"; };
+		468FB7DE16D31F5E001386C1 /* KPAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPAnnotation.m; sourceTree = "<group>"; };
+		468FB7DF16D31F5E001386C1 /* KPAnnotationTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPAnnotationTree.h; sourceTree = "<group>"; };
+		468FB7E016D31F5E001386C1 /* KPAnnotationTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPAnnotationTree.m; sourceTree = "<group>"; };
+		468FB7E116D31F5E001386C1 /* KPTreeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPTreeController.h; sourceTree = "<group>"; };
+		468FB7E216D31F5E001386C1 /* KPTreeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPTreeController.m; sourceTree = "<group>"; };
+		468FB7E316D31F5E001386C1 /* KPTreeNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPTreeNode.h; sourceTree = "<group>"; };
+		468FB7E416D31F5E001386C1 /* KPTreeNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPTreeNode.m; sourceTree = "<group>"; };
+		468FB7E516D31F5E001386C1 /* NSArray+BB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+BB.h"; sourceTree = "<group>"; };
+		468FB7E616D31F5E001386C1 /* NSArray+BB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+BB.m"; sourceTree = "<group>"; };
+		468FB7EF16D32029001386C1 /* TestAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestAnnotation.h; sourceTree = "<group>"; };
+		468FB7F016D32029001386C1 /* TestAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestAnnotation.m; sourceTree = "<group>"; };
+		468FB7F216D32052001386C1 /* MyAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAnnotation.h; sourceTree = "<group>"; };
+		468FB7F316D32052001386C1 /* MyAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAnnotation.m; sourceTree = "<group>"; };
+		468FB80416D32473001386C1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				468FB80516D32473001386C1 /* CoreLocation.framework in Frameworks */,
 				46112E2916C91F9D0068A853 /* MapKit.framework in Frameworks */,
 				46112DEE16C91F5F0068A853 /* UIKit.framework in Frameworks */,
 				46112DF016C91F5F0068A853 /* Foundation.framework in Frameworks */,
@@ -90,6 +114,8 @@
 		46112DE116C91F5F0068A853 = {
 			isa = PBXGroup;
 			children = (
+				468FB80416D32473001386C1 /* CoreLocation.framework */,
+				468FB7DB16D31F0E001386C1 /* Clustering Framework */,
 				46112E2816C91F9D0068A853 /* MapKit.framework */,
 				46112DF316C91F5F0068A853 /* AU Arboretum Prototype 2 */,
 				46112E1716C91F5F0068A853 /* AU Arboretum Prototype 2Tests */,
@@ -121,6 +147,10 @@
 		46112DF316C91F5F0068A853 /* AU Arboretum Prototype 2 */ = {
 			isa = PBXGroup;
 			children = (
+				468FB7F216D32052001386C1 /* MyAnnotation.h */,
+				468FB7F316D32052001386C1 /* MyAnnotation.m */,
+				468FB7EF16D32029001386C1 /* TestAnnotation.h */,
+				468FB7F016D32029001386C1 /* TestAnnotation.m */,
 				46112DFC16C91F5F0068A853 /* AppDelegate.h */,
 				46112DFD16C91F5F0068A853 /* AppDelegate.m */,
 				46112E0516C91F5F0068A853 /* MainStoryboard.storyboard */,
@@ -162,6 +192,48 @@
 				46112E1A16C91F5F0068A853 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		468FB7DB16D31F0E001386C1 /* Clustering Framework */ = {
+			isa = PBXGroup;
+			children = (
+				468FB7DC16D31F5E001386C1 /* kingpin */,
+			);
+			name = "Clustering Framework";
+			sourceTree = "<group>";
+		};
+		468FB7DC16D31F5E001386C1 /* kingpin */ = {
+			isa = PBXGroup;
+			children = (
+				468FB80916D5ADAD001386C1 /* kp */,
+				468FB80816D5ADA4001386C1 /* categories */,
+			);
+			name = kingpin;
+			path = libs/kingpin;
+			sourceTree = "<group>";
+		};
+		468FB80816D5ADA4001386C1 /* categories */ = {
+			isa = PBXGroup;
+			children = (
+				468FB7E516D31F5E001386C1 /* NSArray+BB.h */,
+				468FB7E616D31F5E001386C1 /* NSArray+BB.m */,
+			);
+			name = categories;
+			sourceTree = "<group>";
+		};
+		468FB80916D5ADAD001386C1 /* kp */ = {
+			isa = PBXGroup;
+			children = (
+				468FB7DD16D31F5E001386C1 /* KPAnnotation.h */,
+				468FB7DE16D31F5E001386C1 /* KPAnnotation.m */,
+				468FB7DF16D31F5E001386C1 /* KPAnnotationTree.h */,
+				468FB7E016D31F5E001386C1 /* KPAnnotationTree.m */,
+				468FB7E116D31F5E001386C1 /* KPTreeController.h */,
+				468FB7E216D31F5E001386C1 /* KPTreeController.m */,
+				468FB7E316D31F5E001386C1 /* KPTreeNode.h */,
+				468FB7E416D31F5E001386C1 /* KPTreeNode.m */,
+			);
+			name = kp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,9 +346,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				468FB7E716D31F5E001386C1 /* KPAnnotation.m in Sources */,
+				468FB7E816D31F5E001386C1 /* KPAnnotationTree.m in Sources */,
+				468FB7E916D31F5E001386C1 /* KPTreeController.m in Sources */,
+				468FB7EA16D31F5E001386C1 /* KPTreeNode.m in Sources */,
+				468FB7EB16D31F5E001386C1 /* NSArray+BB.m in Sources */,
 				46112DFA16C91F5F0068A853 /* main.m in Sources */,
 				46112DFE16C91F5F0068A853 /* AppDelegate.m in Sources */,
 				46112E0A16C91F5F0068A853 /* ViewController.m in Sources */,
+				468FB7F116D32029001386C1 /* TestAnnotation.m in Sources */,
+				468FB7F416D32052001386C1 /* MyAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,6 +469,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AU Arboretum Prototype 2/AU Arboretum Prototype 2-Prefix.pch";
 				INFOPLIST_FILE = "AU Arboretum Prototype 2/AU Arboretum Prototype 2-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -401,6 +481,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AU Arboretum Prototype 2/AU Arboretum Prototype 2-Prefix.pch";
 				INFOPLIST_FILE = "AU Arboretum Prototype 2/AU Arboretum Prototype 2-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -459,6 +540,7 @@
 				46112E2416C91F5F0068A853 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		46112E2516C91F5F0068A853 /* Build configuration list for PBXNativeTarget "AU Arboretum Prototype 2Tests" */ = {
 			isa = XCConfigurationList;
@@ -467,6 +549,7 @@
 				46112E2716C91F5F0068A853 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -10,4 +10,8 @@
 
 @interface ViewController : UIViewController
 
+// Apple Map Kit - Map View
+
+@property (strong, nonatomic) IBOutlet MKMapView *mapView;
+
 @end
