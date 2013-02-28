@@ -6,7 +6,16 @@
 //  Copyright (c) 2013 Andrews University. All rights reserved.
 //
 
+
+// --------------------------------------------------------------
+// IMPORTS
+
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
+
+
+// --------------------------------------------------------------
+// INTERFACE DEFINITION
 
 @interface ViewController : UIViewController
 

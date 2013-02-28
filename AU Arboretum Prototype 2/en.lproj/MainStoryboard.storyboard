@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="dvn-eN-mwU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="dvn-eN-mwU">
     <dependencies>
+        <deployment version="1296" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
@@ -27,11 +28,8 @@
                         <rect key="frame" x="0.0" y="64" width="768" height="960"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JIh-i4-zzx">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="356" id="JoN-YA-p4R"/>
-                                    <constraint firstAttribute="height" constant="82" id="NCL-0A-6iL"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="JIh-i4-zzx">
+                                <rect key="frame" x="95" y="110" width="356" height="83"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Go to map view">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -44,10 +42,8 @@
                                     <segue destination="2" kind="push" id="Vfb-kD-ulB"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lwn-2s-loJ">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="82" id="6bp-Uh-TZM"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="lwn-2s-loJ">
+                                <rect key="frame" x="95" y="217" width="356" height="83"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Trees with some category 1">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -60,10 +56,8 @@
                                     <segue destination="2" kind="push" id="bKU-b5-eUQ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Or5-rp-kGs">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="82" id="qOY-19-uBw"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Or5-rp-kGs">
+                                <rect key="frame" x="95" y="319" width="356" height="83"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Trees with some category 2">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -76,10 +70,8 @@
                                     <segue destination="2" kind="push" id="hb1-56-tL5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h5U-uM-435">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="82" id="Jcy-yT-qHy"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="h5U-uM-435">
+                                <rect key="frame" x="95" y="423" width="356" height="83"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Trees with some category 3">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -94,19 +86,6 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="lwn-2s-loJ" firstAttribute="trailing" secondItem="JIh-i4-zzx" secondAttribute="trailing" type="default" id="Iwg-2H-EJB"/>
-                            <constraint firstItem="Or5-rp-kGs" firstAttribute="trailing" secondItem="lwn-2s-loJ" secondAttribute="trailing" type="default" id="OL6-L4-gaH"/>
-                            <constraint firstItem="h5U-uM-435" firstAttribute="leading" secondItem="Or5-rp-kGs" secondAttribute="leading" type="default" id="Wal-M0-Y0J"/>
-                            <constraint firstItem="Or5-rp-kGs" firstAttribute="top" secondItem="UUM-Uc-qut" secondAttribute="top" constant="319" id="Y85-DK-ygh"/>
-                            <constraint firstItem="Or5-rp-kGs" firstAttribute="leading" secondItem="lwn-2s-loJ" secondAttribute="leading" type="default" id="YNb-b3-fKO"/>
-                            <constraint firstItem="JIh-i4-zzx" firstAttribute="top" secondItem="UUM-Uc-qut" secondAttribute="top" constant="110" id="a81-03-DnH"/>
-                            <constraint firstItem="lwn-2s-loJ" firstAttribute="leading" secondItem="JIh-i4-zzx" secondAttribute="leading" type="default" id="cp2-18-J5q"/>
-                            <constraint firstItem="JIh-i4-zzx" firstAttribute="leading" secondItem="UUM-Uc-qut" secondAttribute="leading" constant="95" id="j6n-FX-3Vg"/>
-                            <constraint firstItem="h5U-uM-435" firstAttribute="trailing" secondItem="Or5-rp-kGs" secondAttribute="trailing" type="default" id="qvm-cp-I7f"/>
-                            <constraint firstItem="h5U-uM-435" firstAttribute="top" secondItem="UUM-Uc-qut" secondAttribute="top" constant="423" id="vtN-Ph-ASg"/>
-                            <constraint firstItem="lwn-2s-loJ" firstAttribute="top" secondItem="UUM-Uc-qut" secondAttribute="top" constant="217" id="zmT-Ch-ij8"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Main Menu" id="5jd-na-crt"/>
                 </viewController>
@@ -114,70 +93,53 @@
             </objects>
             <point key="canvasLocation" x="-115" y="-417"/>
         </scene>
-        <!--View Controller - Map View-->
+        <!--Map View Delegate - Map View-->
         <scene sceneID="4">
             <objects>
-                <viewController title="Map View" id="2" customClass="ViewController" sceneMemberID="viewController">
+                <viewController title="Map View" id="2" customClass="MapViewDelegate" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5">
                         <rect key="frame" x="0.0" y="64" width="768" height="960"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="satellite" translatesAutoresizingMaskIntoConstraints="NO" id="MKl-KF-KG7">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="696" id="Aev-lo-BDF"/>
-                                </constraints>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="satellite" id="MKl-KF-KG7">
+                                <rect key="frame" x="0.0" y="-1" width="768" height="696"/>
+                                <connections>
+                                    <outlet property="delegate" destination="2" id="GWs-fH-6xK"/>
+                                </connections>
                             </mapView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C0t-Ou-I8X">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="221" id="OHu-b6-zGD"/>
-                                    <constraint firstAttribute="width" constant="226" id="shv-fm-d8n"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="redraw" id="C0t-Ou-I8X">
+                                <rect key="frame" x="508" y="719" width="226" height="221"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8RQ-2w-0Kv">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" id="8RQ-2w-0Kv">
+                                <rect key="frame" x="20" y="801" width="484" height="139"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="139" id="GXI-og-Mmo"/>
-                                    <constraint firstAttribute="width" constant="484" id="HPI-of-pHx"/>
-                                </constraints>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Tree Unique Identifier" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KM6-sc-no1">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="470" id="EWM-nn-o0T"/>
-                                    <constraint firstAttribute="height" constant="41" id="X49-Om-Pxw"/>
-                                </constraints>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Tree Unique Identifier" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KM6-sc-no1">
+                                <rect key="frame" x="27" y="719" width="470" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Tree Type" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yse-4e-HP4">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="36" id="HlZ-gP-SYW"/>
-                                </constraints>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Tree Type" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yse-4e-HP4">
+                                <rect key="frame" x="27" y="757" width="470" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="yse-4e-HP4" firstAttribute="trailing" secondItem="KM6-sc-no1" secondAttribute="trailing" type="default" id="9qY-GK-8U5"/>
-                            <constraint firstItem="8RQ-2w-0Kv" firstAttribute="centerX" secondItem="yse-4e-HP4" secondAttribute="centerX" type="default" id="Dti-oh-VRk"/>
-                            <constraint firstItem="8RQ-2w-0Kv" firstAttribute="top" secondItem="yse-4e-HP4" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="QEM-Ed-QVj"/>
-                            <constraint firstAttribute="trailing" secondItem="C0t-Ou-I8X" secondAttribute="trailing" constant="34" id="S4l-bu-uq8"/>
-                            <constraint firstItem="MKl-KF-KG7" firstAttribute="leading" secondItem="5" secondAttribute="leading" type="default" id="SG9-xn-drS"/>
-                            <constraint firstItem="MKl-KF-KG7" firstAttribute="trailing" secondItem="5" secondAttribute="trailing" type="default" id="WIg-kV-RLE"/>
-                            <constraint firstItem="yse-4e-HP4" firstAttribute="leading" secondItem="KM6-sc-no1" secondAttribute="leading" type="default" id="bgf-56-B0S"/>
-                            <constraint firstAttribute="bottom" secondItem="C0t-Ou-I8X" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="ikq-3Y-6nJ"/>
-                            <constraint firstItem="8RQ-2w-0Kv" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="lb7-2h-69a"/>
-                            <constraint firstAttribute="bottom" secondItem="8RQ-2w-0Kv" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="mQA-io-FWZ"/>
-                            <constraint firstItem="MKl-KF-KG7" firstAttribute="top" secondItem="5" secondAttribute="top" type="default" id="r5H-Rc-JPQ"/>
-                            <constraint firstItem="KM6-sc-no1" firstAttribute="top" secondItem="C0t-Ou-I8X" secondAttribute="top" type="default" id="tDK-W4-Aaf"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Map View" id="Zt2-5G-hDi"/>
+                    <connections>
+                        <outlet property="commonTreeNameLabel" destination="KM6-sc-no1" id="qur-vi-pfZ"/>
+                        <outlet property="mapView" destination="MKl-KF-KG7" id="vxp-xd-v0P"/>
+                        <outlet property="scientificTreeNameLabel" destination="yse-4e-HP4" id="PJr-6i-UE4"/>
+                        <outlet property="treeDescriptionText" destination="8RQ-2w-0Kv" id="yOs-D1-f3t"/>
+                        <outlet property="treeImage" destination="C0t-Ou-I8X" id="Bhn-cC-LSe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>
             </objects>
@@ -185,11 +147,15 @@
         </scene>
     </scenes>
     <classes>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+        <class className="MapViewDelegate" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewDelegate.h"/>
+            <relationships>
+                <relationship kind="outlet" name="commonTreeNameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+                <relationship kind="outlet" name="scientificTreeNameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="treeDescriptionText" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="treeImage" candidateClass="UIImageView"/>
+            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

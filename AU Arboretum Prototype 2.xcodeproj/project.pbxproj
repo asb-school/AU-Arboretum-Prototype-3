@@ -24,6 +24,31 @@
 		46112E1C16C91F5F0068A853 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 46112E1A16C91F5F0068A853 /* InfoPlist.strings */; };
 		46112E1F16C91F5F0068A853 /* AU_Arboretum_Prototype_2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 46112E1E16C91F5F0068A853 /* AU_Arboretum_Prototype_2Tests.m */; };
 		46112E2916C91F9D0068A853 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46112E2816C91F9D0068A853 /* MapKit.framework */; };
+		469B980316DEF02900A8C849 /* TreeAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 469B980216DEF02900A8C849 /* TreeAnnotation.m */; };
+		469B980F16DF0AD500A8C849 /* MapViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 469B980E16DF0AD500A8C849 /* MapViewDelegate.m */; };
+		469B982416DF100700A8C849 /* atlascedar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 469B981216DF100700A8C849 /* atlascedar.jpg */; };
+		469B982516DF100700A8C849 /* baldcypress.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 469B981316DF100700A8C849 /* baldcypress.jpg */; };
+		469B982616DF100700A8C849 /* bristleconepine.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 469B981416DF100700A8C849 /* bristleconepine.jpg */; };
+		469B982716DF100700A8C849 /* dawnredwood.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 469B981516DF100700A8C849 /* dawnredwood.jpg */; };
+		469B982816DF100700A8C849 /* giantseqouia.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 469B981616DF100700A8C849 /* giantseqouia.jpg */; };
+		469B982916DF100700A8C849 /* ginkgo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 469B981716DF100700A8C849 /* ginkgo.jpg */; };
+		469B982A16DF100700A8C849 /* kentuckycoffee.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 469B981816DF100700A8C849 /* kentuckycoffee.jpg */; };
+		469B982B16DF100700A8C849 /* norwayspruce.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 469B981916DF100700A8C849 /* norwayspruce.jpg */; };
+		469B982C16DF100700A8C849 /* ohiobuckeye.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 469B981A16DF100700A8C849 /* ohiobuckeye.jpg */; };
+		469B982D16DF100700A8C849 /* silktree.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 469B981B16DF100700A8C849 /* silktree.jpg */; };
+		469B982E16DF100700A8C849 /* silvermaple.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 469B981C16DF100700A8C849 /* silvermaple.jpg */; };
+		469B982F16DF100700A8C849 /* sugarmaple.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 469B981D16DF100700A8C849 /* sugarmaple.jpg */; };
+		469B983016DF100700A8C849 /* sycamore.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 469B981E16DF100700A8C849 /* sycamore.jpg */; };
+		469B983116DF100700A8C849 /* umbrellapine.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 469B981F16DF100700A8C849 /* umbrellapine.jpg */; };
+		469B983216DF100700A8C849 /* weepingeurobeech.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 469B982016DF100700A8C849 /* weepingeurobeech.jpg */; };
+		469B983316DF100700A8C849 /* weepingjaplarch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 469B982116DF100700A8C849 /* weepingjaplarch.jpg */; };
+		469B983416DF100700A8C849 /* whiteoak.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 469B982216DF100700A8C849 /* whiteoak.jpg */; };
+		469B983516DF100700A8C849 /* wollemipine.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 469B982316DF100700A8C849 /* wollemipine.jpg */; };
+		469B983716DF102500A8C849 /* MyTreeDB.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 469B983616DF102500A8C849 /* MyTreeDB.sqlite */; };
+		469B983C16DF103D00A8C849 /* TreeList.m in Sources */ = {isa = PBXBuildFile; fileRef = 469B983916DF103D00A8C849 /* TreeList.m */; };
+		469B983D16DF103D00A8C849 /* MyTreeLists.m in Sources */ = {isa = PBXBuildFile; fileRef = 469B983B16DF103D00A8C849 /* MyTreeLists.m */; };
+		469B983F16DF11C000A8C849 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 469B983E16DF11C000A8C849 /* libsqlite3.0.dylib */; };
+		469B984216DF135E00A8C849 /* TreeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 469B984116DF135E00A8C849 /* TreeController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +85,36 @@
 		46112E1D16C91F5F0068A853 /* AU_Arboretum_Prototype_2Tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AU_Arboretum_Prototype_2Tests.h; sourceTree = "<group>"; };
 		46112E1E16C91F5F0068A853 /* AU_Arboretum_Prototype_2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AU_Arboretum_Prototype_2Tests.m; sourceTree = "<group>"; };
 		46112E2816C91F9D0068A853 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		469B980116DEF02900A8C849 /* TreeAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeAnnotation.h; sourceTree = "<group>"; };
+		469B980216DEF02900A8C849 /* TreeAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreeAnnotation.m; sourceTree = "<group>"; };
+		469B980D16DF0AD500A8C849 /* MapViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewDelegate.h; sourceTree = "<group>"; };
+		469B980E16DF0AD500A8C849 /* MapViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewDelegate.m; sourceTree = "<group>"; };
+		469B981216DF100700A8C849 /* atlascedar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = atlascedar.jpg; sourceTree = "<group>"; };
+		469B981316DF100700A8C849 /* baldcypress.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = baldcypress.jpg; sourceTree = "<group>"; };
+		469B981416DF100700A8C849 /* bristleconepine.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bristleconepine.jpg; sourceTree = "<group>"; };
+		469B981516DF100700A8C849 /* dawnredwood.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dawnredwood.jpg; sourceTree = "<group>"; };
+		469B981616DF100700A8C849 /* giantseqouia.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = giantseqouia.jpg; sourceTree = "<group>"; };
+		469B981716DF100700A8C849 /* ginkgo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ginkgo.jpg; sourceTree = "<group>"; };
+		469B981816DF100700A8C849 /* kentuckycoffee.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kentuckycoffee.jpg; sourceTree = "<group>"; };
+		469B981916DF100700A8C849 /* norwayspruce.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = norwayspruce.jpg; sourceTree = "<group>"; };
+		469B981A16DF100700A8C849 /* ohiobuckeye.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ohiobuckeye.jpg; sourceTree = "<group>"; };
+		469B981B16DF100700A8C849 /* silktree.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = silktree.jpg; sourceTree = "<group>"; };
+		469B981C16DF100700A8C849 /* silvermaple.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = silvermaple.jpg; sourceTree = "<group>"; };
+		469B981D16DF100700A8C849 /* sugarmaple.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sugarmaple.jpg; sourceTree = "<group>"; };
+		469B981E16DF100700A8C849 /* sycamore.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sycamore.jpg; sourceTree = "<group>"; };
+		469B981F16DF100700A8C849 /* umbrellapine.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = umbrellapine.jpg; sourceTree = "<group>"; };
+		469B982016DF100700A8C849 /* weepingeurobeech.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = weepingeurobeech.jpg; sourceTree = "<group>"; };
+		469B982116DF100700A8C849 /* weepingjaplarch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = weepingjaplarch.jpg; sourceTree = "<group>"; };
+		469B982216DF100700A8C849 /* whiteoak.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = whiteoak.jpg; sourceTree = "<group>"; };
+		469B982316DF100700A8C849 /* wollemipine.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wollemipine.jpg; sourceTree = "<group>"; };
+		469B983616DF102500A8C849 /* MyTreeDB.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = MyTreeDB.sqlite; sourceTree = "<group>"; };
+		469B983816DF103C00A8C849 /* TreeList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeList.h; sourceTree = "<group>"; };
+		469B983916DF103D00A8C849 /* TreeList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreeList.m; sourceTree = "<group>"; };
+		469B983A16DF103D00A8C849 /* MyTreeLists.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTreeLists.h; sourceTree = "<group>"; };
+		469B983B16DF103D00A8C849 /* MyTreeLists.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTreeLists.m; sourceTree = "<group>"; };
+		469B983E16DF11C000A8C849 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		469B984016DF135D00A8C849 /* TreeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeController.h; sourceTree = "<group>"; };
+		469B984116DF135E00A8C849 /* TreeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreeController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				469B983F16DF11C000A8C849 /* libsqlite3.0.dylib in Frameworks */,
 				46112E2916C91F9D0068A853 /* MapKit.framework in Frameworks */,
 				46112DEE16C91F5F0068A853 /* UIKit.framework in Frameworks */,
 				46112DF016C91F5F0068A853 /* Foundation.framework in Frameworks */,
@@ -90,6 +146,8 @@
 		46112DE116C91F5F0068A853 = {
 			isa = PBXGroup;
 			children = (
+				469B983E16DF11C000A8C849 /* libsqlite3.0.dylib */,
+				469B981116DF0FDF00A8C849 /* Tree Images */,
 				46112E2816C91F9D0068A853 /* MapKit.framework */,
 				46112DF316C91F5F0068A853 /* AU Arboretum Prototype 2 */,
 				46112E1716C91F5F0068A853 /* AU Arboretum Prototype 2Tests */,
@@ -121,9 +179,20 @@
 		46112DF316C91F5F0068A853 /* AU Arboretum Prototype 2 */ = {
 			isa = PBXGroup;
 			children = (
+				469B983616DF102500A8C849 /* MyTreeDB.sqlite */,
+				469B983816DF103C00A8C849 /* TreeList.h */,
+				469B983916DF103D00A8C849 /* TreeList.m */,
+				469B983A16DF103D00A8C849 /* MyTreeLists.h */,
+				469B983B16DF103D00A8C849 /* MyTreeLists.m */,
+				469B984016DF135D00A8C849 /* TreeController.h */,
+				469B984116DF135E00A8C849 /* TreeController.m */,
+				469B980D16DF0AD500A8C849 /* MapViewDelegate.h */,
+				469B980E16DF0AD500A8C849 /* MapViewDelegate.m */,
 				46112DFC16C91F5F0068A853 /* AppDelegate.h */,
 				46112DFD16C91F5F0068A853 /* AppDelegate.m */,
 				46112E0516C91F5F0068A853 /* MainStoryboard.storyboard */,
+				469B980116DEF02900A8C849 /* TreeAnnotation.h */,
+				469B980216DEF02900A8C849 /* TreeAnnotation.m */,
 				46112E0816C91F5F0068A853 /* ViewController.h */,
 				46112E0916C91F5F0068A853 /* ViewController.m */,
 				46112DF416C91F5F0068A853 /* Supporting Files */,
@@ -164,12 +233,37 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		469B981116DF0FDF00A8C849 /* Tree Images */ = {
+			isa = PBXGroup;
+			children = (
+				469B981216DF100700A8C849 /* atlascedar.jpg */,
+				469B981316DF100700A8C849 /* baldcypress.jpg */,
+				469B981416DF100700A8C849 /* bristleconepine.jpg */,
+				469B981516DF100700A8C849 /* dawnredwood.jpg */,
+				469B981616DF100700A8C849 /* giantseqouia.jpg */,
+				469B981716DF100700A8C849 /* ginkgo.jpg */,
+				469B981816DF100700A8C849 /* kentuckycoffee.jpg */,
+				469B981916DF100700A8C849 /* norwayspruce.jpg */,
+				469B981A16DF100700A8C849 /* ohiobuckeye.jpg */,
+				469B981B16DF100700A8C849 /* silktree.jpg */,
+				469B981C16DF100700A8C849 /* silvermaple.jpg */,
+				469B981D16DF100700A8C849 /* sugarmaple.jpg */,
+				469B981E16DF100700A8C849 /* sycamore.jpg */,
+				469B981F16DF100700A8C849 /* umbrellapine.jpg */,
+				469B982016DF100700A8C849 /* weepingeurobeech.jpg */,
+				469B982116DF100700A8C849 /* weepingjaplarch.jpg */,
+				469B982216DF100700A8C849 /* whiteoak.jpg */,
+				469B982316DF100700A8C849 /* wollemipine.jpg */,
+			);
+			name = "Tree Images";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		46112DE916C91F5F0068A853 /* AU Arboretum Prototype 2 */ = {
+		46112DE916C91F5F0068A853 /* TREES! */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 46112E2216C91F5F0068A853 /* Build configuration list for PBXNativeTarget "AU Arboretum Prototype 2" */;
+			buildConfigurationList = 46112E2216C91F5F0068A853 /* Build configuration list for PBXNativeTarget "TREES!" */;
 			buildPhases = (
 				46112DE616C91F5F0068A853 /* Sources */,
 				46112DE716C91F5F0068A853 /* Frameworks */,
@@ -179,7 +273,7 @@
 			);
 			dependencies = (
 			);
-			name = "AU Arboretum Prototype 2";
+			name = "TREES!";
 			productName = "AU Arboretum Prototype 2";
 			productReference = 46112DEA16C91F5F0068A853 /* AU Arboretum Prototype 2.app */;
 			productType = "com.apple.product-type.application";
@@ -224,7 +318,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				46112DE916C91F5F0068A853 /* AU Arboretum Prototype 2 */,
+				46112DE916C91F5F0068A853 /* TREES! */,
 				46112E0F16C91F5F0068A853 /* AU Arboretum Prototype 2Tests */,
 			);
 		};
@@ -240,6 +334,25 @@
 				46112E0216C91F5F0068A853 /* Default@2x.png in Resources */,
 				46112E0416C91F5F0068A853 /* Default-568h@2x.png in Resources */,
 				46112E0716C91F5F0068A853 /* MainStoryboard.storyboard in Resources */,
+				469B982416DF100700A8C849 /* atlascedar.jpg in Resources */,
+				469B982516DF100700A8C849 /* baldcypress.jpg in Resources */,
+				469B982616DF100700A8C849 /* bristleconepine.jpg in Resources */,
+				469B982716DF100700A8C849 /* dawnredwood.jpg in Resources */,
+				469B982816DF100700A8C849 /* giantseqouia.jpg in Resources */,
+				469B982916DF100700A8C849 /* ginkgo.jpg in Resources */,
+				469B982A16DF100700A8C849 /* kentuckycoffee.jpg in Resources */,
+				469B982B16DF100700A8C849 /* norwayspruce.jpg in Resources */,
+				469B982C16DF100700A8C849 /* ohiobuckeye.jpg in Resources */,
+				469B982D16DF100700A8C849 /* silktree.jpg in Resources */,
+				469B982E16DF100700A8C849 /* silvermaple.jpg in Resources */,
+				469B982F16DF100700A8C849 /* sugarmaple.jpg in Resources */,
+				469B983016DF100700A8C849 /* sycamore.jpg in Resources */,
+				469B983116DF100700A8C849 /* umbrellapine.jpg in Resources */,
+				469B983216DF100700A8C849 /* weepingeurobeech.jpg in Resources */,
+				469B983316DF100700A8C849 /* weepingjaplarch.jpg in Resources */,
+				469B983416DF100700A8C849 /* whiteoak.jpg in Resources */,
+				469B983516DF100700A8C849 /* wollemipine.jpg in Resources */,
+				469B983716DF102500A8C849 /* MyTreeDB.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +390,11 @@
 				46112DFA16C91F5F0068A853 /* main.m in Sources */,
 				46112DFE16C91F5F0068A853 /* AppDelegate.m in Sources */,
 				46112E0A16C91F5F0068A853 /* ViewController.m in Sources */,
+				469B980316DEF02900A8C849 /* TreeAnnotation.m in Sources */,
+				469B980F16DF0AD500A8C849 /* MapViewDelegate.m in Sources */,
+				469B983C16DF103D00A8C849 /* TreeList.m in Sources */,
+				469B983D16DF103D00A8C849 /* MyTreeLists.m in Sources */,
+				469B984216DF135E00A8C849 /* TreeController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,7 +411,7 @@
 /* Begin PBXTargetDependency section */
 		46112E1616C91F5F0068A853 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 46112DE916C91F5F0068A853 /* AU Arboretum Prototype 2 */;
+			target = 46112DE916C91F5F0068A853 /* TREES! */;
 			targetProxy = 46112E1516C91F5F0068A853 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -351,7 +469,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
@@ -376,7 +494,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
@@ -390,6 +508,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AU Arboretum Prototype 2/AU Arboretum Prototype 2-Prefix.pch";
 				INFOPLIST_FILE = "AU Arboretum Prototype 2/AU Arboretum Prototype 2-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -401,6 +520,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AU Arboretum Prototype 2/AU Arboretum Prototype 2-Prefix.pch";
 				INFOPLIST_FILE = "AU Arboretum Prototype 2/AU Arboretum Prototype 2-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -452,13 +572,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		46112E2216C91F5F0068A853 /* Build configuration list for PBXNativeTarget "AU Arboretum Prototype 2" */ = {
+		46112E2216C91F5F0068A853 /* Build configuration list for PBXNativeTarget "TREES!" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				46112E2316C91F5F0068A853 /* Debug */,
 				46112E2416C91F5F0068A853 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		46112E2516C91F5F0068A853 /* Build configuration list for PBXNativeTarget "AU Arboretum Prototype 2Tests" */ = {
 			isa = XCConfigurationList;
@@ -467,6 +588,7 @@
 				46112E2716C91F5F0068A853 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
