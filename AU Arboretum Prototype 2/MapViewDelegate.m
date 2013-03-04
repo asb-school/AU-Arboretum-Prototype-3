@@ -77,7 +77,7 @@ TreeController *treeController;
 {
 	// Get a reference to the current annotation
 	TreeAnnotation *thisAnnotation = view.annotation;
-			
+	
 	// Get a reference to the this tree object
 	TreeList *thisTree = [treeController getSingleTreeInformation: thisAnnotation.treeId];
 
