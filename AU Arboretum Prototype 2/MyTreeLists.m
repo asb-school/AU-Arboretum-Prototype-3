@@ -18,7 +18,7 @@
     NSMutableArray *treeArray = [[NSMutableArray alloc] init];
     @try {
         NSFileManager *fileMgr = [NSFileManager defaultManager];
-        NSString *dbPath = [[[NSBundle mainBundle] resourcePath ]stringByAppendingPathComponent:@"MyTreeDB.sqlite"];
+        NSString *dbPath = [[[NSBundle mainBundle] resourcePath ]stringByAppendingPathComponent:@"MyTreesDBnew.sqlite"];
         BOOL success = [fileMgr fileExistsAtPath:dbPath];
         if(!success)
         {
@@ -28,7 +28,7 @@
         {
             NSLog(@"An error has occured.");
         }
-        const char *sql = "SELECT key, name, scientific_name, latitude, longitude, description, picture FROM  treewalk";
+        const char *sql = "SELECT t.key, t.name, t.scientific_name, t.latitude, t.longitude, t.description, m.url FROM  trees AS t, media AS m WHERE t.key = m.treeID";
         sqlite3_stmt *sqlStatement;
         if(sqlite3_prepare(db, sql, -1, &sqlStatement, NULL) != SQLITE_OK)
         {
@@ -69,7 +69,7 @@
 		
 	
         NSFileManager *fileMgr = [NSFileManager defaultManager];
-        NSString *dbPath = [[[NSBundle mainBundle] resourcePath ]stringByAppendingPathComponent:@"MyTreeDB.sqlite"];
+        NSString *dbPath = [[[NSBundle mainBundle] resourcePath ]stringByAppendingPathComponent:@"MyTreesDBnew.sqlite"];
         BOOL success = [fileMgr fileExistsAtPath:dbPath];
 		
         if(!success)
@@ -84,7 +84,7 @@
 		
 		NSString *queryString;
 		
-		queryString = [NSString stringWithFormat:@"SELECT key, name, scientific_name, latitude, longitude, description, picture FROM treewalk WHERE key = %lu;", (unsigned long)givenTreeId];
+		queryString = [NSString stringWithFormat:@"SELECT t.key, t.name, t.scientific_name, t.latitude, t.longitude, t.description, m.url FROM trees AS t, media AS m WHERE t.key = m.treeID AND t.key = %lu;", (unsigned long)givenTreeId];
 
 		const char *sql = [queryString UTF8String];
 		
@@ -130,7 +130,7 @@
     NSMutableArray *treeCoordinatesArray = [[NSMutableArray alloc] init];
     @try {
         NSFileManager *fileMgr = [NSFileManager defaultManager];
-        NSString *dbPath = [[[NSBundle mainBundle] resourcePath ]stringByAppendingPathComponent:@"MyTreeDB.sqlite"];
+        NSString *dbPath = [[[NSBundle mainBundle] resourcePath ]stringByAppendingPathComponent:@"MyTreesDBnew.sqlite"];
         BOOL success = [fileMgr fileExistsAtPath:dbPath];
         if(!success)
         {
@@ -140,7 +140,7 @@
         {
             NSLog(@"An error has occured.");
         }
-        const char *sql = "SELECT key, latitude, longitude FROM  treewalk";
+        const char *sql = "SELECT key, latitude, longitude FROM  trees";
         sqlite3_stmt *sqlStatement;
         if(sqlite3_prepare(db, sql, -1, &sqlStatement, NULL) != SQLITE_OK)
         {
@@ -153,10 +153,10 @@
             MyTreeCoordinates.treeId = sqlite3_column_int(sqlStatement, 0);
 			
 			// ERROR! The latitude is actually the longitude
-            MyTreeCoordinates.lat = [NSNumber numberWithFloat:(float)sqlite3_column_double(sqlStatement, 2)];
+            MyTreeCoordinates.lat = [NSNumber numberWithFloat:(float)sqlite3_column_double(sqlStatement, 1)];
 			
 			// ERROR! The longitude is actually the latitude
-            MyTreeCoordinates.lng = [NSNumber numberWithFloat:(float)sqlite3_column_double(sqlStatement, 1)];
+            MyTreeCoordinates.lng = [NSNumber numberWithFloat:(float)sqlite3_column_double(sqlStatement, 2)];
 						
             [treeCoordinatesArray addObject:MyTreeCoordinates];
         }
