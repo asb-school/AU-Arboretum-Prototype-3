@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		229222D316FFC083005A334E /* MyTreesDBnew.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 229222D216FFC083005A334E /* MyTreesDBnew.sqlite */; };
+		229222D416FFC083005A334E /* MyTreesDBnew.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 229222D216FFC083005A334E /* MyTreesDBnew.sqlite */; };
 		46112DEE16C91F5F0068A853 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46112DED16C91F5F0068A853 /* UIKit.framework */; };
 		46112DF016C91F5F0068A853 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46112DEF16C91F5F0068A853 /* Foundation.framework */; };
 		46112DF216C91F5F0068A853 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46112DF116C91F5F0068A853 /* CoreGraphics.framework */; };
@@ -44,7 +46,6 @@
 		469B983316DF100700A8C849 /* weepingjaplarch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 469B982116DF100700A8C849 /* weepingjaplarch.jpg */; };
 		469B983416DF100700A8C849 /* whiteoak.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 469B982216DF100700A8C849 /* whiteoak.jpg */; };
 		469B983516DF100700A8C849 /* wollemipine.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 469B982316DF100700A8C849 /* wollemipine.jpg */; };
-		469B983716DF102500A8C849 /* MyTreeDB.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 469B983616DF102500A8C849 /* MyTreeDB.sqlite */; };
 		469B983C16DF103D00A8C849 /* TreeList.m in Sources */ = {isa = PBXBuildFile; fileRef = 469B983916DF103D00A8C849 /* TreeList.m */; };
 		469B983D16DF103D00A8C849 /* MyTreeLists.m in Sources */ = {isa = PBXBuildFile; fileRef = 469B983B16DF103D00A8C849 /* MyTreeLists.m */; };
 		469B983F16DF11C000A8C849 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 469B983E16DF11C000A8C849 /* libsqlite3.0.dylib */; };
@@ -62,7 +63,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		46112DEA16C91F5F0068A853 /* AU Arboretum Prototype 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AU Arboretum Prototype 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		229222D216FFC083005A334E /* MyTreesDBnew.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = MyTreesDBnew.sqlite; sourceTree = "<group>"; };
+		46112DEA16C91F5F0068A853 /* TREES!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TREES!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		46112DED16C91F5F0068A853 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		46112DEF16C91F5F0068A853 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		46112DF116C91F5F0068A853 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -107,7 +109,6 @@
 		469B982116DF100700A8C849 /* weepingjaplarch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = weepingjaplarch.jpg; sourceTree = "<group>"; };
 		469B982216DF100700A8C849 /* whiteoak.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = whiteoak.jpg; sourceTree = "<group>"; };
 		469B982316DF100700A8C849 /* wollemipine.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wollemipine.jpg; sourceTree = "<group>"; };
-		469B983616DF102500A8C849 /* MyTreeDB.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = MyTreeDB.sqlite; sourceTree = "<group>"; };
 		469B983816DF103C00A8C849 /* TreeList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeList.h; sourceTree = "<group>"; };
 		469B983916DF103D00A8C849 /* TreeList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreeList.m; sourceTree = "<group>"; };
 		469B983A16DF103D00A8C849 /* MyTreeLists.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTreeLists.h; sourceTree = "<group>"; };
@@ -159,7 +160,7 @@
 		46112DEB16C91F5F0068A853 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				46112DEA16C91F5F0068A853 /* AU Arboretum Prototype 2.app */,
+				46112DEA16C91F5F0068A853 /* TREES!.app */,
 				46112E1016C91F5F0068A853 /* AU Arboretum Prototype 2Tests.octest */,
 			);
 			name = Products;
@@ -179,7 +180,7 @@
 		46112DF316C91F5F0068A853 /* AU Arboretum Prototype 2 */ = {
 			isa = PBXGroup;
 			children = (
-				469B983616DF102500A8C849 /* MyTreeDB.sqlite */,
+				229222D216FFC083005A334E /* MyTreesDBnew.sqlite */,
 				469B983816DF103C00A8C849 /* TreeList.h */,
 				469B983916DF103D00A8C849 /* TreeList.m */,
 				469B983A16DF103D00A8C849 /* MyTreeLists.h */,
@@ -275,7 +276,7 @@
 			);
 			name = "TREES!";
 			productName = "AU Arboretum Prototype 2";
-			productReference = 46112DEA16C91F5F0068A853 /* AU Arboretum Prototype 2.app */;
+			productReference = 46112DEA16C91F5F0068A853 /* TREES!.app */;
 			productType = "com.apple.product-type.application";
 		};
 		46112E0F16C91F5F0068A853 /* AU Arboretum Prototype 2Tests */ = {
@@ -352,7 +353,7 @@
 				469B983316DF100700A8C849 /* weepingjaplarch.jpg in Resources */,
 				469B983416DF100700A8C849 /* whiteoak.jpg in Resources */,
 				469B983516DF100700A8C849 /* wollemipine.jpg in Resources */,
-				469B983716DF102500A8C849 /* MyTreeDB.sqlite in Resources */,
+				229222D316FFC083005A334E /* MyTreesDBnew.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,6 +362,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46112E1C16C91F5F0068A853 /* InfoPlist.strings in Resources */,
+				229222D416FFC083005A334E /* MyTreesDBnew.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
