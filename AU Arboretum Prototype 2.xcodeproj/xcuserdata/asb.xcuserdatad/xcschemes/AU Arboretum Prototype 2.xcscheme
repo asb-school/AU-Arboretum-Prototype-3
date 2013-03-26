@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "46112DE916C91F5F0068A853"
-               BuildableName = "AU Arboretum Prototype 2.app"
+               BuildableName = "TREES!.app"
                BlueprintName = "TREES!"
                ReferencedContainer = "container:AU Arboretum Prototype 2.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "46112DE916C91F5F0068A853"
-            BuildableName = "AU Arboretum Prototype 2.app"
+            BuildableName = "TREES!.app"
             BlueprintName = "TREES!"
             ReferencedContainer = "container:AU Arboretum Prototype 2.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "46112DE916C91F5F0068A853"
-            BuildableName = "AU Arboretum Prototype 2.app"
+            BuildableName = "TREES!.app"
             BlueprintName = "TREES!"
             ReferencedContainer = "container:AU Arboretum Prototype 2.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "46112DE916C91F5F0068A853"
-            BuildableName = "AU Arboretum Prototype 2.app"
+            BuildableName = "TREES!.app"
             BlueprintName = "TREES!"
             ReferencedContainer = "container:AU Arboretum Prototype 2.xcodeproj">
          </BuildableReference>

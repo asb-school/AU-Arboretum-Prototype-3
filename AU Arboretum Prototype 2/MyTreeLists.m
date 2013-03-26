@@ -153,10 +153,10 @@
             MyTreeCoordinates.treeId = sqlite3_column_int(sqlStatement, 0);
 			
 			// ERROR! The latitude is actually the longitude
-            MyTreeCoordinates.lat = [NSNumber numberWithFloat:(float)sqlite3_column_double(sqlStatement, 1)];
+            MyTreeCoordinates.lat = [NSNumber numberWithFloat:(float)sqlite3_column_double(sqlStatement, 2)];
 			
 			// ERROR! The longitude is actually the latitude
-            MyTreeCoordinates.lng = [NSNumber numberWithFloat:(float)sqlite3_column_double(sqlStatement, 2)];
+            MyTreeCoordinates.lng = [NSNumber numberWithFloat:(float)sqlite3_column_double(sqlStatement, 1)];
 						
             [treeCoordinatesArray addObject:MyTreeCoordinates];
         }

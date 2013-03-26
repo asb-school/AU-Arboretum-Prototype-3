@@ -26,6 +26,27 @@
 		46112E1C16C91F5F0068A853 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 46112E1A16C91F5F0068A853 /* InfoPlist.strings */; };
 		46112E1F16C91F5F0068A853 /* AU_Arboretum_Prototype_2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 46112E1E16C91F5F0068A853 /* AU_Arboretum_Prototype_2Tests.m */; };
 		46112E2916C91F9D0068A853 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46112E2816C91F9D0068A853 /* MapKit.framework */; };
+		4642FD3C17020E0F00B06A70 /* dawnRedwood_.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4642FD2717020E0F00B06A70 /* dawnRedwood_.jpg */; };
+		4642FD3D17020E0F00B06A70 /* baldCypress_winter.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4642FD2817020E0F00B06A70 /* baldCypress_winter.jpg */; };
+		4642FD3E17020E0F00B06A70 /* ohioBuckeye_Winter.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4642FD2917020E0F00B06A70 /* ohioBuckeye_Winter.jpg */; };
+		4642FD3F17020E0F00B06A70 /* ginkgo_winter.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4642FD2A17020E0F00B06A70 /* ginkgo_winter.jpg */; };
+		4642FD4017020E0F00B06A70 /* atlasCedar_winter.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4642FD2B17020E0F00B06A70 /* atlasCedar_winter.jpg */; };
+		4642FD4117020E0F00B06A70 /* umbrellaPine_winter.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4642FD2C17020E0F00B06A70 /* umbrellaPine_winter.jpg */; };
+		4642FD4217020E0F00B06A70 /* atlasCedar_winter_trunk.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4642FD2D17020E0F00B06A70 /* atlasCedar_winter_trunk.jpg */; };
+		4642FD4317020E0F00B06A70 /* giantSequoia_winter.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4642FD2E17020E0F00B06A70 /* giantSequoia_winter.jpg */; };
+		4642FD4417020E0F00B06A70 /* silkTree_winter_wide.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4642FD2F17020E0F00B06A70 /* silkTree_winter_wide.jpg */; };
+		4642FD4517020E0F00B06A70 /* wollemiPine_winter_covered.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4642FD3017020E0F00B06A70 /* wollemiPine_winter_covered.jpg */; };
+		4642FD4617020E0F00B06A70 /* kentuckyCoffeeTree_winter.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4642FD3117020E0F00B06A70 /* kentuckyCoffeeTree_winter.jpg */; };
+		4642FD4717020E0F00B06A70 /* whiteOak_winter.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4642FD3217020E0F00B06A70 /* whiteOak_winter.jpg */; };
+		4642FD4817020E0F00B06A70 /* bristleconePine_winter.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4642FD3317020E0F00B06A70 /* bristleconePine_winter.jpg */; };
+		4642FD4917020E0F00B06A70 /* norwaySpruce_winter.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4642FD3417020E0F00B06A70 /* norwaySpruce_winter.jpg */; };
+		4642FD4A17020E0F00B06A70 /* sycamore_winter_crackArrowCloseup.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4642FD3517020E0F00B06A70 /* sycamore_winter_crackArrowCloseup.jpg */; };
+		4642FD4B17020E0F00B06A70 /* sycamore_winter.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4642FD3617020E0F00B06A70 /* sycamore_winter.jpg */; };
+		4642FD4C17020E0F00B06A70 /* weepingEuropeanBeech_winter.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4642FD3717020E0F00B06A70 /* weepingEuropeanBeech_winter.jpg */; };
+		4642FD4D17020E0F00B06A70 /* weepingJapaneseLarch_winter.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4642FD3817020E0F00B06A70 /* weepingJapaneseLarch_winter.jpg */; };
+		4642FD4E17020E0F00B06A70 /* silverMaple_winter.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4642FD3917020E0F00B06A70 /* silverMaple_winter.jpg */; };
+		4642FD4F17020E0F00B06A70 /* sugarMaple_winter.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4642FD3A17020E0F00B06A70 /* sugarMaple_winter.jpg */; };
+		4642FD5017020E0F00B06A70 /* sugarMaple_Bark_winter.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4642FD3B17020E0F00B06A70 /* sugarMaple_Bark_winter.jpg */; };
 		469B980316DEF02900A8C849 /* TreeAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 469B980216DEF02900A8C849 /* TreeAnnotation.m */; };
 		469B980F16DF0AD500A8C849 /* MapViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 469B980E16DF0AD500A8C849 /* MapViewDelegate.m */; };
 		469B982416DF100700A8C849 /* atlascedar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 469B981216DF100700A8C849 /* atlascedar.jpg */; };
@@ -87,6 +108,27 @@
 		46112E1D16C91F5F0068A853 /* AU_Arboretum_Prototype_2Tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AU_Arboretum_Prototype_2Tests.h; sourceTree = "<group>"; };
 		46112E1E16C91F5F0068A853 /* AU_Arboretum_Prototype_2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AU_Arboretum_Prototype_2Tests.m; sourceTree = "<group>"; };
 		46112E2816C91F9D0068A853 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		4642FD2717020E0F00B06A70 /* dawnRedwood_.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dawnRedwood_.jpg; sourceTree = "<group>"; };
+		4642FD2817020E0F00B06A70 /* baldCypress_winter.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = baldCypress_winter.jpg; sourceTree = "<group>"; };
+		4642FD2917020E0F00B06A70 /* ohioBuckeye_Winter.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ohioBuckeye_Winter.jpg; sourceTree = "<group>"; };
+		4642FD2A17020E0F00B06A70 /* ginkgo_winter.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ginkgo_winter.jpg; sourceTree = "<group>"; };
+		4642FD2B17020E0F00B06A70 /* atlasCedar_winter.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = atlasCedar_winter.jpg; sourceTree = "<group>"; };
+		4642FD2C17020E0F00B06A70 /* umbrellaPine_winter.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = umbrellaPine_winter.jpg; sourceTree = "<group>"; };
+		4642FD2D17020E0F00B06A70 /* atlasCedar_winter_trunk.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = atlasCedar_winter_trunk.jpg; sourceTree = "<group>"; };
+		4642FD2E17020E0F00B06A70 /* giantSequoia_winter.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = giantSequoia_winter.jpg; sourceTree = "<group>"; };
+		4642FD2F17020E0F00B06A70 /* silkTree_winter_wide.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = silkTree_winter_wide.jpg; sourceTree = "<group>"; };
+		4642FD3017020E0F00B06A70 /* wollemiPine_winter_covered.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wollemiPine_winter_covered.jpg; sourceTree = "<group>"; };
+		4642FD3117020E0F00B06A70 /* kentuckyCoffeeTree_winter.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kentuckyCoffeeTree_winter.jpg; sourceTree = "<group>"; };
+		4642FD3217020E0F00B06A70 /* whiteOak_winter.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = whiteOak_winter.jpg; sourceTree = "<group>"; };
+		4642FD3317020E0F00B06A70 /* bristleconePine_winter.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bristleconePine_winter.jpg; sourceTree = "<group>"; };
+		4642FD3417020E0F00B06A70 /* norwaySpruce_winter.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = norwaySpruce_winter.jpg; sourceTree = "<group>"; };
+		4642FD3517020E0F00B06A70 /* sycamore_winter_crackArrowCloseup.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sycamore_winter_crackArrowCloseup.jpg; sourceTree = "<group>"; };
+		4642FD3617020E0F00B06A70 /* sycamore_winter.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sycamore_winter.jpg; sourceTree = "<group>"; };
+		4642FD3717020E0F00B06A70 /* weepingEuropeanBeech_winter.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = weepingEuropeanBeech_winter.jpg; sourceTree = "<group>"; };
+		4642FD3817020E0F00B06A70 /* weepingJapaneseLarch_winter.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = weepingJapaneseLarch_winter.jpg; sourceTree = "<group>"; };
+		4642FD3917020E0F00B06A70 /* silverMaple_winter.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = silverMaple_winter.jpg; sourceTree = "<group>"; };
+		4642FD3A17020E0F00B06A70 /* sugarMaple_winter.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sugarMaple_winter.jpg; sourceTree = "<group>"; };
+		4642FD3B17020E0F00B06A70 /* sugarMaple_Bark_winter.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sugarMaple_Bark_winter.jpg; sourceTree = "<group>"; };
 		469B980116DEF02900A8C849 /* TreeAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeAnnotation.h; sourceTree = "<group>"; };
 		469B980216DEF02900A8C849 /* TreeAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreeAnnotation.m; sourceTree = "<group>"; };
 		469B980D16DF0AD500A8C849 /* MapViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewDelegate.h; sourceTree = "<group>"; };
@@ -237,6 +279,27 @@
 		469B981116DF0FDF00A8C849 /* Tree Images */ = {
 			isa = PBXGroup;
 			children = (
+				4642FD2717020E0F00B06A70 /* dawnRedwood_.jpg */,
+				4642FD2817020E0F00B06A70 /* baldCypress_winter.jpg */,
+				4642FD2917020E0F00B06A70 /* ohioBuckeye_Winter.jpg */,
+				4642FD2A17020E0F00B06A70 /* ginkgo_winter.jpg */,
+				4642FD2B17020E0F00B06A70 /* atlasCedar_winter.jpg */,
+				4642FD2C17020E0F00B06A70 /* umbrellaPine_winter.jpg */,
+				4642FD2D17020E0F00B06A70 /* atlasCedar_winter_trunk.jpg */,
+				4642FD2E17020E0F00B06A70 /* giantSequoia_winter.jpg */,
+				4642FD2F17020E0F00B06A70 /* silkTree_winter_wide.jpg */,
+				4642FD3017020E0F00B06A70 /* wollemiPine_winter_covered.jpg */,
+				4642FD3117020E0F00B06A70 /* kentuckyCoffeeTree_winter.jpg */,
+				4642FD3217020E0F00B06A70 /* whiteOak_winter.jpg */,
+				4642FD3317020E0F00B06A70 /* bristleconePine_winter.jpg */,
+				4642FD3417020E0F00B06A70 /* norwaySpruce_winter.jpg */,
+				4642FD3517020E0F00B06A70 /* sycamore_winter_crackArrowCloseup.jpg */,
+				4642FD3617020E0F00B06A70 /* sycamore_winter.jpg */,
+				4642FD3717020E0F00B06A70 /* weepingEuropeanBeech_winter.jpg */,
+				4642FD3817020E0F00B06A70 /* weepingJapaneseLarch_winter.jpg */,
+				4642FD3917020E0F00B06A70 /* silverMaple_winter.jpg */,
+				4642FD3A17020E0F00B06A70 /* sugarMaple_winter.jpg */,
+				4642FD3B17020E0F00B06A70 /* sugarMaple_Bark_winter.jpg */,
 				469B981216DF100700A8C849 /* atlascedar.jpg */,
 				469B981316DF100700A8C849 /* baldcypress.jpg */,
 				469B981416DF100700A8C849 /* bristleconepine.jpg */,
@@ -354,6 +417,27 @@
 				469B983416DF100700A8C849 /* whiteoak.jpg in Resources */,
 				469B983516DF100700A8C849 /* wollemipine.jpg in Resources */,
 				229222D316FFC083005A334E /* MyTreesDBnew.sqlite in Resources */,
+				4642FD3C17020E0F00B06A70 /* dawnRedwood_.jpg in Resources */,
+				4642FD3D17020E0F00B06A70 /* baldCypress_winter.jpg in Resources */,
+				4642FD3E17020E0F00B06A70 /* ohioBuckeye_Winter.jpg in Resources */,
+				4642FD3F17020E0F00B06A70 /* ginkgo_winter.jpg in Resources */,
+				4642FD4017020E0F00B06A70 /* atlasCedar_winter.jpg in Resources */,
+				4642FD4117020E0F00B06A70 /* umbrellaPine_winter.jpg in Resources */,
+				4642FD4217020E0F00B06A70 /* atlasCedar_winter_trunk.jpg in Resources */,
+				4642FD4317020E0F00B06A70 /* giantSequoia_winter.jpg in Resources */,
+				4642FD4417020E0F00B06A70 /* silkTree_winter_wide.jpg in Resources */,
+				4642FD4517020E0F00B06A70 /* wollemiPine_winter_covered.jpg in Resources */,
+				4642FD4617020E0F00B06A70 /* kentuckyCoffeeTree_winter.jpg in Resources */,
+				4642FD4717020E0F00B06A70 /* whiteOak_winter.jpg in Resources */,
+				4642FD4817020E0F00B06A70 /* bristleconePine_winter.jpg in Resources */,
+				4642FD4917020E0F00B06A70 /* norwaySpruce_winter.jpg in Resources */,
+				4642FD4A17020E0F00B06A70 /* sycamore_winter_crackArrowCloseup.jpg in Resources */,
+				4642FD4B17020E0F00B06A70 /* sycamore_winter.jpg in Resources */,
+				4642FD4C17020E0F00B06A70 /* weepingEuropeanBeech_winter.jpg in Resources */,
+				4642FD4D17020E0F00B06A70 /* weepingJapaneseLarch_winter.jpg in Resources */,
+				4642FD4E17020E0F00B06A70 /* silverMaple_winter.jpg in Resources */,
+				4642FD4F17020E0F00B06A70 /* sugarMaple_winter.jpg in Resources */,
+				4642FD5017020E0F00B06A70 /* sugarMaple_Bark_winter.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
