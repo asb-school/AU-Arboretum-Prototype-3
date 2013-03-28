@@ -84,7 +84,7 @@
 		
 		NSString *queryString;
 		
-		queryString = [NSString stringWithFormat:@"SELECT t.key, t.name, t.scientific_name, t.latitude, t.longitude, t.description, m.url FROM trees AS t, media AS m WHERE t.key = m.treeID AND t.key = %lu;", (unsigned long)givenTreeId];
+		queryString = [NSString stringWithFormat:@"SELECT t.key, t.name, t.scientific_name, t.latitude, t.longitude, t.description, m.url FROM trees AS t, media AS m WHERE t.key = m.treeID AND m.precedence = 1 AND t.key = %lu;", (unsigned long)givenTreeId];
 
 		const char *sql = [queryString UTF8String];
 		
