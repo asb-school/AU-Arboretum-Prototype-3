@@ -45,8 +45,8 @@ NSMutableArray *filteredFields, *fields, *picfields, *filteredpicFields,*options
 	[super viewDidLoad];
 	
     //Hide Table & Searchbar When program is initialized
-//	[self.table setHidden:TRUE];
-  //  [self.search setHidden:TRUE];
+	[self.table setHidden:TRUE];
+    [self.search setHidden:TRUE];
     
     
     MyTreeLists * mytrees =[[MyTreeLists alloc] init];
