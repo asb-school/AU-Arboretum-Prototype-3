@@ -17,7 +17,7 @@
 // --------------------------------------------------------------
 // INTERFACE DEFINITION
 
-@interface MapViewDelegate : UIViewController <MKMapViewDelegate>
+@interface MapViewDelegate : UIViewController <MKMapViewDelegate, UITableViewDataSource, UISearchBarDelegate, UITableViewDelegate >
 
 // Our custom map view
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
@@ -35,8 +35,21 @@
 @property (strong, nonatomic) IBOutlet UIImageView *treeImage;
 
 
+//Search Bar
+@property (strong, nonatomic) IBOutlet UISearchBar *search;
+
+//Custom Tableview
+@property (strong, nonatomic) IBOutlet UITableView *table;
+
+
+
+
+
 // METHODS
 - (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view;
+
+- (IBAction)GetTreeListing:(id)sender;
+
 
 
 @end
