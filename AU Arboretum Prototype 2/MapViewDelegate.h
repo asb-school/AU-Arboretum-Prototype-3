@@ -48,7 +48,9 @@
 // METHODS
 - (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view;
 
-- (IBAction)GetTreeListing:(id)sender;
+- (IBAction)Browse:(id)sender;
+
+- (IBAction)CloseBrowse:(id)sender;
 
 
 

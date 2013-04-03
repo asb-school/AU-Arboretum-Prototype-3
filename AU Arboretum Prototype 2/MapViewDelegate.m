@@ -135,6 +135,25 @@ NSMutableArray *filteredFields, *fields, *picfields, *filteredpicFields,*options
 	[super viewDidUnload];
 }
 
+
+//------------------------------------------------------------
+//BUTTON FUNCTIONS
+- (IBAction)Browse:(id)sender {
+    
+    [self.table setHidden:FALSE];
+    [self.search setHidden:FALSE];
+}
+
+- (IBAction)CloseBrowse:(id)sender{
+    
+    [self.table setHidden:TRUE];
+    [self.search setHidden:TRUE];
+
+}
+
+
+    
+
 //----------------------------------------------------------
 //--------------------------------------------------------
 #pragma TableFunctions
