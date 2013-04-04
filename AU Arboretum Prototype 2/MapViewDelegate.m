@@ -214,7 +214,7 @@ NSMutableArray *filteredFields, *fields, *picfields, *filteredpicFields,*options
     return cell;
 }
 
- - (void) tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
+ - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
  {
      
      // Update tree information in UI
@@ -226,7 +226,7 @@ NSMutableArray *filteredFields, *fields, *picfields, *filteredpicFields,*options
      [self.scientificTreeNameLabel setText:((TreeList *) [_objects objectAtIndex:index]).scientificname];
      [self.treeDescriptionText setText:((TreeList *) [_objects objectAtIndex:index]).description];
      
-     [self.table reloadData];
+    // [self.table reloadData];
 
 /*
      
