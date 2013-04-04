@@ -27,8 +27,10 @@
 // SETUP CLASS VARIABLES
 
 TreeController *treeController;
+MyTreeLists *mytrees;
 Boolean isFiltered;
 NSMutableArray *filteredFields, *fields, *picfields, *filteredpicFields,*options, *scientificFields, *_objects;
+
 
 
 // --------------------------------------------------------------
@@ -211,9 +213,23 @@ NSMutableArray *filteredFields, *fields, *picfields, *filteredpicFields,*options
     [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
     return cell;
 }
-/*
+
  - (void) tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
  {
+     
+     // Update tree information in UI
+     NSInteger index = indexPath.row;
+     NSLog(@"The result is %i", index);
+     [self.treeImage setImage:[UIImage imageNamed:((TreeList *) [_objects objectAtIndex:index]).picturename]];
+    
+     [self.commonTreeNameLabel setText:((TreeList *) [_objects objectAtIndex:index]).tree];
+     [self.scientificTreeNameLabel setText:((TreeList *) [_objects objectAtIndex:index]).scientificname];
+     [self.treeDescriptionText setText:((TreeList *) [_objects objectAtIndex:index]).description];
+     
+     [self.table reloadData];
+
+/*
+     
  MainViewController *menu = [[MainViewController alloc] initWithNibName:@"MainViewController" bundle:nil];
  if([[options objectAtIndex:indexPath.row] isEqual:@"Common Name"]) {
  menu.TreeInt = 0;
@@ -224,8 +240,9 @@ NSMutableArray *filteredFields, *fields, *picfields, *filteredpicFields,*options
  
  }
  [self.navigationController pushViewController: menu animated:YES];
- }
  */
+ }
+ 
 
 /*
  - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -260,13 +277,12 @@ NSMutableArray *filteredFields, *fields, *picfields, *filteredpicFields,*options
 
 -(void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar
 {
-    //[table setHidden:FALSE];
+    
 }
 
 
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
-    //[table setHidden:FALSE];
     [self.table resignFirstResponder];
 }
 @end

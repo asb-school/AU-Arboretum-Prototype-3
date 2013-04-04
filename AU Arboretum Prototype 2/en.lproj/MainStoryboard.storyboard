@@ -185,14 +185,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <searchBar contentMode="redraw" id="Lrc-ow-Soe">
-                                <rect key="frame" x="0.0" y="44" width="248" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="Je1-Ka-uXZ" id="SuR-9Y-Lxc"/>
-                                </connections>
-                            </searchBar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="U4j-2y-dpN">
                                 <rect key="frame" x="0.0" y="0.0" width="898" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -209,6 +201,14 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <searchBar contentMode="redraw" id="Bm0-o4-HWN">
+                                <rect key="frame" x="0.0" y="44" width="248" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Je1-Ka-uXZ" id="tuq-pP-Wbn"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -217,7 +217,7 @@
                         <outlet property="commonTreeNameLabel" destination="KM6-sc-no1" id="qur-vi-pfZ"/>
                         <outlet property="mapView" destination="MKl-KF-KG7" id="vxp-xd-v0P"/>
                         <outlet property="scientificTreeNameLabel" destination="yse-4e-HP4" id="PJr-6i-UE4"/>
-                        <outlet property="search" destination="Lrc-ow-Soe" id="fxP-BA-X5O"/>
+                        <outlet property="search" destination="Bm0-o4-HWN" id="FaZ-ut-OXm"/>
                         <outlet property="searchDisplayController" destination="Je1-Ka-uXZ" id="ixl-jU-JsA"/>
                         <outlet property="table" destination="hnY-ei-p0E" id="lyt-o2-dTt"/>
                         <outlet property="treeDescriptionText" destination="8RQ-2w-0Kv" id="yOs-D1-f3t"/>
@@ -228,7 +228,6 @@
                 <searchDisplayController id="Je1-Ka-uXZ">
                     <connections>
                         <outlet property="delegate" destination="2" id="uWk-pj-OJi"/>
-                        <outlet property="searchBar" destination="Lrc-ow-Soe" id="eq1-hV-oyU"/>
                         <outlet property="searchContentsController" destination="2" id="nxq-cr-myd"/>
                         <outlet property="searchResultsDataSource" destination="2" id="Mdd-dA-e9z"/>
                         <outlet property="searchResultsDelegate" destination="2" id="hen-yb-ddO"/>
@@ -238,22 +237,6 @@
             <point key="canvasLocation" x="812" y="-417"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="MapViewDelegate" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewDelegate.h"/>
-            <relationships>
-                <relationship kind="action" name="Browse:"/>
-                <relationship kind="action" name="CloseBrowse:"/>
-                <relationship kind="outlet" name="commonTreeNameLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
-                <relationship kind="outlet" name="scientificTreeNameLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="search" candidateClass="UISearchBar"/>
-                <relationship kind="outlet" name="table" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="treeDescriptionText" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="treeImage" candidateClass="UIImageView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>
