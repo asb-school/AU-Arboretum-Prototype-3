@@ -55,14 +55,13 @@ NSMutableArray *filteredFields,*fields, *picfields, *filteredpicFields,*options,
     MyTreeLists * mytrees =[[MyTreeLists alloc] init];
     
     //Put mutable array for objects fields in variable
-    _objects =  [mytrees getMyTrees];
     
+  //  Initialize Arrays
+    _objects =  [mytrees getMyTrees];
     fields = [[NSMutableArray alloc]init];
     picfields = [[NSMutableArray alloc] init];
     scientificFields =[[NSMutableArray alloc] init];
     nameFields = [[NSMutableArray alloc] init];
-    
-
     
     NSInteger i = 0;
     //Populate fields array with name fields form database
