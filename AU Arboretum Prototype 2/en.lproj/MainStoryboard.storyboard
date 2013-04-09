@@ -91,7 +91,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eTu-Fc-VEE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-115" y="-417"/>
+            <point key="canvasLocation" x="-903" y="-341"/>
         </scene>
         <!--Map View Delegate - Map View-->
         <scene sceneID="4">
@@ -148,7 +148,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EPe-Lp-Iqc">
-                                                    <rect key="frame" x="10" y="0.0" width="154" height="43"/>
+                                                    <rect key="frame" x="10" y="0.0" width="208" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -189,9 +189,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="898" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem title="Browse Trees" id="jlN-lI-RsH">
+                                    <barButtonItem title="Common Names" id="jlN-lI-RsH">
                                         <connections>
                                             <action selector="Browse:" destination="2" id="Vhc-XB-sJR"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Scientific Names" width="134" id="zde-Dx-ql2">
+                                        <connections>
+                                            <action selector="SciNames:" destination="2" id="YAP-Lz-0d2"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem title="Close Browser" id="lcZ-lF-wcs">

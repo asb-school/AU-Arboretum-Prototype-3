@@ -53,5 +53,7 @@
 - (IBAction)CloseBrowse:(id)sender;
 
 
+- (IBAction)SciNames:(id)sender;
+
 
 @end

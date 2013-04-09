@@ -29,7 +29,9 @@
 TreeController *treeController;
 MyTreeLists *mytrees;
 Boolean isFiltered;
-NSMutableArray *filteredFields, *fields, *picfields, *filteredpicFields,*options, *scientificFields, *_objects;
+NSInteger searchSelection;
+
+NSMutableArray *filteredFields,*fields, *picfields, *filteredpicFields,*options, *scientificFields, *nameFields, *_objects;
 
 
 
@@ -49,8 +51,7 @@ NSMutableArray *filteredFields, *fields, *picfields, *filteredpicFields,*options
     //Hide Table & Searchbar When program is initialized
 	[self.table setHidden:TRUE];
     [self.search setHidden:TRUE];
-    
-    
+
     MyTreeLists * mytrees =[[MyTreeLists alloc] init];
     
     //Put mutable array for objects fields in variable
@@ -58,17 +59,20 @@ NSMutableArray *filteredFields, *fields, *picfields, *filteredpicFields,*options
     
     fields = [[NSMutableArray alloc]init];
     picfields = [[NSMutableArray alloc] init];
+    scientificFields =[[NSMutableArray alloc] init];
+    nameFields = [[NSMutableArray alloc] init];
+    
+
     
     NSInteger i = 0;
     //Populate fields array with name fields form database
     while (i<_objects.count) {
         [fields addObject:((TreeList *) [_objects objectAtIndex:i]).tree];
+        [nameFields addObject:((TreeList *) [_objects objectAtIndex:i]).tree];
         [scientificFields addObject:((TreeList *) [_objects objectAtIndex:i]).scientificname];
         [picfields addObject: [UIImage imageNamed:((TreeList *) [_objects objectAtIndex:i]).picturename]];
         i=i+1;
     }
-    
-    
 	// Setup zoom location (happens to be somewhere around middle of AU)
 	CLLocationCoordinate2D zoomLocation;
 	zoomLocation.latitude = 41.961134;
@@ -119,8 +123,6 @@ NSMutableArray *filteredFields, *fields, *picfields, *filteredpicFields,*options
 	
 }
 
-
-
 // --------------------------------------------------------------
 // VIEW WILL APPEAR
 
@@ -140,10 +142,15 @@ NSMutableArray *filteredFields, *fields, *picfields, *filteredpicFields,*options
 
 //------------------------------------------------------------
 //BUTTON FUNCTIONS
+
+
 - (IBAction)Browse:(id)sender {
-    
+    searchSelection = 0;
+    [self.table reloadData];
     [self.table setHidden:FALSE];
     [self.search setHidden:FALSE];
+     NSLog(@"The result is %i", searchSelection);
+    
 }
 
 - (IBAction)CloseBrowse:(id)sender{
@@ -153,7 +160,14 @@ NSMutableArray *filteredFields, *fields, *picfields, *filteredpicFields,*options
 
 }
 
-
+- (IBAction)SciNames:(id)sender{
+    searchSelection = 1;
+    [self.table reloadData];
+    [self.table setHidden:FALSE];
+    [self.search setHidden:FALSE];
+    NSLog(@"The result is %i", searchSelection);
+    
+}
     
 
 //----------------------------------------------------------
@@ -163,6 +177,7 @@ NSMutableArray *filteredFields, *fields, *picfields, *filteredpicFields,*options
 //---------------------------------------------------------
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
 {
+   
     
     if(isFiltered){
         return[filteredFields count];
@@ -180,20 +195,14 @@ NSMutableArray *filteredFields, *fields, *picfields, *filteredpicFields,*options
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    TreeList *cellindexfiltered = [filteredFields objectAtIndex:indexPath.row];
-    TreeList *cellindex = [fields objectAtIndex:indexPath.row];
+   
     UITableViewCell *cell = [self.table dequeueReusableCellWithIdentifier:@"Cell"];
     
-    if(cell == nil){
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
-        if(!isFiltered){
-            cell.textLabel.text = cellindex.tree;
-        }
-        else{
-            cell.textLabel.text = cellindexfiltered.tree;
-            
-        }
-        
+    if(searchSelection==1){
+        fields = scientificFields;
+    }
+    if(searchSelection==0){
+        fields = nameFields;
     }
     
     if(isFiltered){
@@ -227,35 +236,8 @@ NSMutableArray *filteredFields, *fields, *picfields, *filteredpicFields,*options
      [self.treeDescriptionText setText:((TreeList *) [_objects objectAtIndex:index]).description];
      
     // [self.table reloadData];
+ }
 
-/*
-     
- MainViewController *menu = [[MainViewController alloc] initWithNibName:@"MainViewController" bundle:nil];
- if([[options objectAtIndex:indexPath.row] isEqual:@"Common Name"]) {
- menu.TreeInt = 0;
- }
- 
- if([[options objectAtIndex:indexPath.row] isEqual:@"Scientific Name"]) {
- menu.TreeInt = 1;
- 
- }
- [self.navigationController pushViewController: menu animated:YES];
- */
- }
- 
-
-/*
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
- {
- NSIndexPath *indexPath = [self.table indexPathForSelectedRow];
- 
- 
- NSInteger object = indexPath.row;
- 
- [[segue destinationViewController] setCIndex:object];
- 
- }
- */
 #pragma SEARCHBAR
 
 -(void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
