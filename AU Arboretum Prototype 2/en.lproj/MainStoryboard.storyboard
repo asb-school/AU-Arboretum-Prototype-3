@@ -251,23 +251,6 @@
             <point key="canvasLocation" x="812" y="-417"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="MapViewDelegate" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewDelegate.h"/>
-            <relationships>
-                <relationship kind="action" name="Browse:"/>
-                <relationship kind="action" name="CloseBrowse:"/>
-                <relationship kind="action" name="SciNames:"/>
-                <relationship kind="outlet" name="commonTreeNameLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
-                <relationship kind="outlet" name="scientificTreeNameLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="search" candidateClass="UISearchBar"/>
-                <relationship kind="outlet" name="table" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="treeDescriptionText" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="treeImage" candidateClass="UIImageView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

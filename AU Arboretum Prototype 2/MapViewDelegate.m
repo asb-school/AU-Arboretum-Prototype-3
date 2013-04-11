@@ -51,7 +51,7 @@ NSMutableArray *filteredFields,*fields, *picfields, *filteredpicFields,*options,
     //Hide Table & Searchbar When program is initialized
 	[self.table setHidden:TRUE];
     [self.search setHidden:TRUE];
-
+    
     MyTreeLists * mytrees =[[MyTreeLists alloc] init];
     
     //Put mutable array for objects fields in variable
@@ -181,7 +181,6 @@ NSMutableArray *filteredFields,*fields, *picfields, *filteredpicFields,*options,
     if(isFiltered){
         return[filteredFields count];
     }
-    //  return [fields count];
     return ([fields count]);
     
     [self.table reloadData];
@@ -190,7 +189,8 @@ NSMutableArray *filteredFields,*fields, *picfields, *filteredpicFields,*options,
 // Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
 // Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
 
-
+//------------------------------------------------------------
+//------------------------------------------------------------
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -203,18 +203,15 @@ NSMutableArray *filteredFields,*fields, *picfields, *filteredpicFields,*options,
     if(searchSelection==0){
         fields = nameFields;
     }
-    
     if(isFiltered){
         NSString *object = filteredFields[indexPath.row];
         UIImage *picObj = filteredpicFields[indexPath.row];
-        
         cell.textLabel.text = [object description];
         cell.imageView.image = picObj;
+        
     }else{
         NSString *object = fields[indexPath.row];
         UIImage *picObj = picfields[indexPath.row];
-        
-        
         cell.textLabel.text = object;
         cell.imageView.image = picObj;
     }
@@ -222,6 +219,9 @@ NSMutableArray *filteredFields,*fields, *picfields, *filteredpicFields,*options,
     return cell;
 }
 
+
+//-------------------------------------------------------------------
+//------------------------------------------------------------
  - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
  {
      
@@ -229,7 +229,6 @@ NSMutableArray *filteredFields,*fields, *picfields, *filteredpicFields,*options,
      NSInteger index = indexPath.row;
      NSLog(@"The result is %i", index);
      [self.treeImage setImage:[UIImage imageNamed:((TreeList *) [_objects objectAtIndex:index]).picturename]];
-    
      [self.commonTreeNameLabel setText:((TreeList *) [_objects objectAtIndex:index]).tree];
      [self.scientificTreeNameLabel setText:((TreeList *) [_objects objectAtIndex:index]).scientificname];
      [self.treeDescriptionText setText:((TreeList *) [_objects objectAtIndex:index]).description];
@@ -237,7 +236,14 @@ NSMutableArray *filteredFields,*fields, *picfields, *filteredpicFields,*options,
     // [self.table reloadData];
  }
 
+
+
 #pragma SEARCHBAR
+//-------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------
+//SEARCH BAR SUBROUTINES
+//-------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
 
 -(void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
 {
@@ -255,15 +261,29 @@ NSMutableArray *filteredFields,*fields, *picfields, *filteredpicFields,*options,
     }
     [self.table reloadData];
 }
-
+//-------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
 -(void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar
 {
+    [self.table resignFirstResponder];
     
 }
 
+//-------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
 
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
     [self.table resignFirstResponder];
 }
+
+//----------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------
+- (void) searchDisplayControllerDidEndSearch:(UISearchDisplayController *)controller {
+    
+    self.searchDisplayController.searchBar.frame=CGRectMake(0, 44, 248, 44);
+
+}
+
+
 @end
