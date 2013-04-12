@@ -115,26 +115,6 @@
                                     <rect key="frame" x="0.0" y="66" width="248" height="607"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <prototypes>
-                                        <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="WxQ-1T-wVb" style="IBUITableViewCellStyleDefault" id="DWX-vb-OWU">
-                                            <rect key="frame" x="0.0" y="22" width="248" height="44"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                <rect key="frame" x="0.0" y="0.0" width="228" height="43"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <subviews>
-                                                    <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WxQ-1T-wVb">
-                                                        <rect key="frame" x="10" y="0.0" width="208" height="43"/>
-                                                        <autoresizingMask key="autoresizingMask"/>
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                        <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </label>
-                                                </subviews>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            </view>
-                                        </tableViewCell>
-                                    </prototypes>
                                     <connections>
                                         <outlet property="dataSource" destination="2" id="ypf-GL-RA9"/>
                                     </connections>
@@ -251,6 +231,23 @@
             <point key="canvasLocation" x="812" y="-417"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="MapViewDelegate" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewDelegate.h"/>
+            <relationships>
+                <relationship kind="action" name="Browse:"/>
+                <relationship kind="action" name="CloseBrowse:"/>
+                <relationship kind="action" name="SciNames:"/>
+                <relationship kind="outlet" name="commonTreeNameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+                <relationship kind="outlet" name="scientificTreeNameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="search" candidateClass="UISearchBar"/>
+                <relationship kind="outlet" name="table" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="treeDescriptionText" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="treeImage" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>
