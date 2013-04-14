@@ -30,7 +30,6 @@ TreeController *treeController;
 MyTreeLists *mytrees;
 Boolean isFiltered;
 NSInteger searchSelection, filteredindexes;
-
 NSMutableArray *filteredFields,*fields, *picfields, *filteredpicFields,*options, *scientificFields, *nameFields, *_objects, *filteredScientificfields, *filtereddescription;
 
 
@@ -58,12 +57,14 @@ NSMutableArray *filteredFields,*fields, *picfields, *filteredpicFields,*options,
     
   //  Initialize Arrays
     _objects =  [mytrees getMyTrees];
-    fields = [[NSMutableArray alloc]init];
+   fields = [[NSMutableArray alloc]init];
     picfields = [[NSMutableArray alloc] init];
     scientificFields =[[NSMutableArray alloc] init];
     nameFields = [[NSMutableArray alloc] init];
     
+        fields = [[NSMutableArray alloc] initWithObjects:@"Common Name", @"Scientific Name", nil];
     
+   
     NSInteger i = 0;
     //Populate fields array with name fields form database
     while (i<_objects.count) {
@@ -73,6 +74,9 @@ NSMutableArray *filteredFields,*fields, *picfields, *filteredpicFields,*options,
         [picfields addObject: [UIImage imageNamed:((TreeList *) [_objects objectAtIndex:i]).picturename]];
         i=i+1;
     }
+    
+    
+    
 	// Setup zoom location (happens to be somewhere around middle of AU)
 	CLLocationCoordinate2D zoomLocation;
 	zoomLocation.latitude = 41.961134;
@@ -120,11 +124,7 @@ NSMutableArray *filteredFields,*fields, *picfields, *filteredpicFields,*options,
 	[self.scientificTreeNameLabel setText: thisTree.scientificname];
 	[self.treeDescriptionText setText: thisTree.description];
 	[self.treeImage setImage: treeImage];
-    
-    //Closes Keyboard if placemarker is clicked
-    [self.search resignFirstResponder];
 
-    
 	
 }
 
@@ -151,44 +151,50 @@ NSMutableArray *filteredFields,*fields, *picfields, *filteredpicFields,*options,
 
 - (IBAction)Browse:(id)sender {
     searchSelection = 0;
+    
+    //Refresh Table
     [self.table reloadData];
+    
+    //Pressed to unhide table/search when common names button is pressed
     [self.table setHidden:FALSE];
     [self.search setHidden:FALSE];
-     NSLog(@"The result is %i", searchSelection);
     
+}
+
+- (IBAction)SciNames:(id)sender{
+    searchSelection = 1;
+    //Refresh Table
+    [self.table reloadData];
+    
+    //Pressed to unhide table/search when scientific names button is pressed
+    [self.table setHidden:FALSE];
+    [self.search setHidden:FALSE];
 }
 
 - (IBAction)CloseBrowse:(id)sender{
     
+//Pressed to unhide table/search when browser closes
     [self.table setHidden:TRUE];
     [self.search setHidden:TRUE];
 
 }
 
-- (IBAction)SciNames:(id)sender{
-    searchSelection = 1;
-    [self.table reloadData];
-    [self.table setHidden:FALSE];
-    [self.search setHidden:FALSE];
-    NSLog(@"The result is %i", searchSelection);
-    
-}
-    
-
-//----------------------------------------------------------
-//--------------------------------------------------------
 #pragma TableFunctions
-//---------------------------------------------------------
-//---------------------------------------------------------
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+//TABLE VIEW SUBROUTINES
+//-----------------------------------------------------------------
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
 {
-   
     
+    //Allocates space for rows on table based on the number of abjects in array
+   
     if(isFiltered){
         return[filteredFields count];
     }
-    return ([fields count]);
-    
+    else{
+     return [fields count];   
+    }
     [self.table reloadData];
 }
 
@@ -197,61 +203,59 @@ NSMutableArray *filteredFields,*fields, *picfields, *filteredpicFields,*options,
 
 //------------------------------------------------------------
 //------------------------------------------------------------
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-   
     UITableViewCell *cell = [self.table dequeueReusableCellWithIdentifier:@"Cell"];
     
+    //Decides weather to print scientific names or common names to table cells
     if(searchSelection==1){
         fields = scientificFields;
     }
     if(searchSelection==0){
         fields = nameFields;
     }
+    
+    //Prints filtered images and names to cells after search
     if(isFiltered){
-        NSString *object = filteredFields[indexPath.row];
-        UIImage *picObj = filteredpicFields[indexPath.row];
-        cell.textLabel.text = [object description];
-        cell.imageView.image = picObj;
+        cell.textLabel.text = filteredFields[indexPath.row];
+        cell.imageView.image = filteredpicFields[indexPath.row];
         
     }else{
-        NSString *object = fields[indexPath.row];
-        UIImage *picObj = picfields[indexPath.row];
-        cell.textLabel.text = object;
-        cell.imageView.image = picObj;
+        
+        //Prints  names and images to cells before search
+        cell.textLabel.text = fields[indexPath.row];
+        cell.imageView.image = picfields[indexPath.row];
     }
     [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
     return cell;
 }
-
 
 //-------------------------------------------------------------------
 //------------------------------------------------------------
  - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
  {
      
+     //Witdraw keybord when cell is clicked
+     
      [self.search resignFirstResponder];
      // Update tree information in UI
      NSInteger index = indexPath.row;
      
+     
+     // Update tree information in UI after search when cell is clicked
      if(isFiltered){
-         
          [self.commonTreeNameLabel setText:[filteredFields objectAtIndex:index]];
         [self.scientificTreeNameLabel setText:[filteredScientificfields objectAtIndex:index]];
          [self.treeDescriptionText setText:[filtereddescription objectAtIndex:index]];
          [self.treeImage setImage:[filteredpicFields objectAtIndex:index]];
-         
-         
      }
-     
+     // Update tree information in UI before search when cell is clicked
      if(!isFiltered){
          [self.treeImage setImage:[UIImage imageNamed:((TreeList *) [_objects objectAtIndex:index]).picturename]];
          [self.commonTreeNameLabel setText:((TreeList *) [_objects objectAtIndex:index]).tree];
          [self.scientificTreeNameLabel setText:((TreeList *) [_objects objectAtIndex:index]).scientificname];
          [self.treeDescriptionText setText:((TreeList *) [_objects objectAtIndex:index]).description];
      }
-          
     // [self.table reloadData];
  }
 
@@ -261,11 +265,11 @@ NSMutableArray *filteredFields,*fields, *picfields, *filteredpicFields,*options,
 //-----------------------------------------------------------------
 //-----------------------------------------------------------------
 //SEARCH BAR SUBROUTINES
-//-------------------------------------------------------------------------------
-//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------
 
 -(void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
 {
+    //Initialize Populates filtered arrays when there is input in search bars
     if(searchText.length==0){
         isFiltered=NO;}
     else{
@@ -274,19 +278,18 @@ NSMutableArray *filteredFields,*fields, *picfields, *filteredpicFields,*options,
          filteredpicFields =[ [NSMutableArray alloc] init];
         filteredScientificfields= [ [NSMutableArray alloc] init];
         filtereddescription =[ [NSMutableArray alloc] init];
+        filteredindexes = 0;
         
-    
-         filteredindexes = 0;
-        for(NSString *strin in fields){
-    
-            NSRange TreeRange = [strin rangeOfString:searchText options: NSCaseInsensitiveSearch];
+        //Loops through rows to mach them with search input
+        for(NSString *string in fields){
+            NSRange TreeRange = [string rangeOfString:searchText options: NSCaseInsensitiveSearch];
             if(TreeRange.location!= NSNotFound){
                 
-                NSLog(@"The result is %i", filteredindexes);
+                //Add the information for the filtered searched information into their own fultered arrays
                 [filteredpicFields addObject:[picfields objectAtIndex:filteredindexes]];
                 [filteredScientificfields addObject:[scientificFields objectAtIndex:filteredindexes]];
                 [filtereddescription addObject:((TreeList *) [_objects objectAtIndex:filteredindexes]).description];
-                [ filteredFields addObject:strin ];
+                [ filteredFields addObject:string ];
                 
             }
             filteredindexes++;
@@ -294,57 +297,61 @@ NSMutableArray *filteredFields,*fields, *picfields, *filteredpicFields,*options,
     }
     [self.table reloadData];
 }
-//-------------------------------------------------------------------------------
+//------------------------------------------------------------------
 
 
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
+    //Position Search Bar
      self.searchDisplayController.searchBar.frame=CGRectMake(0, 44, 248, 44);
+    
+    //Withdaraws keyboard when search button clicked
     [self.table resignFirstResponder];
 }
 
 //-----------------------------------------------------------------
-//-----------------------------------------------------------------
 - (void) searchDisplayControllerDidEndSearch:(UISearchDisplayController *)controller {
-    
-   self.searchDisplayController.searchBar.frame=CGRectMake(0, 44, 248, 44);
- 
-
 
 }
 
 //-----------------------------------------------------------------
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
 {
-   
-    ;
     [self.search resignFirstResponder];
     
-    
+    //Refreshes the table when Cancel Button Clicked
     [filteredFields removeAllObjects];
     [filteredpicFields removeAllObjects];
     [filteredpicFields addObjectsFromArray:picfields];
     [filteredFields addObjectsFromArray:fields];
-    
-    //[scientificFields removeAllObjects];
-    //  [filteredScientificfields addObjectsFromArray:scientificFields];
-    
     self.search.text = nil;
-      [self.table reloadData];
+    [self.table reloadData];
     isFiltered=FALSE;
-      
+    
+    //Set Position and size of table when search button clicked
+    CGRect newFrame = CGRectMake(0, 88, 248, 652);
+    self.table.frame = newFrame;
+    
 }
 //-----------------------------------------------------------------
 -(void)searchDisplayController: (UISearchDisplayController*)controller
  didShowSearchResultsTableView: (UITableView*)tableView
 {
-   
-        CGRect newFrame = CGRectMake(0, 90, 248, 650);
+    //Set Position and size of table when search results shown
+    CGRect newFrame = CGRectMake(0, 88, 248, 618);
     self.table.frame = newFrame;
         tableView.frame = newFrame;
+}
+//-----------------------------------------------------------------
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    
+    // dismiss keyboard through `resignFirstResponder` When anything is pressed
+    [self.search resignFirstResponder];
+    
+    //Set Position and size of table when clicked
+    CGRect newFrame = CGRectMake(0, 88, 248, 618);
+    self.table.frame = newFrame;
+
 
 }
-
-//-----------------------------------------------------------------
-
 @end
