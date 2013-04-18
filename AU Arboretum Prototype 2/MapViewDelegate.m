@@ -70,6 +70,54 @@ TreeController *treeController;
 }
 
 
+
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
+{
+	// Create annotation identifier
+ 	static NSString *identifier = @"TreeAnnotation";
+	
+	// Check class of tree annotation
+    if ([annotation isKindOfClass:[TreeAnnotation class]])
+	{
+		// Create the annotation view with the given identifier
+        MKAnnotationView *annotationView = (MKAnnotationView *) [_mapView dequeueReusableAnnotationViewWithIdentifier:identifier];
+        
+		// If we have no annotation view set
+		if (annotationView == nil)
+		{
+			// Create annotation view with given annotation ID
+            annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier];
+			
+			// Create a button
+			UIButton *button = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+			button.frame = CGRectMake(0, 0, 23, 24);
+			annotationView.rightCalloutAccessoryView = button;
+
+			// Custom view -- failed experiement
+			UIView *leftCAV = [[UIView alloc] initWithFrame:CGRectMake(0,0,366,455)];
+			[leftCAV addSubview: [[[NSBundle mainBundle] loadNibNamed:@"annotationImageView" owner:self options:nil] lastObject]];
+	
+			//annotationView.rightCalloutAccessoryView = leftCAV;
+			
+			// Config options
+            annotationView.enabled = YES;
+            annotationView.canShowCallout = NO;
+            annotationView.image = [UIImage imageNamed:@"ui_map_pin.png"];
+		}
+		
+		// Nothing to do here
+		else
+		{
+            annotationView.annotation = annotation;
+        }
+ 
+        return annotationView;
+    }
+ 
+    return nil;
+}
+
+
 // --------------------------------------------------------------
 // DID SELECT ANNOTATION VIEW
 
@@ -77,6 +125,9 @@ TreeController *treeController;
 {
 	// Get a reference to the current annotation
 	TreeAnnotation *thisAnnotation = view.annotation;
+	
+	// Change pin image
+	view.image = [UIImage imageNamed:@"ui_map_pin_selected.png"];
 	
 	// Get a reference to the this tree object
 	TreeList *thisTree = [treeController getSingleTreeInformation: thisAnnotation.treeId];
@@ -92,6 +143,15 @@ TreeController *treeController;
 	
 }
 
+
+// --------------------------------------------------------------
+// DID DESELECT ANNOTATION VIEW
+
+- (void)mapView:(MKMapView *)mapView didDeselectAnnotationView:(MKAnnotationView *)view
+{
+	// Change pin image back to normal
+	view.image = [UIImage imageNamed:@"ui_map_pin.png"];
+}
 
 
 // --------------------------------------------------------------

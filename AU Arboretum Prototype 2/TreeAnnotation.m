@@ -37,6 +37,10 @@
 	temporaryCoordinate.longitude = [givenLongitude floatValue];
 
 	[self setCoordinate: temporaryCoordinate];
+	
+	// Set title
+	self.title = @"Tree pin"; // YOU SHALL IMPLEMENT THIS!!!
 }
+
 
 @end

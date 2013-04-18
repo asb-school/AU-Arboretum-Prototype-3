@@ -26,9 +26,10 @@
 // METHODS
 - (void)setCoordinateWithLatitude: (NSNumber *)givenLatitude andLongitude: (NSNumber *)givenLongitude;
 
+
 // PROPERTIES
 @property (nonatomic) CLLocationCoordinate2D coordinate;
 @property (nonatomic) NSUInteger treeId;
-
+@property (nonatomic) NSString *title;
 
 @end
