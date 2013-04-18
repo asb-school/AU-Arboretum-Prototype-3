@@ -70,6 +70,8 @@ TreeController *treeController;
 }
 
 
+// --------------------------------------------------------------
+// VIEW FOR ANNOTATION
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
 {
@@ -123,6 +125,18 @@ TreeController *treeController;
 
 - (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view
 {
+    // Animation to show the information view
+    NSTimeInterval animationDuration = 0.2; // in seconds
+    CGRect newFrameSize = CGRectMake(0, 690, 768, 266);
+    
+    // Begin animations
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:animationDuration];
+    
+    // Run animation
+    _informationView.frame = newFrameSize;
+    [UIView commitAnimations];
+    
 	// Get a reference to the current annotation
 	TreeAnnotation *thisAnnotation = view.annotation;
 	
@@ -159,14 +173,23 @@ TreeController *treeController;
 
 - (void)viewWillAppear:(BOOL)animated
 {
-		
+    // Hide the information view
+    CGRect newFrameSize = CGRectMake(0, 1030, 768, 266);
+    _informationView.frame = newFrameSize;
+    [UIView commitAnimations];
 }
 
-- (void)viewDidUnload {
+
+// --------------------------------------------------------------
+// VIEW DID UNLOAD
+
+- (void)viewDidUnload
+{
 	[self setCommonTreeNameLabel:nil];
 	[self setScientificTreeNameLabel:nil];
 	[self setTreeDescriptionText:nil];
 	[self setTreeImage:nil];
+    [self setInformationView:nil];
 	[super viewDidUnload];
 }
 @end

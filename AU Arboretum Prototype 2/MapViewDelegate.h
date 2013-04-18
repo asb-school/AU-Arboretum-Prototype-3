@@ -34,6 +34,8 @@
 // Tree image
 @property (strong, nonatomic) IBOutlet UIImageView *treeImage;
 
+// Information view
+@property (strong, nonatomic) IBOutlet UIView *informationView;
 
 // METHODS
 - (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view;
