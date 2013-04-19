@@ -46,6 +46,8 @@
 
 
 // METHODS
+- (void)plotAnnotationsWithScientificName: (NSString *)givenScientificName;
+
 - (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view;
 
 - (IBAction)Browse:(id)sender;

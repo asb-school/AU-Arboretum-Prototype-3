@@ -94,6 +94,16 @@ NSMutableArray *filteredFields,*fields, *picfields, *filteredpicFields,*options,
 
 
 // --------------------------------------------------------------
+// PLOT ANNOTATIONS WITH SCIENTIFIC NAME
+
+- (void)plotAnnotationsWithScientificName:(NSString *)givenScientificName
+{
+    // Get annotations with scientific name and add to map
+    [self.mapView addAnnotations: [treeController getTreeAnnotationsForScientificName:givenScientificName]];
+}
+
+
+// --------------------------------------------------------------
 // VIEW DID APPEAR
 
 - (void)viewDidAppear:(BOOL)animated

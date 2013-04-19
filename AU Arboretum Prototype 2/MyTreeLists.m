@@ -58,6 +58,59 @@
 }
 
 
+- (NSMutableArray *)getTreesWithScientificName:(NSString *)scientificName
+{
+    NSMutableArray *treeArray = [[NSMutableArray alloc] init];
+    @try {
+        NSFileManager *fileMgr = [NSFileManager defaultManager];
+        NSString *dbPath = [[[NSBundle mainBundle] resourcePath ]stringByAppendingPathComponent:@"MyTreesDBnew.sqlite"];
+        BOOL success = [fileMgr fileExistsAtPath:dbPath];
+        if(!success)
+        {
+            NSLog(@"Cannot locate database file '%@'.", dbPath);
+        }
+        if(!(sqlite3_open([dbPath UTF8String], &db) == SQLITE_OK))
+        {
+            NSLog(@"An error has occured.");
+        }
+        
+        //        const char *sql = "SELECT DISTINCT t.key, t.name, t.scientific_name, t.latitude, t.longitude, t.description, m.url FROM  trees AS t, media AS m WHERE t.key = m.treeID";
+        
+        NSString *queryString;
+		
+		queryString = [NSString stringWithFormat:@"SELECT t.key, t.name, t.scientific_name, t.latitude, t.longitude, t.description, m.url FROM trees AS t, media AS m WHERE t.key = m.treeID AND m.precedence = 1 AND t.scientific_name = %@", scientificName];
+        
+		const char *sql = [queryString UTF8String];
+        
+        sqlite3_stmt *sqlStatement;
+        if(sqlite3_prepare(db, sql, -1, &sqlStatement, NULL) != SQLITE_OK)
+        {
+            NSLog(@"Problem with prepare statement");
+        }
+        
+        //
+        while (sqlite3_step(sqlStatement)==SQLITE_ROW) {
+            TreeList *MyTree = [[TreeList alloc]init];
+            MyTree.treeId = sqlite3_column_int(sqlStatement, 0);
+            MyTree.tree = [NSString stringWithUTF8String:(char *) sqlite3_column_text(sqlStatement,1)];
+            MyTree.scientificname = [NSString stringWithUTF8String:(char *) sqlite3_column_text(sqlStatement, 2)];
+            MyTree.lng = [NSNumber numberWithFloat:(float)sqlite3_column_double(sqlStatement, 3)];
+            MyTree.lat = [NSNumber numberWithFloat:(float)sqlite3_column_double(sqlStatement, 4)];
+            //MyTree.description = [NSString stringWithUTF8String:(char *) sqlite3_column_text(sqlStatement, 5)];
+            //MyTree.picturename = [NSString stringWithUTF8String:(char *) sqlite3_column_text(sqlStatement, 6)];
+            [treeArray addObject:MyTree];
+        }
+    }
+    @catch (NSException *exception) {
+        NSLog(@"An exception occured: %@", [exception reason]);
+    }
+    @finally {
+        return treeArray;
+    }
+    
+}
+
+
 
 // Returns a single tree
 - (TreeList *)getSingleTree: (NSUInteger)givenTreeId
