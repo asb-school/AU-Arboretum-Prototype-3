@@ -295,6 +295,22 @@ TreeController *treeController;
 
 - (void)viewWillAppear:(BOOL)animated
 {
+
+//    self.navigationController.nav
+    
+//    [_navigationController setNavi]
+    
+    
+//    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
+    self.navigationController.navigationBar.tintColor = [UIColor purpleColor];
+    
+    UINavigationBar *navigationBar = self.navigationController.navigationBar;
+    UIImage *customBarImage = [UIImage imageNamed:@"ui_button_1.png"];
+
+    [navigationBar setBackgroundImage:customBarImage forBarMetrics:UIBarMetricsDefault];
+    
+    
+    
     // Hide the information view
     CGRect newFrameSize = CGRectMake(0, 940, 768, 266);
     _informationView.frame = newFrameSize;
@@ -315,7 +331,6 @@ TreeController *treeController;
 	[self setTreeDescriptionText:nil];
 	[self setTreeImage:nil];
     [self setInformationView:nil];
-    [self setNavigationController:nil];
 	[super viewDidUnload];
 }
 

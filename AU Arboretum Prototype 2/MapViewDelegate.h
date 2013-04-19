@@ -24,7 +24,7 @@
 }
 
 // Navigation controller
-@property (strong, nonatomic) IBOutlet UINavigationItem *navigationController;
+//@property (strong, nonatomic) IBOutlet UINavigationItem *navigationController;
 
 // Our custom map view
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
