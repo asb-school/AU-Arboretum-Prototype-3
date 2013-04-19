@@ -71,6 +71,24 @@ TreeController *treeController;
 
 
 // --------------------------------------------------------------
+// HIDE SHOW ACTION FOR INFORMATION VIEW
+
+- (IBAction)hideShowAction:(id)sender
+{
+    // If information view is hidden
+    if (informationViewHidden)
+    {
+        [self showInformationView];
+    }
+    
+    // If information view is showing
+    else
+    {
+        [self hideInformationView];
+    }
+}
+
+// --------------------------------------------------------------
 // VIEW FOR ANNOTATION
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
@@ -93,7 +111,7 @@ TreeController *treeController;
 			// Create a button
 			UIButton *button = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
 			button.frame = CGRectMake(0, 0, 23, 24);
-			annotationView.rightCalloutAccessoryView = button;
+			//annotationView.rightCalloutAccessoryView = button;
 
 			// Custom view -- failed experiement
 			UIView *leftCAV = [[UIView alloc] initWithFrame:CGRectMake(0,0,366,455)];
@@ -103,7 +121,7 @@ TreeController *treeController;
 			
 			// Config options
             annotationView.enabled = YES;
-            annotationView.canShowCallout = NO;
+            annotationView.canShowCallout = YES;
             annotationView.image = [UIImage imageNamed:@"ui_map_pin.png"];
 		}
 		
@@ -125,17 +143,11 @@ TreeController *treeController;
 
 - (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view
 {
-    // Animation to show the information view
-    NSTimeInterval animationDuration = 0.2; // in seconds
-    CGRect newFrameSize = CGRectMake(0, 690, 768, 266);
+    // Cancel hiding of display if an annotation is selected
+    noFurtherAnnotationsSelected = FALSE;
     
-    // Begin animations
-    [UIView beginAnimations:nil context:NULL];
-    [UIView setAnimationDuration:animationDuration];
-    
-    // Run animation
-    _informationView.frame = newFrameSize;
-    [UIView commitAnimations];
+    // Show the information view
+    [self showInformationView];
     
 	// Get a reference to the current annotation
 	TreeAnnotation *thisAnnotation = view.annotation;
@@ -163,8 +175,68 @@ TreeController *treeController;
 
 - (void)mapView:(MKMapView *)mapView didDeselectAnnotationView:(MKAnnotationView *)view
 {
-	// Change pin image back to normal
+    // Change pin image back to normal
 	view.image = [UIImage imageNamed:@"ui_map_pin.png"];
+    
+    
+    /* Create an assumption that no further annotations will be selected.
+     * Then, call a function to hide the information view after a specified
+     * delay. This delayed function will only hide the information view if
+     * the toggle is true. If another annotation is selected before the delay
+     * time expires, the toggle will be set to false. Thus the function which
+     * hides the information view will not execute the hiding of the 
+     * information view.
+    */
+    
+    noFurtherAnnotationsSelected = TRUE;
+    
+    // Call information hide function with delay
+    [self performSelector:@selector(hideInformationViewOnTimeout) withObject:nil afterDelay:0.8];
+}
+
+
+- (void)showInformationView
+{
+    // Animation to show the information view
+    NSTimeInterval animationDuration = 0.2; // in seconds
+    CGRect newFrameSize = CGRectMake(0, 690, 768, 266);
+    
+    // Begin animations
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:animationDuration];
+    
+    // Run animation
+    _informationView.frame = newFrameSize;
+    [UIView commitAnimations];
+    
+    // Toggle status of information view
+    informationViewHidden = FALSE;
+}
+
+- (void)hideInformationViewOnTimeout
+{
+    if (noFurtherAnnotationsSelected)
+    {
+        [self hideInformationView];
+    }
+}
+
+- (void)hideInformationView
+{
+    // Animation to hide the information view
+    NSTimeInterval animationDuration = 0.2; // in seconds
+    CGRect newFrameSize = CGRectMake(0, 940, 768, 266);
+    
+    // Begin animations
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:animationDuration];
+    
+    // Run animation
+    _informationView.frame = newFrameSize;
+    [UIView commitAnimations];
+    
+    // Toggle status
+    informationViewHidden = TRUE;
 }
 
 
@@ -174,9 +246,12 @@ TreeController *treeController;
 - (void)viewWillAppear:(BOOL)animated
 {
     // Hide the information view
-    CGRect newFrameSize = CGRectMake(0, 1030, 768, 266);
+    CGRect newFrameSize = CGRectMake(0, 940, 768, 266);
     _informationView.frame = newFrameSize;
     [UIView commitAnimations];
+    
+    // Toggle status of information view
+    informationViewHidden = TRUE;
 }
 
 

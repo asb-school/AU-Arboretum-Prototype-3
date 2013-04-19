@@ -18,6 +18,10 @@
 // INTERFACE DEFINITION
 
 @interface MapViewDelegate : UIViewController <MKMapViewDelegate>
+{
+    BOOL informationViewHidden;
+    BOOL noFurtherAnnotationsSelected;
+}
 
 // Our custom map view
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
@@ -39,6 +43,10 @@
 
 // METHODS
 - (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view;
+- (void)showInformationView;
+- (void)hideInformationView;
+- (void)hideInformationViewOnTimeout;
+- (IBAction)hideShowAction:(id)sender;
 
 
 @end
