@@ -29,6 +29,7 @@
 TreeController *treeController;
 MyTreeLists *mytrees;
 Boolean isFiltered;
+NSString *scientificNameSelected;
 NSInteger searchSelection, filteredindexes;
 NSMutableArray *filteredFields,*fields, *picfields, *filteredpicFields,*options, *scientificFields, *nameFields, *_objects, *filteredScientificfields, *filtereddescription;
 
@@ -271,6 +272,11 @@ NSMutableArray *filteredFields,*fields, *picfields, *filteredpicFields,*options,
         [self.scientificTreeNameLabel setText:[filteredScientificfields objectAtIndex:index]];
          [self.treeDescriptionText setText:[filtereddescription objectAtIndex:index]];
          [self.treeImage setImage:[filteredpicFields objectAtIndex:index]];
+         
+         
+         scientificNameSelected = [filteredScientificfields objectAtIndex:index];
+         [self plotAnnotationsWithScientificName:scientificNameSelected];
+         
      }
      // Update tree information in UI before search when cell is clicked
      if(!isFiltered){
@@ -278,6 +284,10 @@ NSMutableArray *filteredFields,*fields, *picfields, *filteredpicFields,*options,
          [self.commonTreeNameLabel setText:((TreeList *) [_objects objectAtIndex:index]).tree];
          [self.scientificTreeNameLabel setText:((TreeList *) [_objects objectAtIndex:index]).scientificname];
          [self.treeDescriptionText setText:((TreeList *) [_objects objectAtIndex:index]).description];
+         
+         
+         scientificNameSelected = ((TreeList *) [_objects objectAtIndex:index]).scientificname;
+         [self plotAnnotationsWithScientificName:scientificNameSelected];
      }
     // [self.table reloadData];
  }
@@ -302,6 +312,7 @@ NSMutableArray *filteredFields,*fields, *picfields, *filteredpicFields,*options,
         filteredScientificfields= [ [NSMutableArray alloc] init];
         filtereddescription =[ [NSMutableArray alloc] init];
         filteredindexes = 0;
+        
         
         //Loops through rows to mach them with search input
         for(NSString *string in fields){
