@@ -61,9 +61,6 @@ NSMutableArray *filteredFields,*fields, *picfields, *filteredpicFields,*options,
     picfields = [[NSMutableArray alloc] init];
     scientificFields =[[NSMutableArray alloc] init];
     nameFields = [[NSMutableArray alloc] init];
-    
-        fields = [[NSMutableArray alloc] initWithObjects:@"Common Name", @"Scientific Name", nil];
-    
    
     NSInteger i = 0;
     //Populate fields array with name fields form database
@@ -126,6 +123,22 @@ NSMutableArray *filteredFields,*fields, *picfields, *filteredpicFields,*options,
 	[self.treeImage setImage: treeImage];
 
 	
+}
+
+// --------------------------------------------------------------
+// FIND ANNOTATION WITH GIVEN TREE ID
+
+- (void)findAnnotationWithGivenTreeId:(NSInteger)givenTreeId
+{
+    // Search all current map annotations
+    // for (id<TreeAnnotation> annotation in _mapView.annotations)
+    for (TreeAnnotation *annotation in _mapView.annotations)
+    {
+        if (annotation.treeId == givenTreeId)
+        {
+            [_mapView selectAnnotation:annotation animated:YES];
+        }
+    }
 }
 
 // --------------------------------------------------------------
