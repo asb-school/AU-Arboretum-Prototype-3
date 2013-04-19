@@ -179,6 +179,7 @@
                         <outlet property="commonTreeNameLabel" destination="KM6-sc-no1" id="qur-vi-pfZ"/>
                         <outlet property="informationView" destination="q5b-Eb-yGD" id="OjV-a1-kap"/>
                         <outlet property="mapView" destination="MKl-KF-KG7" id="vxp-xd-v0P"/>
+                        <outlet property="navigationController" destination="Zt2-5G-hDi" id="Tfa-0e-mga"/>
                         <outlet property="scientificTreeNameLabel" destination="yse-4e-HP4" id="PJr-6i-UE4"/>
                         <outlet property="treeDescriptionText" destination="8RQ-2w-0Kv" id="yOs-D1-f3t"/>
                         <outlet property="treeImage" destination="C0t-Ou-I8X" id="Bhn-cC-LSe"/>
@@ -197,6 +198,24 @@
         <image name="ui_button_5.png" width="427" height="88"/>
         <image name="ui_main_bg.png" width="768" height="1024"/>
     </resources>
+    <classes>
+        <class className="MapViewDelegate" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewDelegate.h"/>
+            <relationships>
+                <relationship kind="action" name="hideShowAction:"/>
+                <relationship kind="outlet" name="commonTreeNameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="informationView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+                <relationship kind="outlet" name="navigationController" candidateClass="UINavigationItem"/>
+                <relationship kind="outlet" name="scientificTreeNameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="treeDescriptionText" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="treeImage" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

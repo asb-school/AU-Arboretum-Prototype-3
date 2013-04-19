@@ -66,7 +66,7 @@ TreeController *treeController;
 
 - (void)viewDidAppear:(BOOL)animated
 {
-
+    [self findAnnotationWithGivenTreeId:1];
 }
 
 
@@ -84,9 +84,10 @@ TreeController *treeController;
     // If information view is showing
     else
     {
-        [self hideInformationView];
+        [self hideInformationViewAndClear:NO];
     }
 }
+
 
 // --------------------------------------------------------------
 // VIEW FOR ANNOTATION
@@ -191,9 +192,14 @@ TreeController *treeController;
     noFurtherAnnotationsSelected = TRUE;
     
     // Call information hide function with delay
-    [self performSelector:@selector(hideInformationViewOnTimeout) withObject:nil afterDelay:0.8];
+    [self performSelector:@selector(hideInformationViewOnTimeout) withObject:nil afterDelay:0.7];
+    
+
 }
 
+
+// --------------------------------------------------------------
+// SHOW INFORMATION VIEW
 
 - (void)showInformationView
 {
@@ -213,15 +219,11 @@ TreeController *treeController;
     informationViewHidden = FALSE;
 }
 
-- (void)hideInformationViewOnTimeout
-{
-    if (noFurtherAnnotationsSelected)
-    {
-        [self hideInformationView];
-    }
-}
 
-- (void)hideInformationView
+// --------------------------------------------------------------
+// HIDE INFORMATION VIEW
+
+- (void)hideInformationViewAndClear:(BOOL)clearView
 {
     // Animation to hide the information view
     NSTimeInterval animationDuration = 0.2; // in seconds
@@ -237,6 +239,54 @@ TreeController *treeController;
     
     // Toggle status
     informationViewHidden = TRUE;
+    
+    // If we need to clear the view
+    if (clearView)
+    {
+        // Wait a bit until the animation has completed to clear view
+        [self performSelector:@selector(clearView) withObject:nil afterDelay:0.5];
+    }
+}
+
+
+// --------------------------------------------------------------
+// HIDE INFORMATION VIEW ON TIMEOUT
+
+- (void)hideInformationViewOnTimeout
+{
+    if (noFurtherAnnotationsSelected)
+    {
+        [self hideInformationViewAndClear:YES];
+    }
+}
+
+
+// --------------------------------------------------------------
+// CLEAR VIEW
+
+- (void)clearView
+{
+    [self.commonTreeNameLabel setText: @""];
+    [self.scientificTreeNameLabel setText: @""];
+    [self.treeDescriptionText setText: @""];
+    [self.treeImage setImage: nil];
+}
+
+
+// --------------------------------------------------------------
+// FIND ANNOTATION WITH GIVEN TREE ID
+
+- (void)findAnnotationWithGivenTreeId:(NSInteger)givenTreeId
+{
+    // Search all current map annotations
+    // for (id<TreeAnnotation> annotation in _mapView.annotations)
+    for (TreeAnnotation *annotation in _mapView.annotations)
+    {
+        if (annotation.treeId == givenTreeId)
+        {
+            [_mapView selectAnnotation:annotation animated:YES];
+        }
+    }
 }
 
 
@@ -265,6 +315,8 @@ TreeController *treeController;
 	[self setTreeDescriptionText:nil];
 	[self setTreeImage:nil];
     [self setInformationView:nil];
+    [self setNavigationController:nil];
 	[super viewDidUnload];
 }
+
 @end
