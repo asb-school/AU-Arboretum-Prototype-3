@@ -132,6 +132,9 @@ NSMutableArray *filteredFields,*fields, *picfields, *filteredpicFields,*options,
 	[self.scientificTreeNameLabel setText: thisTree.scientificname];
 	[self.treeDescriptionText setText: thisTree.description];
 	[self.treeImage setImage: treeImage];
+    
+    [self.table setHidden:TRUE];
+    [self.search setHidden:TRUE];
 
 	
 }
@@ -385,6 +388,9 @@ NSMutableArray *filteredFields,*fields, *picfields, *filteredpicFields,*options,
     //Set Position and size of table when clicked
     CGRect newFrame = CGRectMake(0, 88, 248, 618);
     self.table.frame = newFrame;
+    
+    [self.table setHidden:TRUE];
+    [self.search setHidden:TRUE];
 
 
 }
