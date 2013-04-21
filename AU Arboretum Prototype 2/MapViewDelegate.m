@@ -46,7 +46,6 @@ NSMutableArray *filteredFields,*fields, *picfields, *filteredpicFields,*options,
 
 - (void)viewDidLoad
 {
-	[super viewDidLoad];
 	
     //Hide Table & Searchbar When program is initialized
 	[self.table setHidden:TRUE];
@@ -71,6 +70,8 @@ NSMutableArray *filteredFields,*fields, *picfields, *filteredpicFields,*options,
         [scientificFields addObject:((TreeList *) [_objects objectAtIndex:i]).scientificname];
         [picfields addObject: [UIImage imageNamed:((TreeList *) [_objects objectAtIndex:i]).picturename]];
         i=i+1;
+        
+        [super viewDidLoad];
     }
     
     
@@ -94,6 +95,11 @@ NSMutableArray *filteredFields,*fields, *picfields, *filteredpicFields,*options,
 }
 
 
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
 // --------------------------------------------------------------
 // PLOT ANNOTATIONS WITH SCIENTIFIC NAME
 
@@ -154,7 +160,7 @@ NSMutableArray *filteredFields,*fields, *picfields, *filteredpicFields,*options,
         }
     }
 }
-
+      
 // --------------------------------------------------------------
 // VIEW WILL APPEAR
 
@@ -211,6 +217,11 @@ NSMutableArray *filteredFields,*fields, *picfields, *filteredpicFields,*options,
 //-----------------------------------------------------------------
 //TABLE VIEW SUBROUTINES
 //-----------------------------------------------------------------
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
 {
     
@@ -218,7 +229,7 @@ NSMutableArray *filteredFields,*fields, *picfields, *filteredpicFields,*options,
    
     if(isFiltered){
         return[filteredFields count];
-    }
+   }
     else{
      return [fields count];   
     }
@@ -230,9 +241,11 @@ NSMutableArray *filteredFields,*fields, *picfields, *filteredpicFields,*options,
 
 //------------------------------------------------------------
 //------------------------------------------------------------
+
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [self.table dequeueReusableCellWithIdentifier:@"Cell"];
+    UITableViewCell *cell = [self.table dequeueReusableCellWithIdentifier:@"TreeCell"];
     
     //Decides weather to print scientific names or common names to table cells
     if(searchSelection==1){
@@ -244,18 +257,20 @@ NSMutableArray *filteredFields,*fields, *picfields, *filteredpicFields,*options,
     
     //Prints filtered images and names to cells after search
     if(isFiltered){
-        cell.textLabel.text = filteredFields[indexPath.row];
-        cell.imageView.image = filteredpicFields[indexPath.row];
+       cell.textLabel.text = filteredFields[indexPath.row];
+       cell.imageView.image = filteredpicFields[indexPath.row];
         
     }else{
         
         //Prints  names and images to cells before search
-        cell.textLabel.text = fields[indexPath.row];
+       cell.textLabel.text = fields[indexPath.row];
         cell.imageView.image = picfields[indexPath.row];
     }
     [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
     return cell;
 }
+
+
 
 //-------------------------------------------------------------------
 //------------------------------------------------------------
@@ -306,12 +321,14 @@ NSMutableArray *filteredFields,*fields, *picfields, *filteredpicFields,*options,
 -(void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
 {
     //Initialize Populates filtered arrays when there is input in search bars
-    if(searchText.length==0){
-        isFiltered=NO;}
+    if(searchText.length==0)
+    {
+        isFiltered=NO;
+    }
     else{
         isFiltered=YES;
         filteredFields =[ [NSMutableArray alloc] init];
-         filteredpicFields =[ [NSMutableArray alloc] init];
+        filteredpicFields =[ [NSMutableArray alloc] init];
         filteredScientificfields= [ [NSMutableArray alloc] init];
         filtereddescription =[ [NSMutableArray alloc] init];
         filteredindexes = 0;
@@ -322,11 +339,11 @@ NSMutableArray *filteredFields,*fields, *picfields, *filteredpicFields,*options,
             NSRange TreeRange = [string rangeOfString:searchText options: NSCaseInsensitiveSearch];
             if(TreeRange.location!= NSNotFound){
                 
-                //Add the information for the filtered searched information into their own fultered arrays
+            //Add the information for the filtered searched information into their own fultered arrays
                 [filteredpicFields addObject:[picfields objectAtIndex:filteredindexes]];
                 [filteredScientificfields addObject:[scientificFields objectAtIndex:filteredindexes]];
                 [filtereddescription addObject:((TreeList *) [_objects objectAtIndex:filteredindexes]).description];
-                [ filteredFields addObject:string ];
+                [filteredFields addObject:string ];
                 
             }
             filteredindexes++;
@@ -378,7 +395,7 @@ NSMutableArray *filteredFields,*fields, *picfields, *filteredpicFields,*options,
     CGRect newFrame = CGRectMake(0, 88, 248, 618);
     self.table.frame = newFrame;
         tableView.frame = newFrame;
-}
+} 
 //-----------------------------------------------------------------
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     
@@ -388,6 +405,7 @@ NSMutableArray *filteredFields,*fields, *picfields, *filteredpicFields,*options,
     //Set Position and size of table when clicked
     CGRect newFrame = CGRectMake(0, 88, 248, 618);
     self.table.frame = newFrame;
+    
     
     [self.table setHidden:TRUE];
     [self.search setHidden:TRUE];

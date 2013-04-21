@@ -107,27 +107,19 @@
                                     <outlet property="delegate" destination="2" id="GWs-fH-6xK"/>
                                 </connections>
                             </mapView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="hnY-ei-p0E">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Ffm-WB-K0z">
                                 <rect key="frame" x="0.0" y="88" width="248" height="607"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <tableView key="tableFooterView" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="hBB-Bd-PxW">
-                                    <rect key="frame" x="0.0" y="66" width="248" height="607"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <connections>
-                                        <outlet property="dataSource" destination="2" id="ypf-GL-RA9"/>
-                                    </connections>
-                                </tableView>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="EPe-Lp-Iqc" style="IBUITableViewCellStyleDefault" id="GBd-v9-ZxF">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="TreeCell" textLabel="z2I-Fc-REm" style="IBUITableViewCellStyleDefault" id="Chd-Tf-Pd0">
                                         <rect key="frame" x="0.0" y="22" width="248" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="228" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EPe-Lp-Iqc">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="z2I-Fc-REm">
                                                     <rect key="frame" x="10" y="0.0" width="208" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -140,8 +132,8 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="2" id="VRH-Xt-8zp"/>
-                                    <outlet property="delegate" destination="2" id="PKW-EB-Rm0"/>
+                                    <outlet property="dataSource" destination="2" id="3qj-pV-ufj"/>
+                                    <outlet property="delegate" destination="2" id="GK0-bs-ktL"/>
                                 </connections>
                             </tableView>
                             <imageView userInteractionEnabled="NO" contentMode="redraw" id="C0t-Ou-I8X">
@@ -204,7 +196,7 @@
                         <outlet property="scientificTreeNameLabel" destination="yse-4e-HP4" id="PJr-6i-UE4"/>
                         <outlet property="search" destination="9oK-J8-AGY" id="646-XQ-ytl"/>
                         <outlet property="searchDisplayController" destination="7rp-dH-p2g" id="8Oq-Fs-7Jc"/>
-                        <outlet property="table" destination="hnY-ei-p0E" id="lyt-o2-dTt"/>
+                        <outlet property="table" destination="Ffm-WB-K0z" id="6JU-wg-bgj"/>
                         <outlet property="treeDescriptionText" destination="8RQ-2w-0Kv" id="yOs-D1-f3t"/>
                         <outlet property="treeImage" destination="C0t-Ou-I8X" id="Bhn-cC-LSe"/>
                     </connections>
@@ -228,7 +220,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="812" y="-417"/>
+            <point key="canvasLocation" x="636" y="-853"/>
         </scene>
     </scenes>
     <classes>
