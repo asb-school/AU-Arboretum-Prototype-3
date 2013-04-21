@@ -71,6 +71,8 @@
 		469B983D16DF103D00A8C849 /* MyTreeLists.m in Sources */ = {isa = PBXBuildFile; fileRef = 469B983B16DF103D00A8C849 /* MyTreeLists.m */; };
 		469B983F16DF11C000A8C849 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 469B983E16DF11C000A8C849 /* libsqlite3.0.dylib */; };
 		469B984216DF135E00A8C849 /* TreeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 469B984116DF135E00A8C849 /* TreeController.m */; };
+		596C741817249E9700CA39AB /* whiteOak_winter_vertical.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 596C741717249E9700CA39AB /* whiteOak_winter_vertical.jpg */; };
+		596C741A17249EB200CA39AB /* silkTree_winter_vertical.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 596C741917249EB200CA39AB /* silkTree_winter_vertical.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -158,6 +160,8 @@
 		469B983E16DF11C000A8C849 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		469B984016DF135D00A8C849 /* TreeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeController.h; sourceTree = "<group>"; };
 		469B984116DF135E00A8C849 /* TreeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreeController.m; sourceTree = "<group>"; };
+		596C741717249E9700CA39AB /* whiteOak_winter_vertical.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = whiteOak_winter_vertical.jpg; path = media/TreeWalk/whiteOak_winter_vertical.jpg; sourceTree = "<group>"; };
+		596C741917249EB200CA39AB /* silkTree_winter_vertical.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = silkTree_winter_vertical.jpg; path = media/TreeWalk/silkTree_winter_vertical.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,12 +205,14 @@
 				22EE04771704B3FB00BA1EAC /* giantseqouia.jpg */,
 				22EE04781704B3FB00BA1EAC /* giantSequoia_winter.jpg */,
 				22EE04791704B3FB00BA1EAC /* ginkgo_winter.jpg */,
+				596C741917249EB200CA39AB /* silkTree_winter_vertical.jpg */,
+				596C741717249E9700CA39AB /* whiteOak_winter_vertical.jpg */,
 				22EE047A1704B3FB00BA1EAC /* ginkgo.jpg */,
 				22EE047B1704B3FB00BA1EAC /* kentuckycoffee.jpg */,
 				22EE047C1704B3FB00BA1EAC /* kentuckyCoffeeTree_winter.jpg */,
 				22EE047D1704B3FB00BA1EAC /* norwaySpruce_winter.jpg */,
-				22EE047E1704B3FB00BA1EAC /* norwayspruce.jpg */,
 				22EE047F1704B3FB00BA1EAC /* ohioBuckeye_Winter.jpg */,
+				22EE047E1704B3FB00BA1EAC /* norwayspruce.jpg */,
 				22EE04801704B3FC00BA1EAC /* ohiobuckeye.jpg */,
 				22EE04811704B3FC00BA1EAC /* silkTree_winter_wide.jpg */,
 				22EE04821704B3FC00BA1EAC /* silktree.jpg */,
@@ -438,6 +444,8 @@
 				22EE04B91704B3FC00BA1EAC /* whiteoak.jpg in Resources */,
 				22EE04BA1704B3FC00BA1EAC /* wollemiPine_winter_covered.jpg in Resources */,
 				22EE04BB1704B3FC00BA1EAC /* wollemipine.jpg in Resources */,
+				596C741817249E9700CA39AB /* whiteOak_winter_vertical.jpg in Resources */,
+				596C741A17249EB200CA39AB /* silkTree_winter_vertical.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
