@@ -60,6 +60,44 @@
 
 
 // --------------------------------------------------------------
+// GET TREE ANNOTATIONS FOR A SPECIFIC SCIENTIFIC NAME
+
+- (NSMutableArray *)getTreeAnnotationsForScientificName:(NSString *)givenScientificName
+{
+    // Define
+    NSMutableArray *treeList = [NSMutableArray new];
+    NSMutableArray *treeAnnotations = [NSMutableArray new];
+    
+    // Create a database controller
+    MyTreeLists *treeDatabaseController = [MyTreeLists new];
+    
+    // Get a list of all trees and their coordinates for a
+    // given scientific name
+    treeList = [treeDatabaseController getTreesWithScientificName:givenScientificName];
+    
+    // For each tree in the tree walk list create a new tree
+	// annotation and add it to the tree annotations array
+    for (TreeList *currentTree in treeList)
+    {
+        // Create a new annotation
+        TreeAnnotation *currentAnnotation = [TreeAnnotation new];
+        
+        // Set id of the tree
+        [currentAnnotation setTreeId: currentTree.treeId];
+        
+        // Set coordinates of tree
+        [currentAnnotation setCoordinateWithLatitude: currentTree.lat andLongitude: currentTree.lng];
+        
+        // Add to tree annotation list
+        [treeAnnotations addObject: currentAnnotation];
+    }
+    
+    // Return tree annotations list
+    return treeAnnotations;
+}
+
+
+// --------------------------------------------------------------
 // GET SINGLE TREE INFORMATION
 
 - (TreeList *)getSingleTreeInformation:(NSUInteger)givenTreeId

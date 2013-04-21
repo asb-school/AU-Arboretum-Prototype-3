@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12B19" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="dvn-eN-mwU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="dvn-eN-mwU">
     <dependencies>
         <deployment version="1296" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller - Navigation Controller-->
@@ -91,7 +91,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eTu-Fc-VEE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-115" y="-417"/>
+            <point key="canvasLocation" x="-903" y="-341"/>
         </scene>
         <!--Map View Delegate - Map View-->
         <scene sceneID="4">
@@ -102,11 +102,48 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="satellite" id="MKl-KF-KG7">
-                                <rect key="frame" x="0.0" y="-1" width="768" height="696"/>
+                                <rect key="frame" x="0.0" y="44" width="768" height="651"/>
                                 <connections>
                                     <outlet property="delegate" destination="2" id="GWs-fH-6xK"/>
                                 </connections>
                             </mapView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="hnY-ei-p0E">
+                                <rect key="frame" x="0.0" y="88" width="248" height="607"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <tableView key="tableFooterView" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="hBB-Bd-PxW">
+                                    <rect key="frame" x="0.0" y="66" width="248" height="607"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <connections>
+                                        <outlet property="dataSource" destination="2" id="ypf-GL-RA9"/>
+                                    </connections>
+                                </tableView>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="EPe-Lp-Iqc" style="IBUITableViewCellStyleDefault" id="GBd-v9-ZxF">
+                                        <rect key="frame" x="0.0" y="22" width="248" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="228" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EPe-Lp-Iqc">
+                                                    <rect key="frame" x="10" y="0.0" width="208" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="2" id="VRH-Xt-8zp"/>
+                                    <outlet property="delegate" destination="2" id="PKW-EB-Rm0"/>
+                                </connections>
+                            </tableView>
                             <imageView userInteractionEnabled="NO" contentMode="redraw" id="C0t-Ou-I8X">
                                 <rect key="frame" x="508" y="719" width="226" height="221"/>
                             </imageView>
@@ -128,6 +165,35 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="U4j-2y-dpN">
+                                <rect key="frame" x="0.0" y="0.0" width="898" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Common Names" id="jlN-lI-RsH">
+                                        <connections>
+                                            <action selector="Browse:" destination="2" id="Vhc-XB-sJR"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Scientific Names" width="134" id="zde-Dx-ql2">
+                                        <connections>
+                                            <action selector="SciNames:" destination="2" id="YAP-Lz-0d2"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Close Browser" id="lcZ-lF-wcs">
+                                        <connections>
+                                            <action selector="CloseBrowse:" destination="2" id="q7R-QI-v5b"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <searchBar contentMode="redraw" id="9oK-J8-AGY">
+                                <rect key="frame" x="0.0" y="44" width="248" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="2" id="jfB-Be-Sso"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -136,11 +202,31 @@
                         <outlet property="commonTreeNameLabel" destination="KM6-sc-no1" id="qur-vi-pfZ"/>
                         <outlet property="mapView" destination="MKl-KF-KG7" id="vxp-xd-v0P"/>
                         <outlet property="scientificTreeNameLabel" destination="yse-4e-HP4" id="PJr-6i-UE4"/>
+                        <outlet property="search" destination="9oK-J8-AGY" id="646-XQ-ytl"/>
+                        <outlet property="searchDisplayController" destination="7rp-dH-p2g" id="8Oq-Fs-7Jc"/>
+                        <outlet property="table" destination="hnY-ei-p0E" id="lyt-o2-dTt"/>
                         <outlet property="treeDescriptionText" destination="8RQ-2w-0Kv" id="yOs-D1-f3t"/>
                         <outlet property="treeImage" destination="C0t-Ou-I8X" id="Bhn-cC-LSe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="Je1-Ka-uXZ">
+                    <connections>
+                        <outlet property="delegate" destination="2" id="uWk-pj-OJi"/>
+                        <outlet property="searchContentsController" destination="2" id="nxq-cr-myd"/>
+                        <outlet property="searchResultsDataSource" destination="2" id="Mdd-dA-e9z"/>
+                        <outlet property="searchResultsDelegate" destination="2" id="hen-yb-ddO"/>
+                    </connections>
+                </searchDisplayController>
+                <searchDisplayController id="7rp-dH-p2g">
+                    <connections>
+                        <outlet property="delegate" destination="2" id="Mn0-Yf-pbd"/>
+                        <outlet property="searchBar" destination="9oK-J8-AGY" id="JSu-Bp-Qjw"/>
+                        <outlet property="searchContentsController" destination="2" id="rRa-J4-nsS"/>
+                        <outlet property="searchResultsDataSource" destination="2" id="XEr-1j-ula"/>
+                        <outlet property="searchResultsDelegate" destination="2" id="upX-BM-KtG"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="812" y="-417"/>
         </scene>
@@ -149,9 +235,14 @@
         <class className="MapViewDelegate" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewDelegate.h"/>
             <relationships>
+                <relationship kind="action" name="Browse:"/>
+                <relationship kind="action" name="CloseBrowse:"/>
+                <relationship kind="action" name="SciNames:"/>
                 <relationship kind="outlet" name="commonTreeNameLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
                 <relationship kind="outlet" name="scientificTreeNameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="search" candidateClass="UISearchBar"/>
+                <relationship kind="outlet" name="table" candidateClass="UITableView"/>
                 <relationship kind="outlet" name="treeDescriptionText" candidateClass="UITextView"/>
                 <relationship kind="outlet" name="treeImage" candidateClass="UIImageView"/>
             </relationships>
