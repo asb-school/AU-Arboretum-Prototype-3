@@ -28,7 +28,7 @@
         {
             NSLog(@"An error has occured.");
         }
-        const char *sql = "SELECT DISTINCT t.key, t.name, t.scientific_name, t.latitude, t.longitude, t.description, m.url FROM  trees AS t, media AS m WHERE t.key = m.treeID";
+        const char *sql = "SELECT DISTINCT t.key, t.name, t.scientific_name, t.latitude, t.longitude, t.description, m.url FROM  trees AS t, media AS m WHERE t.key = m.treeID GROUP BY t.key";
         sqlite3_stmt *sqlStatement;
         if(sqlite3_prepare(db, sql, -1, &sqlStatement, NULL) != SQLITE_OK)
         {
