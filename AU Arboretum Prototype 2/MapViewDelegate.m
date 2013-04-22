@@ -74,7 +74,6 @@ NSMutableArray *filteredFields,*fields, *picfields, *filteredpicFields,*options,
     }
     
     
-    
 	// Setup zoom location (happens to be somewhere around middle of AU)
 	CLLocationCoordinate2D zoomLocation;
 	zoomLocation.latitude = 41.961134;
