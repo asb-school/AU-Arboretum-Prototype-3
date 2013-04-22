@@ -300,6 +300,22 @@ TreeController *treeController;
     
 //    [_navigationController setNavi]
     
+    // Create an array to store the custom UI buttons
+    NSMutableArray *customUIButtons = [NSMutableArray new];
+
+    // Create a search button
+    UIBarButtonItem *searchButton =[[UIBarButtonItem alloc] initWithTitle:@"Search" style:UIBarButtonItemStyleDone target:self action:@selector(logout)];
+
+    // Add the search button to the custom UI buttons array
+    [customUIButtons addObject:searchButton];
+    
+    // Set left bar button items to the custom UI buttons we created earlier
+    self.navigationItem.leftBarButtonItems = customUIButtons;
+    
+    // This allows us to add the custom UI buttons in ADDITION to the back button.
+    // If this was set to NO, it would not show the back button.
+    self.navigationItem.leftItemsSupplementBackButton = YES;
+    
     
 //    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
     self.navigationController.navigationBar.tintColor = [UIColor purpleColor];
