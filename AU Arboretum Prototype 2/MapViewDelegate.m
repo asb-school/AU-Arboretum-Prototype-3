@@ -66,7 +66,8 @@ TreeController *treeController;
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    [self findAnnotationWithGivenTreeId:1];
+    // Select a tree on launch
+    // [self findAnnotationWithGivenTreeId:1];
 }
 
 
@@ -279,11 +280,12 @@ TreeController *treeController;
 - (void)findAnnotationWithGivenTreeId:(NSInteger)givenTreeId
 {
     // Search all current map annotations
-    // for (id<TreeAnnotation> annotation in _mapView.annotations)
     for (TreeAnnotation *annotation in _mapView.annotations)
     {
+        // If the current annotation matches the given tree id
         if (annotation.treeId == givenTreeId)
         {
+            // Select it on the map
             [_mapView selectAnnotation:annotation animated:YES];
         }
     }
@@ -296,15 +298,12 @@ TreeController *treeController;
 - (void)viewWillAppear:(BOOL)animated
 {
 
-//    self.navigationController.nav
-    
-//    [_navigationController setNavi]
     
     // Create an array to store the custom UI buttons
     NSMutableArray *customUIButtons = [NSMutableArray new];
 
     // Create a search button
-    UIBarButtonItem *searchButton =[[UIBarButtonItem alloc] initWithTitle:@"Search" style:UIBarButtonItemStyleDone target:self action:@selector(logout)];
+    UIBarButtonItem *searchButton =[[UIBarButtonItem alloc] initWithTitle:@"Search" style:UIBarButtonItemStyleDone target:self action:nil];
 
     // Add the search button to the custom UI buttons array
     [customUIButtons addObject:searchButton];
@@ -317,7 +316,7 @@ TreeController *treeController;
     self.navigationItem.leftItemsSupplementBackButton = YES;
     
     
-//    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
+    // self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
     self.navigationController.navigationBar.tintColor = [UIColor purpleColor];
     
     UINavigationBar *navigationBar = self.navigationController.navigationBar;

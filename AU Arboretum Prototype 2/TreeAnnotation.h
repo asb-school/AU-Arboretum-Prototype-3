@@ -31,5 +31,6 @@
 @property (nonatomic) CLLocationCoordinate2D coordinate;
 @property (nonatomic) NSUInteger treeId;
 @property (nonatomic) NSString *title;
+@property (nonatomic) NSString *subtitle;
 
 @end
