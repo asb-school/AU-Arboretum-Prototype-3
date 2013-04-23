@@ -50,7 +50,6 @@
 		22EE04BB1704B3FC00BA1EAC /* wollemipine.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 22EE04941704B3FC00BA1EAC /* wollemipine.jpg */; };
 		46112DEE16C91F5F0068A853 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46112DED16C91F5F0068A853 /* UIKit.framework */; };
 		46112DF016C91F5F0068A853 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46112DEF16C91F5F0068A853 /* Foundation.framework */; };
-		46112DF216C91F5F0068A853 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46112DF116C91F5F0068A853 /* CoreGraphics.framework */; };
 		46112DF816C91F5F0068A853 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 46112DF616C91F5F0068A853 /* InfoPlist.strings */; };
 		46112DFA16C91F5F0068A853 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 46112DF916C91F5F0068A853 /* main.m */; };
 		46112DFE16C91F5F0068A853 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 46112DFD16C91F5F0068A853 /* AppDelegate.m */; };
@@ -71,6 +70,21 @@
 		469B983D16DF103D00A8C849 /* MyTreeLists.m in Sources */ = {isa = PBXBuildFile; fileRef = 469B983B16DF103D00A8C849 /* MyTreeLists.m */; };
 		469B983F16DF11C000A8C849 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 469B983E16DF11C000A8C849 /* libsqlite3.0.dylib */; };
 		469B984216DF135E00A8C849 /* TreeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 469B984116DF135E00A8C849 /* TreeController.m */; };
+		469DA311171F85660027B133 /* ui_button_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 469DA30A171F85660027B133 /* ui_button_1.png */; };
+		469DA312171F85660027B133 /* ui_button_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 469DA30B171F85660027B133 /* ui_button_2.png */; };
+		469DA313171F85660027B133 /* ui_button_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 469DA30C171F85660027B133 /* ui_button_3.png */; };
+		469DA314171F85660027B133 /* ui_button_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 469DA30D171F85660027B133 /* ui_button_4.png */; };
+		469DA315171F85660027B133 /* ui_button_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 469DA30E171F85660027B133 /* ui_button_5.png */; };
+		469DA316171F85660027B133 /* ui_button_overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 469DA30F171F85660027B133 /* ui_button_overlay.png */; };
+		469DA317171F85660027B133 /* ui_main_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 469DA310171F85660027B133 /* ui_main_bg.png */; };
+		469DA319171F8B090027B133 /* ui_map_pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 469DA318171F8B090027B133 /* ui_map_pin.png */; };
+		469DA31E171F9BB70027B133 /* annotationImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 469DA31D171F9BB70027B133 /* annotationImageView.xib */; };
+		469DA320171FA6700027B133 /* ui_map_pin_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 469DA31F171FA6700027B133 /* ui_map_pin_selected.png */; };
+		469DA3281726BF420027B133 /* IISideController.m in Sources */ = {isa = PBXBuildFile; fileRef = 469DA3231726BF420027B133 /* IISideController.m */; };
+		469DA3291726BF420027B133 /* IIViewDeckController.m in Sources */ = {isa = PBXBuildFile; fileRef = 469DA3251726BF420027B133 /* IIViewDeckController.m */; };
+		469DA32A1726BF420027B133 /* IIWrapController.m in Sources */ = {isa = PBXBuildFile; fileRef = 469DA3271726BF420027B133 /* IIWrapController.m */; };
+		469DA32C1726BF860027B133 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 469DA32B1726BF860027B133 /* QuartzCore.framework */; };
+		46E01CB81726C9E6009C68C5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46112DF116C91F5F0068A853 /* CoreGraphics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -158,6 +172,23 @@
 		469B983E16DF11C000A8C849 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		469B984016DF135D00A8C849 /* TreeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeController.h; sourceTree = "<group>"; };
 		469B984116DF135E00A8C849 /* TreeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreeController.m; sourceTree = "<group>"; };
+		469DA30A171F85660027B133 /* ui_button_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ui_button_1.png; sourceTree = "<group>"; };
+		469DA30B171F85660027B133 /* ui_button_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ui_button_2.png; sourceTree = "<group>"; };
+		469DA30C171F85660027B133 /* ui_button_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ui_button_3.png; sourceTree = "<group>"; };
+		469DA30D171F85660027B133 /* ui_button_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ui_button_4.png; sourceTree = "<group>"; };
+		469DA30E171F85660027B133 /* ui_button_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ui_button_5.png; sourceTree = "<group>"; };
+		469DA30F171F85660027B133 /* ui_button_overlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ui_button_overlay.png; sourceTree = "<group>"; };
+		469DA310171F85660027B133 /* ui_main_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ui_main_bg.png; sourceTree = "<group>"; };
+		469DA318171F8B090027B133 /* ui_map_pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ui_map_pin.png; sourceTree = "<group>"; };
+		469DA31D171F9BB70027B133 /* annotationImageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = annotationImageView.xib; sourceTree = "<group>"; };
+		469DA31F171FA6700027B133 /* ui_map_pin_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ui_map_pin_selected.png; sourceTree = "<group>"; };
+		469DA3221726BF420027B133 /* IISideController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IISideController.h; sourceTree = "<group>"; };
+		469DA3231726BF420027B133 /* IISideController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IISideController.m; sourceTree = "<group>"; };
+		469DA3241726BF420027B133 /* IIViewDeckController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IIViewDeckController.h; sourceTree = "<group>"; };
+		469DA3251726BF420027B133 /* IIViewDeckController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IIViewDeckController.m; sourceTree = "<group>"; };
+		469DA3261726BF420027B133 /* IIWrapController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IIWrapController.h; sourceTree = "<group>"; };
+		469DA3271726BF420027B133 /* IIWrapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IIWrapController.m; sourceTree = "<group>"; };
+		469DA32B1726BF860027B133 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,11 +196,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46E01CB81726C9E6009C68C5 /* CoreGraphics.framework in Frameworks */,
+				469DA32C1726BF860027B133 /* QuartzCore.framework in Frameworks */,
 				469B983F16DF11C000A8C849 /* libsqlite3.0.dylib in Frameworks */,
 				46112E2916C91F9D0068A853 /* MapKit.framework in Frameworks */,
 				46112DEE16C91F5F0068A853 /* UIKit.framework in Frameworks */,
 				46112DF016C91F5F0068A853 /* Foundation.framework in Frameworks */,
-				46112DF216C91F5F0068A853 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,6 +221,9 @@
 		46112DE116C91F5F0068A853 = {
 			isa = PBXGroup;
 			children = (
+				469DA32B1726BF860027B133 /* QuartzCore.framework */,
+				469DA3211726BF420027B133 /* ViewDeck */,
+				469DA309171F85560027B133 /* UI Resources */,
 				22EE046E1704B3FB00BA1EAC /* atlasCedar_winter_trunk.jpg */,
 				22EE046F1704B3FB00BA1EAC /* atlasCedar_winter.jpg */,
 				22EE04701704B3FB00BA1EAC /* atlascedar.jpg */,
@@ -270,6 +305,7 @@
 				469B984116DF135E00A8C849 /* TreeController.m */,
 				469B980D16DF0AD500A8C849 /* MapViewDelegate.h */,
 				469B980E16DF0AD500A8C849 /* MapViewDelegate.m */,
+				469DA31D171F9BB70027B133 /* annotationImageView.xib */,
 				46112DFC16C91F5F0068A853 /* AppDelegate.h */,
 				46112DFD16C91F5F0068A853 /* AppDelegate.m */,
 				46112E0516C91F5F0068A853 /* MainStoryboard.storyboard */,
@@ -320,6 +356,35 @@
 			children = (
 			);
 			name = "Tree Images";
+			sourceTree = "<group>";
+		};
+		469DA309171F85560027B133 /* UI Resources */ = {
+			isa = PBXGroup;
+			children = (
+				469DA31F171FA6700027B133 /* ui_map_pin_selected.png */,
+				469DA318171F8B090027B133 /* ui_map_pin.png */,
+				469DA30A171F85660027B133 /* ui_button_1.png */,
+				469DA30B171F85660027B133 /* ui_button_2.png */,
+				469DA30C171F85660027B133 /* ui_button_3.png */,
+				469DA30D171F85660027B133 /* ui_button_4.png */,
+				469DA30E171F85660027B133 /* ui_button_5.png */,
+				469DA30F171F85660027B133 /* ui_button_overlay.png */,
+				469DA310171F85660027B133 /* ui_main_bg.png */,
+			);
+			name = "UI Resources";
+			sourceTree = "<group>";
+		};
+		469DA3211726BF420027B133 /* ViewDeck */ = {
+			isa = PBXGroup;
+			children = (
+				469DA3221726BF420027B133 /* IISideController.h */,
+				469DA3231726BF420027B133 /* IISideController.m */,
+				469DA3241726BF420027B133 /* IIViewDeckController.h */,
+				469DA3251726BF420027B133 /* IIViewDeckController.m */,
+				469DA3261726BF420027B133 /* IIWrapController.h */,
+				469DA3271726BF420027B133 /* IIWrapController.m */,
+			);
+			path = ViewDeck;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -438,6 +503,16 @@
 				22EE04B91704B3FC00BA1EAC /* whiteoak.jpg in Resources */,
 				22EE04BA1704B3FC00BA1EAC /* wollemiPine_winter_covered.jpg in Resources */,
 				22EE04BB1704B3FC00BA1EAC /* wollemipine.jpg in Resources */,
+				469DA311171F85660027B133 /* ui_button_1.png in Resources */,
+				469DA312171F85660027B133 /* ui_button_2.png in Resources */,
+				469DA313171F85660027B133 /* ui_button_3.png in Resources */,
+				469DA314171F85660027B133 /* ui_button_4.png in Resources */,
+				469DA315171F85660027B133 /* ui_button_5.png in Resources */,
+				469DA316171F85660027B133 /* ui_button_overlay.png in Resources */,
+				469DA317171F85660027B133 /* ui_main_bg.png in Resources */,
+				469DA319171F8B090027B133 /* ui_map_pin.png in Resources */,
+				469DA31E171F9BB70027B133 /* annotationImageView.xib in Resources */,
+				469DA320171FA6700027B133 /* ui_map_pin_selected.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,6 +556,9 @@
 				469B983C16DF103D00A8C849 /* TreeList.m in Sources */,
 				469B983D16DF103D00A8C849 /* MyTreeLists.m in Sources */,
 				469B984216DF135E00A8C849 /* TreeController.m in Sources */,
+				469DA3281726BF420027B133 /* IISideController.m in Sources */,
+				469DA3291726BF420027B133 /* IIViewDeckController.m in Sources */,
+				469DA32A1726BF420027B133 /* IIWrapController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

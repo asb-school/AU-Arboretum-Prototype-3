@@ -12,12 +12,20 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
-
+#import "TreeAnnotation.h"
+#import "IIViewDeckController.h"
 
 // --------------------------------------------------------------
 // INTERFACE DEFINITION
 
 @interface MapViewDelegate : UIViewController <MKMapViewDelegate>
+{
+    BOOL informationViewHidden;
+    BOOL noFurtherAnnotationsSelected;
+}
+
+// Navigation controller
+//@property (strong, nonatomic) IBOutlet UINavigationItem *navigationController;
 
 // Our custom map view
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
@@ -34,9 +42,17 @@
 // Tree image
 @property (strong, nonatomic) IBOutlet UIImageView *treeImage;
 
+// Information view
+@property (strong, nonatomic) IBOutlet UIView *informationView;
 
 // METHODS
 - (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view;
+- (void)showInformationView;
+- (void)hideInformationViewAndClear:(BOOL)clearView;
+- (void)hideInformationViewOnTimeout;
+- (void)clearView;
+- (void)findAnnotationWithGivenTreeId:(NSInteger)givenTreeId;
+- (IBAction)hideShowAction:(id)sender;
 
 
 @end

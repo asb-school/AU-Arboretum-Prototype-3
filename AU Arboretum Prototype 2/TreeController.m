@@ -49,6 +49,10 @@
 		
 		// Set coordinates of tree
 		[currentAnnotation setCoordinateWithLatitude: currentTree.lat andLongitude: currentTree.lng];
+        
+        // Set tree type            
+        currentAnnotation.title = currentTree.tree;
+        currentAnnotation.subtitle = currentTree.scientificname;
 		
 		// Add to tree annotation list
 		[treeWalkAnnotations addObject: currentAnnotation];

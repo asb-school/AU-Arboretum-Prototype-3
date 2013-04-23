@@ -140,7 +140,7 @@
         {
             NSLog(@"An error has occured.");
         }
-        const char *sql = "SELECT key, latitude, longitude FROM  trees";
+        const char *sql = "SELECT key, latitude, longitude, name, scientific_name FROM  trees";
         sqlite3_stmt *sqlStatement;
         if(sqlite3_prepare(db, sql, -1, &sqlStatement, NULL) != SQLITE_OK)
         {
@@ -157,6 +157,12 @@
 			
 			// ERROR! The longitude is actually the latitude
             MyTreeCoordinates.lng = [NSNumber numberWithFloat:(float)sqlite3_column_double(sqlStatement, 1)];
+            
+            // Tree name
+            MyTreeCoordinates.tree = [NSString stringWithUTF8String:(char *) sqlite3_column_text(sqlStatement, 3)];
+            
+            // Scientific name
+            MyTreeCoordinates.scientificname = [NSString stringWithUTF8String:(char *)sqlite3_column_text(sqlStatement, 4)];
 						
             [treeCoordinatesArray addObject:MyTreeCoordinates];
         }

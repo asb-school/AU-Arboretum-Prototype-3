@@ -24,6 +24,8 @@
 
 @synthesize treeId;
 @synthesize coordinate;
+@synthesize title;
+@synthesize subtitle;
 
 
 // --------------------------------------------------------------
@@ -38,5 +40,6 @@
 
 	[self setCoordinate: temporaryCoordinate];
 }
+
 
 @end
