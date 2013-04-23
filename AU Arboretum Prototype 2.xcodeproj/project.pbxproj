@@ -64,6 +64,7 @@
 		46112E1C16C91F5F0068A853 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 46112E1A16C91F5F0068A853 /* InfoPlist.strings */; };
 		46112E1F16C91F5F0068A853 /* AU_Arboretum_Prototype_2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 46112E1E16C91F5F0068A853 /* AU_Arboretum_Prototype_2Tests.m */; };
 		46112E2916C91F9D0068A853 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46112E2816C91F9D0068A853 /* MapKit.framework */; };
+		467ED2101726E253003BF980 /* SearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 467ED20F1726E253003BF980 /* SearchController.m */; };
 		469B980316DEF02900A8C849 /* TreeAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 469B980216DEF02900A8C849 /* TreeAnnotation.m */; };
 		469B980F16DF0AD500A8C849 /* MapViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 469B980E16DF0AD500A8C849 /* MapViewDelegate.m */; };
 		469B983C16DF103D00A8C849 /* TreeList.m in Sources */ = {isa = PBXBuildFile; fileRef = 469B983916DF103D00A8C849 /* TreeList.m */; };
@@ -161,6 +162,8 @@
 		46112E1D16C91F5F0068A853 /* AU_Arboretum_Prototype_2Tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AU_Arboretum_Prototype_2Tests.h; sourceTree = "<group>"; };
 		46112E1E16C91F5F0068A853 /* AU_Arboretum_Prototype_2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AU_Arboretum_Prototype_2Tests.m; sourceTree = "<group>"; };
 		46112E2816C91F9D0068A853 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		467ED20E1726E253003BF980 /* SearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchController.h; sourceTree = "<group>"; };
+		467ED20F1726E253003BF980 /* SearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchController.m; sourceTree = "<group>"; };
 		469B980116DEF02900A8C849 /* TreeAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeAnnotation.h; sourceTree = "<group>"; };
 		469B980216DEF02900A8C849 /* TreeAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreeAnnotation.m; sourceTree = "<group>"; };
 		469B980D16DF0AD500A8C849 /* MapViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewDelegate.h; sourceTree = "<group>"; };
@@ -224,45 +227,6 @@
 				469DA32B1726BF860027B133 /* QuartzCore.framework */,
 				469DA3211726BF420027B133 /* ViewDeck */,
 				469DA309171F85560027B133 /* UI Resources */,
-				22EE046E1704B3FB00BA1EAC /* atlasCedar_winter_trunk.jpg */,
-				22EE046F1704B3FB00BA1EAC /* atlasCedar_winter.jpg */,
-				22EE04701704B3FB00BA1EAC /* atlascedar.jpg */,
-				22EE04711704B3FB00BA1EAC /* baldCypress_winter.jpg */,
-				22EE04721704B3FB00BA1EAC /* baldcypress.jpg */,
-				22EE04731704B3FB00BA1EAC /* bristleconePine_winter.jpg */,
-				22EE04741704B3FB00BA1EAC /* bristleconepine.jpg */,
-				22EE04751704B3FB00BA1EAC /* dawnRedwood_.jpg */,
-				22EE04761704B3FB00BA1EAC /* dawnredwood.jpg */,
-				22EE04771704B3FB00BA1EAC /* giantseqouia.jpg */,
-				22EE04781704B3FB00BA1EAC /* giantSequoia_winter.jpg */,
-				22EE04791704B3FB00BA1EAC /* ginkgo_winter.jpg */,
-				22EE047A1704B3FB00BA1EAC /* ginkgo.jpg */,
-				22EE047B1704B3FB00BA1EAC /* kentuckycoffee.jpg */,
-				22EE047C1704B3FB00BA1EAC /* kentuckyCoffeeTree_winter.jpg */,
-				22EE047D1704B3FB00BA1EAC /* norwaySpruce_winter.jpg */,
-				22EE047E1704B3FB00BA1EAC /* norwayspruce.jpg */,
-				22EE047F1704B3FB00BA1EAC /* ohioBuckeye_Winter.jpg */,
-				22EE04801704B3FC00BA1EAC /* ohiobuckeye.jpg */,
-				22EE04811704B3FC00BA1EAC /* silkTree_winter_wide.jpg */,
-				22EE04821704B3FC00BA1EAC /* silktree.jpg */,
-				22EE04831704B3FC00BA1EAC /* silverMaple_winter.jpg */,
-				22EE04841704B3FC00BA1EAC /* silvermaple.jpg */,
-				22EE04851704B3FC00BA1EAC /* sugarMaple_Bark_winter.jpg */,
-				22EE04861704B3FC00BA1EAC /* sugarMaple_winter.jpg */,
-				22EE04871704B3FC00BA1EAC /* sugarmaple.jpg */,
-				22EE04881704B3FC00BA1EAC /* sycamore_winter_crackArrowCloseup.jpg */,
-				22EE04891704B3FC00BA1EAC /* sycamore_winter.jpg */,
-				22EE048A1704B3FC00BA1EAC /* sycamore.jpg */,
-				22EE048B1704B3FC00BA1EAC /* umbrellaPine_winter.jpg */,
-				22EE048C1704B3FC00BA1EAC /* umbrellapine.jpg */,
-				22EE048D1704B3FC00BA1EAC /* weepingeurobeech.jpg */,
-				22EE048E1704B3FC00BA1EAC /* weepingEuropeanBeech_winter.jpg */,
-				22EE048F1704B3FC00BA1EAC /* weepingJapaneseLarch_winter.jpg */,
-				22EE04901704B3FC00BA1EAC /* weepingjaplarch.jpg */,
-				22EE04911704B3FC00BA1EAC /* whiteOak_winter.jpg */,
-				22EE04921704B3FC00BA1EAC /* whiteoak.jpg */,
-				22EE04931704B3FC00BA1EAC /* wollemiPine_winter_covered.jpg */,
-				22EE04941704B3FC00BA1EAC /* wollemipine.jpg */,
 				469B983E16DF11C000A8C849 /* libsqlite3.0.dylib */,
 				469B981116DF0FDF00A8C849 /* Tree Images */,
 				46112E2816C91F9D0068A853 /* MapKit.framework */,
@@ -299,6 +263,8 @@
 				229222D216FFC083005A334E /* MyTreesDBnew.sqlite */,
 				469B983916DF103D00A8C849 /* TreeList.m */,
 				469B983816DF103C00A8C849 /* TreeList.h */,
+				467ED20E1726E253003BF980 /* SearchController.h */,
+				467ED20F1726E253003BF980 /* SearchController.m */,
 				469B983A16DF103D00A8C849 /* MyTreeLists.h */,
 				469B983B16DF103D00A8C849 /* MyTreeLists.m */,
 				469B984016DF135D00A8C849 /* TreeController.h */,
@@ -354,6 +320,45 @@
 		469B981116DF0FDF00A8C849 /* Tree Images */ = {
 			isa = PBXGroup;
 			children = (
+				22EE046E1704B3FB00BA1EAC /* atlasCedar_winter_trunk.jpg */,
+				22EE046F1704B3FB00BA1EAC /* atlasCedar_winter.jpg */,
+				22EE04701704B3FB00BA1EAC /* atlascedar.jpg */,
+				22EE04711704B3FB00BA1EAC /* baldCypress_winter.jpg */,
+				22EE04721704B3FB00BA1EAC /* baldcypress.jpg */,
+				22EE04731704B3FB00BA1EAC /* bristleconePine_winter.jpg */,
+				22EE04741704B3FB00BA1EAC /* bristleconepine.jpg */,
+				22EE04751704B3FB00BA1EAC /* dawnRedwood_.jpg */,
+				22EE04761704B3FB00BA1EAC /* dawnredwood.jpg */,
+				22EE04771704B3FB00BA1EAC /* giantseqouia.jpg */,
+				22EE04781704B3FB00BA1EAC /* giantSequoia_winter.jpg */,
+				22EE04791704B3FB00BA1EAC /* ginkgo_winter.jpg */,
+				22EE047A1704B3FB00BA1EAC /* ginkgo.jpg */,
+				22EE047B1704B3FB00BA1EAC /* kentuckycoffee.jpg */,
+				22EE047C1704B3FB00BA1EAC /* kentuckyCoffeeTree_winter.jpg */,
+				22EE047D1704B3FB00BA1EAC /* norwaySpruce_winter.jpg */,
+				22EE047E1704B3FB00BA1EAC /* norwayspruce.jpg */,
+				22EE047F1704B3FB00BA1EAC /* ohioBuckeye_Winter.jpg */,
+				22EE04801704B3FC00BA1EAC /* ohiobuckeye.jpg */,
+				22EE04811704B3FC00BA1EAC /* silkTree_winter_wide.jpg */,
+				22EE04821704B3FC00BA1EAC /* silktree.jpg */,
+				22EE04831704B3FC00BA1EAC /* silverMaple_winter.jpg */,
+				22EE04841704B3FC00BA1EAC /* silvermaple.jpg */,
+				22EE04851704B3FC00BA1EAC /* sugarMaple_Bark_winter.jpg */,
+				22EE04861704B3FC00BA1EAC /* sugarMaple_winter.jpg */,
+				22EE04871704B3FC00BA1EAC /* sugarmaple.jpg */,
+				22EE04881704B3FC00BA1EAC /* sycamore_winter_crackArrowCloseup.jpg */,
+				22EE04891704B3FC00BA1EAC /* sycamore_winter.jpg */,
+				22EE048A1704B3FC00BA1EAC /* sycamore.jpg */,
+				22EE048B1704B3FC00BA1EAC /* umbrellaPine_winter.jpg */,
+				22EE048C1704B3FC00BA1EAC /* umbrellapine.jpg */,
+				22EE048D1704B3FC00BA1EAC /* weepingeurobeech.jpg */,
+				22EE048E1704B3FC00BA1EAC /* weepingEuropeanBeech_winter.jpg */,
+				22EE048F1704B3FC00BA1EAC /* weepingJapaneseLarch_winter.jpg */,
+				22EE04901704B3FC00BA1EAC /* weepingjaplarch.jpg */,
+				22EE04911704B3FC00BA1EAC /* whiteOak_winter.jpg */,
+				22EE04921704B3FC00BA1EAC /* whiteoak.jpg */,
+				22EE04931704B3FC00BA1EAC /* wollemiPine_winter_covered.jpg */,
+				22EE04941704B3FC00BA1EAC /* wollemipine.jpg */,
 			);
 			name = "Tree Images";
 			sourceTree = "<group>";
@@ -559,6 +564,7 @@
 				469DA3281726BF420027B133 /* IISideController.m in Sources */,
 				469DA3291726BF420027B133 /* IIViewDeckController.m in Sources */,
 				469DA32A1726BF420027B133 /* IIWrapController.m in Sources */,
+				467ED2101726E253003BF980 /* SearchController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

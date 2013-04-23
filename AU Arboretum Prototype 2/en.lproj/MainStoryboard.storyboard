@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="dvn-eN-mwU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12B19" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="dvn-eN-mwU">
     <dependencies>
         <deployment version="1296" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller - Navigation Controller-->
@@ -63,10 +63,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Bxy-Kr-S3G">
-                                <rect key="frame" x="82" y="586" width="428" height="83"/>
+                                <rect key="frame" x="82" y="583" width="428" height="88"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="22"/>
                                 <inset key="contentEdgeInsets" minX="38" minY="1" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="CAMPUS TREES" backgroundImage="ui_button_3.png">
+                                <state key="normal" title="HISTORICAL TREE WALK" backgroundImage="ui_button_3.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -75,7 +75,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="TWY-7a-RMG">
-                                <rect key="frame" x="82" y="684" width="428" height="83"/>
+                                <rect key="frame" x="82" y="681" width="428" height="88"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="22"/>
                                 <inset key="contentEdgeInsets" minX="38" minY="1" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="ALL TREES" backgroundImage="ui_button_4.png">
@@ -87,10 +87,10 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="dbT-aK-mGQ">
-                                <rect key="frame" x="82" y="782" width="428" height="83"/>
+                                <rect key="frame" x="82" y="779" width="428" height="88"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="22"/>
                                 <inset key="contentEdgeInsets" minX="38" minY="1" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="UNDEFINED" backgroundImage="ui_button_5.png">
+                                <state key="normal" title="SEARCH" backgroundImage="ui_button_5.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -188,10 +188,10 @@
             </objects>
             <point key="canvasLocation" x="812" y="-417"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Search Controller-->
         <scene sceneID="K5L-91-D4e">
             <objects>
-                <tableViewController storyboardIdentifier="search" id="Ngh-ej-9R0" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="search" id="Ngh-ej-9R0" customClass="SearchController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="wZp-ez-WF4">
                         <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -226,23 +226,6 @@
         <image name="ui_button_5.png" width="427" height="88"/>
         <image name="ui_main_bg.png" width="768" height="1024"/>
     </resources>
-    <classes>
-        <class className="MapViewDelegate" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewDelegate.h"/>
-            <relationships>
-                <relationship kind="action" name="hideShowAction:"/>
-                <relationship kind="outlet" name="commonTreeNameLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="informationView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
-                <relationship kind="outlet" name="scientificTreeNameLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="treeDescriptionText" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="treeImage" candidateClass="UIImageView"/>
-            </relationships>
-        </class>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

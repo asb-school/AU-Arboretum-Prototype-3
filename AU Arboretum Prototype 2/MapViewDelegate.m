@@ -11,21 +11,12 @@
 // IMPORTS
 
 #import "MapViewDelegate.h"
-#import "TreeController.h"
-#import "TreeAnnotation.h"
-#import "TreeList.h"
 
 
 // --------------------------------------------------------------
 // DEFINITIONS
 
 #define METERS_PER_MILE 1609.344
-
-
-// --------------------------------------------------------------
-// SETUP CLASS VARIABLES
-
-TreeController *treeController;
 
 
 // --------------------------------------------------------------
@@ -40,11 +31,10 @@ TreeController *treeController;
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
-	
-//	[self.viewDeckController toggleLeftViewAnimated:YES];
-	
-	
-	
+    
+    // More details please
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(selectTreeNotification:) name:@"selectTreesWithCustomType" object:nil];
+    
 	// Setup zoom location (happens to be somewhere around middle of AU)
 	CLLocationCoordinate2D zoomLocation;
 	zoomLocation.latitude = 41.961134;
@@ -63,6 +53,11 @@ TreeController *treeController;
 	[self.mapView addAnnotations: [treeController getTreeAnnotations]];
 }
 
+- (void) selectTreeNotification:(NSNotification *)notification
+{
+    NSDictionary *treeInformation = notification.userInfo;
+    NSLog(@"Please select tree type: %@", [treeInformation objectForKey:@"treeType"]);
+}
 
 // --------------------------------------------------------------
 // VIEW DID APPEAR
@@ -71,6 +66,14 @@ TreeController *treeController;
 {
     // Select a tree on launch
     // [self findAnnotationWithGivenTreeId:1];
+}
+
+
+- (void)selectTree:(NSString *)givenTreeType
+{
+    NSLog(@"display trees with type: %@", givenTreeType);
+    
+    [self findAnnotationWithGivenTreeId:3];
 }
 
 
@@ -116,6 +119,7 @@ TreeController *treeController;
 			// Create a button
 			UIButton *button = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
 			button.frame = CGRectMake(0, 0, 23, 24);
+            
 			//annotationView.rightCalloutAccessoryView = button;
 
 			// Custom view -- failed experiement

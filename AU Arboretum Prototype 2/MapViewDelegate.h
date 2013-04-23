@@ -12,8 +12,11 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
-#import "TreeAnnotation.h"
 #import "IIViewDeckController.h"
+#import "TreeController.h"
+#import "TreeAnnotation.h"
+#import "TreeList.h"
+
 
 // --------------------------------------------------------------
 // INTERFACE DEFINITION
@@ -22,6 +25,7 @@
 {
     BOOL informationViewHidden;
     BOOL noFurtherAnnotationsSelected;
+    TreeController *treeController;
 }
 
 // Navigation controller
@@ -51,6 +55,8 @@
 - (void)hideInformationViewAndClear:(BOOL)clearView;
 - (void)hideInformationViewOnTimeout;
 - (void)clearView;
+- (void)selectTreeNotification:(NSNotification *)notification;
+- (void)selectTree:(NSString *)givenTreeType;
 - (void)findAnnotationWithGivenTreeId:(NSInteger)givenTreeId;
 - (IBAction)hideShowAction:(id)sender;
 
