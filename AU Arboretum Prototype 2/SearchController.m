@@ -6,16 +6,27 @@
 //  Copyright (c) 2013 Andrews University. All rights reserved.
 //
 
+
+// --------------------------------------------------------------
+// IMPORTS
+
 #import "SearchController.h"
 
-@interface SearchController ()
 
-@end
+// --------------------------------------------------------------
+// BEGIN IMPLEMENTATION
 
 @implementation SearchController
 
+
+// --------------------------------------------------------------
+// SYNTHESIZE PROPERTIES
+
 @synthesize tableData;
 
+
+// --------------------------------------------------------------
+// INIT FUNCTION
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,11 +43,50 @@
     return self;
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
 
+// --------------------------------------------------------------
+// VIEW DID LOAD
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+	
+	// Set language strings
+	allTreesString = @"ALL TREES";
+	
+	// Init the table data array
+	tableData = [NSMutableArray new];
+	
+	// Get tree types
+	[self getTreeTypes];
+	
+    // Reload data
+    [self.tableView reloadData];
 }
 
+
+// --------------------------------------------------------------
+// GET TREE TYPES
+
+- (void)getTreeTypes
+{
+	// Temporary list container
+	NSMutableArray *treeTypes = [NSMutableArray new];
+	
+	// Create database controller
+	MyTreeLists *treeDatabaseController = [MyTreeLists new];
+	
+	// Get a list of all tree types
+	treeTypes = [treeDatabaseController getTreeTypes];
+	
+	// Format stuff to the table data
+	[tableData addObject: allTreesString];
+	[tableData addObjectsFromArray: treeTypes];
+}
+
+
+// --------------------------------------------------------------
+// NUMBER OF ROWS IN SECTION
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -44,16 +94,38 @@
 }
 
 
+// --------------------------------------------------------------
+// DID SELECT ROW AT INDEX PATH
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+	// Get a reference to the current cell
     UITableViewCell *currentCell = [self.tableView cellForRowAtIndexPath:indexPath];
-    
-    NSLog(@"selected: %@", currentCell.textLabel.text);
-    
-    NSDictionary *treeInformation = [NSDictionary dictionaryWithObject:currentCell.textLabel.text forKey:@"treeType"];
-    
-    [[NSNotificationCenter defaultCenter] postNotificationName: @"selectTreesWithCustomType" object:nil userInfo:treeInformation];
+	
+	// Check if we need to select all trees, or just one specific one
+	if ([currentCell.textLabel.text isEqualToString: allTreesString])
+	{
+		// Call notification center to dispatch observer for selecting all trees
+		[[NSNotificationCenter defaultCenter] postNotificationName:@"selectAllTrees" object:nil];
+	}
+	
+	// Else, select a specific tree
+	else
+	{
+		// Get the cell text and assign it to a tree information dictionary
+		NSDictionary *treeInformation = [NSDictionary dictionaryWithObject:currentCell.textLabel.text forKey:@"treeType"];
+		
+		// Call notification center to dispatch observer for selecting tree with tree information dictionary
+		[[NSNotificationCenter defaultCenter] postNotificationName: @"selectTreesWithCustomType" object:nil userInfo:treeInformation];
+	}
+	
+	// Deselect cell after selecting
+	[self.tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:YES];
 }
+
+
+// --------------------------------------------------------------
+// CELL FOR ROW AT INDEX PATH
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -71,22 +143,8 @@
 }
 
 
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view.
-    
-    // Set table data
-    tableData = [NSMutableArray new];
-    
-    // Dummy data
-    [tableData addObject:@"one"];
-    [tableData addObject:@"two"];
-    
-    // Reload data
-    [self.tableView reloadData];
-}
+// --------------------------------------------------------------
+// DID RECEIVE MEMORY WARNING
 
 - (void)didReceiveMemoryWarning
 {

@@ -20,7 +20,7 @@
 
 
 // --------------------------------------------------------------
-// SYNTHESIZE PROPERTIES (setters & getters)
+// SYNTHESIZE PROPERTIES
 
 @synthesize treeId;
 @synthesize coordinate;

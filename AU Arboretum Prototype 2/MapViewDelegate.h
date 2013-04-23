@@ -23,13 +23,13 @@
 
 @interface MapViewDelegate : UIViewController <MKMapViewDelegate>
 {
+	// VARIABLES
     BOOL informationViewHidden;
     BOOL noFurtherAnnotationsSelected;
     TreeController *treeController;
 }
 
-// Navigation controller
-//@property (strong, nonatomic) IBOutlet UINavigationItem *navigationController;
+// PROPERTIES
 
 // Our custom map view
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
@@ -49,14 +49,17 @@
 // Information view
 @property (strong, nonatomic) IBOutlet UIView *informationView;
 
+
 // METHODS
 - (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view;
+- (void)plotAllAnnotations;
 - (void)showInformationView;
 - (void)hideInformationViewAndClear:(BOOL)clearView;
 - (void)hideInformationViewOnTimeout;
 - (void)clearView;
+- (void)selectAllTreesNotification:(NSNotification *)notification;
 - (void)selectTreeNotification:(NSNotification *)notification;
-- (void)selectTree:(NSString *)givenTreeType;
+- (void)plotAnnotationsWithCommonName:(NSString *)givenCommonName;
 - (void)findAnnotationWithGivenTreeId:(NSInteger)givenTreeId;
 - (IBAction)hideShowAction:(id)sender;
 

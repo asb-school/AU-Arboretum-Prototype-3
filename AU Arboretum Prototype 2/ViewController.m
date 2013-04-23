@@ -54,6 +54,7 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+	// Hide navigation bar
     [self.navigationController setNavigationBarHidden:YES animated:animated];
 	[super viewWillAppear:animated];
 }
@@ -64,6 +65,7 @@
 
 - (void)viewWillDisappear:(BOOL)animated
 {
+	// Show navigation bar
 	[self.navigationController setNavigationBarHidden:NO animated:animated];
 	[super viewWillDisappear:animated];
 }

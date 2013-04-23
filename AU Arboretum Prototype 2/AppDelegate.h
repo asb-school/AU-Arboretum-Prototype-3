@@ -6,11 +6,20 @@
 //  Copyright (c) 2013 Andrews University. All rights reserved.
 //
 
+
+// --------------------------------------------------------------
+// IMPORTS
+
 #import <UIKit/UIKit.h>
 #import "IIViewDeckController.h"
 
+
+// --------------------------------------------------------------
+// INTERFACE DEFINITION
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
+// PROPERTIES
 @property (strong, nonatomic) UIWindow *window;
 
 @end

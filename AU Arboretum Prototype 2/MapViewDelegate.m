@@ -32,8 +32,13 @@
 {
 	[super viewDidLoad];
     
-    // More details please
+	// Setup observers on the notification center for:
+	
+	// Select trees with a specific type
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(selectTreeNotification:) name:@"selectTreesWithCustomType" object:nil];
+    
+	// Select all trees
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(selectAllTreesNotification:) name:@"selectAllTrees" object:nil];
     
 	// Setup zoom location (happens to be somewhere around middle of AU)
 	CLLocationCoordinate2D zoomLocation;
@@ -49,15 +54,82 @@
 	// Create a new tree controller object
 	treeController = [TreeController new];
 	
+	// Plot all annotations
+	[self plotAllAnnotations];
+}
+
+
+// --------------------------------------------------------------
+// SELECT ALL TREES NOTIFICATION
+
+- (void)selectAllTreesNotification:(NSNotification *)notification
+{
+	// Hide search pane
+	[self.viewDeckController toggleLeftViewAnimated:YES];
+	
+	// Plot all annotations
+	[self plotAllAnnotations];
+}
+
+
+// --------------------------------------------------------------
+// SELECT TREE NOTIFICATION
+
+- (void) selectTreeNotification:(NSNotification *)notification
+{
+	// Extract the tree information dictionary from the notification object wrapper
+    NSDictionary *treeInformation = notification.userInfo;
+	
+	// Hide search pane
+	[self.viewDeckController toggleLeftViewAnimated:YES];
+	
+	// Plot annotations with the given name from the tree information dictionary
+	[self plotAnnotationsWithCommonName:[treeInformation objectForKey:@"treeType"]];
+}
+
+
+// --------------------------------------------------------------
+// PLOT ALL ANNOTATIONS
+
+- (void)plotAllAnnotations
+{
+	// Clear any annotations
+	if ([self.mapView annotations])
+	{
+		[self.mapView removeAnnotations:[self.mapView annotations]];
+	}
+	
 	// Get annotations from tree controller and add to map view
 	[self.mapView addAnnotations: [treeController getTreeAnnotations]];
 }
 
-- (void) selectTreeNotification:(NSNotification *)notification
+
+// --------------------------------------------------------------
+// PLOT ANNOTATIONS WITH COMMON NAME
+
+- (void)plotAnnotationsWithCommonName:(NSString *)givenCommonName
 {
-    NSDictionary *treeInformation = notification.userInfo;
-    NSLog(@"Please select tree type: %@", [treeInformation objectForKey:@"treeType"]);
+	// New container for returned annotations
+	NSMutableArray *returnedAnnotations = [NSMutableArray new];
+	
+	// Get tree annotations with the given common name
+	returnedAnnotations = [treeController getTreeAnnotationsForType:givenCommonName];
+	
+	// Check if we have results
+	if (returnedAnnotations)
+	{
+		// If we have more than 0
+		if ([returnedAnnotations count] > 0)
+		{
+			// Clear the map of any annotations
+			[self.mapView removeAnnotations:[self.mapView annotations]];
+			
+			// Add the annotations to the map
+			[self.mapView addAnnotations:returnedAnnotations];
+		}
+	}
 }
+
 
 // --------------------------------------------------------------
 // VIEW DID APPEAR
@@ -66,14 +138,6 @@
 {
     // Select a tree on launch
     // [self findAnnotationWithGivenTreeId:1];
-}
-
-
-- (void)selectTree:(NSString *)givenTreeType
-{
-    NSLog(@"display trees with type: %@", givenTreeType);
-    
-    [self findAnnotationWithGivenTreeId:3];
 }
 
 
@@ -116,7 +180,8 @@
 			// Create annotation view with given annotation ID
             annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier];
 			
-			// Create a button
+			// Failed experiment
+			/* Create a button
 			UIButton *button = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
 			button.frame = CGRectMake(0, 0, 23, 24);
             
@@ -126,7 +191,7 @@
 			UIView *leftCAV = [[UIView alloc] initWithFrame:CGRectMake(0,0,366,455)];
 			[leftCAV addSubview: [[[NSBundle mainBundle] loadNibNamed:@"annotationImageView" owner:self options:nil] lastObject]];
 	
-			//annotationView.rightCalloutAccessoryView = leftCAV;
+			//annotationView.rightCalloutAccessoryView = leftCAV;*/
 			
 			// Config options
             annotationView.enabled = YES;
