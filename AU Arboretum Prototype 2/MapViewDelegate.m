@@ -75,7 +75,7 @@
 // --------------------------------------------------------------
 // SELECT TREE NOTIFICATION
 
-- (void) selectTreeNotification:(NSNotification *)notification
+- (void)selectTreeNotification:(NSNotification *)notification
 {
 	// Extract the tree information dictionary from the notification object wrapper
     NSDictionary *treeInformation = notification.userInfo;
@@ -278,7 +278,7 @@
 {
     // Animation to show the information view
     NSTimeInterval animationDuration = 0.2; // in seconds
-    CGRect newFrameSize = CGRectMake(0, 690, 768, 266);
+    CGRect newFrameSize = CGRectMake(0, 600, 768, 365);
     
     // Begin animations
     [UIView beginAnimations:nil context:NULL];
@@ -300,7 +300,7 @@
 {
     // Animation to hide the information view
     NSTimeInterval animationDuration = 0.2; // in seconds
-    CGRect newFrameSize = CGRectMake(0, 940, 768, 266);
+    CGRect newFrameSize = CGRectMake(0, 930, 768, 365);
     
     // Begin animations
     [UIView beginAnimations:nil context:NULL];
@@ -379,31 +379,48 @@
     NSMutableArray *customUIButtons = [NSMutableArray new];
 
     // Create a search button
-    UIBarButtonItem *searchButton =[[UIBarButtonItem alloc] initWithTitle:@"Search" style:UIBarButtonItemStyleDone target:self action:@selector(searchButton)];
+//    UIBarButtonItem *searchButton = [[UIBarButtonItem alloc] initWithTitle:@"Search" style:UIBarButtonItemStyleDone target:self action:@selector(searchButton)];
+	
+//	UIBarButtonItem *searchButton = [UIButton buttonWithType:UIButtonTypeCustom];
+	
+//	[searchButton setBackgroundImage: [UIImage imageNamed:@"ui_search_button.png"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+	
+//	UIBarButtonItem *searchButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"ui_search_button.png"] style:UIButtonTypeCustom target:self action:@selector(searchButton)];
 
     // Add the search button to the custom UI buttons array
-    [customUIButtons addObject:searchButton];
+//    [customUIButtons addObjectarchButton];
+
+	UIButton *buttom = [UIButton buttonWithType:UIButtonTypeCustom];
+	[buttom setImage: [UIImage imageNamed:@"ui_search_button.png"] forState:UIControlStateNormal];
+	
+	buttom.frame = CGRectMake(0, 0, 30, 30);
+//	[self.navigationController popViewControllerAnimated:YES];
+	[buttom addTarget:self action:@selector(searchButton) forControlEvents:UIControlEventTouchUpInside];
+
+	UIBarButtonItem *customBarItem = [[UIBarButtonItem alloc] initWithCustomView:buttom];
+	
+	[customUIButtons addObject:customBarItem];
     
     // Set left bar button items to the custom UI buttons we created earlier
     self.navigationItem.leftBarButtonItems = customUIButtons;
     
     // This allows us to add the custom UI buttons in ADDITION to the back button.
     // If this was set to NO, it would not show the back button.
-    self.navigationItem.leftItemsSupplementBackButton = YES;
+    self.navigationItem.leftItemsSupplementBackButton = NO;
     
     
     // self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
-    self.navigationController.navigationBar.tintColor = [UIColor purpleColor];
+    self.navigationController.navigationBar.tintColor = [UIColor grayColor];
     
     UINavigationBar *navigationBar = self.navigationController.navigationBar;
-    UIImage *customBarImage = [UIImage imageNamed:@"ui_button_1.png"];
+    UIImage *customBarImage = [UIImage imageNamed:@"ui_navigation_bar"];
 
     [navigationBar setBackgroundImage:customBarImage forBarMetrics:UIBarMetricsDefault];
     
     
     
     // Hide the information view
-    CGRect newFrameSize = CGRectMake(0, 940, 768, 266);
+    CGRect newFrameSize = CGRectMake(0, 930, 768, 365);
     _informationView.frame = newFrameSize;
     [UIView commitAnimations];
     

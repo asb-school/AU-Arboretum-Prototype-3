@@ -38,6 +38,10 @@
         // Set delegates and data sources
         self.tableView.delegate = self;
         self.tableView.dataSource = self;
+		
+		// Table view background color
+		self.tableView.backgroundView = nil;
+		self.tableView.backgroundColor = [UIColor redColor];
     }
     
     return self;
@@ -121,6 +125,15 @@
 	
 	// Deselect cell after selecting
 	[self.tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:YES];
+}
+
+
+// --------------------------------------------------------------
+// WILL DISPLAY CELL FOR ROW AT INDEX PATH
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    cell.backgroundColor = [UIColor redColor];
 }
 
 
