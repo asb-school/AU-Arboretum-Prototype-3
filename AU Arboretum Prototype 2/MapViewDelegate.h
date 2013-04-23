@@ -13,6 +13,7 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 #import "TreeAnnotation.h"
+#import "IIViewDeckController.h"
 
 // --------------------------------------------------------------
 // INTERFACE DEFINITION

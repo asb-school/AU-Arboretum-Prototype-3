@@ -41,6 +41,9 @@ TreeController *treeController;
 {
 	[super viewDidLoad];
 	
+//	[self.viewDeckController toggleLeftViewAnimated:YES];
+	
+	
 	
 	// Setup zoom location (happens to be somewhere around middle of AU)
 	CLLocationCoordinate2D zoomLocation;
@@ -292,18 +295,22 @@ TreeController *treeController;
 }
 
 
+- (void)searchButton
+{
+	[self.viewDeckController toggleLeftViewAnimated:YES];
+}
+
+
 // --------------------------------------------------------------
 // VIEW WILL APPEAR
 
 - (void)viewWillAppear:(BOOL)animated
 {
-
-    
     // Create an array to store the custom UI buttons
     NSMutableArray *customUIButtons = [NSMutableArray new];
 
     // Create a search button
-    UIBarButtonItem *searchButton =[[UIBarButtonItem alloc] initWithTitle:@"Search" style:UIBarButtonItemStyleDone target:self action:nil];
+    UIBarButtonItem *searchButton =[[UIBarButtonItem alloc] initWithTitle:@"Search" style:UIBarButtonItemStyleDone target:self action:@selector(searchButton)];
 
     // Add the search button to the custom UI buttons array
     [customUIButtons addObject:searchButton];

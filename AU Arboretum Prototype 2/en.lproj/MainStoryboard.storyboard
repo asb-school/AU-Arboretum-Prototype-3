@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12B19" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="dvn-eN-mwU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="dvn-eN-mwU">
     <dependencies>
         <deployment version="1296" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller - Navigation Controller-->
         <scene sceneID="7S1-lR-sAZ">
             <objects>
-                <navigationController title="Navigation Controller" definesPresentationContext="YES" id="dvn-eN-mwU" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="navCtrl" title="Navigation Controller" definesPresentationContext="YES" id="dvn-eN-mwU" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="efW-LR-4vA">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -23,7 +23,7 @@
         <!--View Controller - Main Menu-->
         <scene sceneID="W8U-LD-iMq">
             <objects>
-                <viewController title="Main Menu" id="W7X-DK-Rwg" customClass="ViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mainMenu" title="Main Menu" id="W7X-DK-Rwg" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UUM-Uc-qut">
                         <rect key="frame" x="0.0" y="64" width="768" height="960"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -117,7 +117,7 @@
         <!--Map View Delegate - Map View-->
         <scene sceneID="4">
             <objects>
-                <viewController title="Map View" id="2" customClass="MapViewDelegate" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mapViewD" title="Map View" id="2" customClass="MapViewDelegate" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5">
                         <rect key="frame" x="0.0" y="64" width="768" height="960"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -188,6 +188,35 @@
             </objects>
             <point key="canvasLocation" x="812" y="-417"/>
         </scene>
+        <!--Table View Controller-->
+        <scene sceneID="K5L-91-D4e">
+            <objects>
+                <tableViewController storyboardIdentifier="search" id="Ngh-ej-9R0" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="wZp-ez-WF4">
+                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="aeK-Z4-yvv">
+                                <rect key="frame" x="0.0" y="22" width="768" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Ngh-ej-9R0" id="MfN-CR-Fhl"/>
+                            <outlet property="delegate" destination="Ngh-ej-9R0" id="Rs9-WD-mTn"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XB1-Vz-D8t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="812" y="712"/>
+        </scene>
     </scenes>
     <resources>
         <image name="ui_button_1.png" width="427" height="88"/>
@@ -197,12 +226,29 @@
         <image name="ui_button_5.png" width="427" height="88"/>
         <image name="ui_main_bg.png" width="768" height="1024"/>
     </resources>
+    <classes>
+        <class className="MapViewDelegate" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewDelegate.h"/>
+            <relationships>
+                <relationship kind="action" name="hideShowAction:"/>
+                <relationship kind="outlet" name="commonTreeNameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="informationView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+                <relationship kind="outlet" name="scientificTreeNameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="treeDescriptionText" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="treeImage" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Vfb-kD-ulB"/>
+        <segue reference="bKU-b5-eUQ"/>
     </inferredMetricsTieBreakers>
 </document>

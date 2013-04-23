@@ -8,10 +8,25 @@
 
 #import "AppDelegate.h"
 
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+	
+	UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+	
+	UIViewController *left = [mainStoryboard instantiateViewControllerWithIdentifier:@"search"];
+	UIViewController *mainMenu = [mainStoryboard instantiateViewControllerWithIdentifier:@"navCtrl"];
+
+	IIViewDeckController *deckController = [[IIViewDeckController alloc] initWithCenterViewController:mainMenu leftViewController:left];
+	
+	deckController.leftSize = 550;
+	deckController.panningMode = IIViewDeckNoPanning;
+
+	self.window.rootViewController = deckController;
+
+
     // Override point for customization after application launch.
     return YES;
 }
