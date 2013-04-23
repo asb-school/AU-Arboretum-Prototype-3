@@ -48,7 +48,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="lwn-2s-loJ">
-                                <rect key="frame" x="82" y="488" width="428" height="83"/>
+                                <rect key="frame" x="82" y="487" width="428" height="83"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="22"/>
                                 <inset key="contentEdgeInsets" minX="38" minY="1" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="CONIFER WALK" backgroundImage="ui_button_2.png">
@@ -63,7 +63,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Bxy-Kr-S3G">
-                                <rect key="frame" x="82" y="583" width="428" height="88"/>
+                                <rect key="frame" x="82" y="584" width="428" height="88"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="22"/>
                                 <inset key="contentEdgeInsets" minX="38" minY="1" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="HISTORICAL TREE WALK" backgroundImage="ui_button_3.png">
@@ -75,7 +75,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="TWY-7a-RMG">
-                                <rect key="frame" x="82" y="681" width="428" height="88"/>
+                                <rect key="frame" x="82" y="687" width="428" height="88"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="22"/>
                                 <inset key="contentEdgeInsets" minX="38" minY="1" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="ALL TREES" backgroundImage="ui_button_4.png">
@@ -87,7 +87,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="dbT-aK-mGQ">
-                                <rect key="frame" x="82" y="779" width="428" height="88"/>
+                                <rect key="frame" x="82" y="792" width="428" height="88"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="22"/>
                                 <inset key="contentEdgeInsets" minX="38" minY="1" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="SEARCH" backgroundImage="ui_button_5.png">
@@ -146,13 +146,13 @@
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Sugar Maple" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KM6-sc-no1">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KM6-sc-no1">
                                         <rect key="frame" x="355" y="52" width="385" height="41"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="28"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="scientific name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yse-4e-HP4">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yse-4e-HP4">
                                         <rect key="frame" x="356" y="82" width="470" height="36"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
                                         <color key="textColor" red="0.56644491700348809" green="0.82911088493534557" blue="0.9474051339285714" alpha="1" colorSpace="calibratedRGB"/>
@@ -200,7 +200,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="wZp-ez-WF4">
                         <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.4323381696428571" green="0.4323381696428571" blue="0.4323381696428571" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <imageView key="tableHeaderView" userInteractionEnabled="NO" contentMode="scaleToFill" image="ui_table_bar.png" id="HIo-ZD-Blp">
                             <rect key="frame" x="0.0" y="0.0" width="768" height="60"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -214,7 +214,6 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -238,6 +237,26 @@
         <image name="ui_main_bg.png" width="768" height="1024"/>
         <image name="ui_table_bar.png" width="768" height="58"/>
     </resources>
+    <classes>
+        <class className="MapViewDelegate" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewDelegate.h"/>
+            <relationships>
+                <relationship kind="action" name="hideShowAction:"/>
+                <relationship kind="outlet" name="commonTreeNameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="informationView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+                <relationship kind="outlet" name="scientificTreeNameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="treeDescriptionText" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="treeImage" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="SearchController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SearchController.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

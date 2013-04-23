@@ -40,8 +40,8 @@
         self.tableView.dataSource = self;
 		
 		// Table view background color
-		self.tableView.backgroundView = nil;
-		self.tableView.backgroundColor = [UIColor redColor];
+		[self.tableView setBackgroundView: nil];
+		[self.tableView setBackgroundColor: [UIColor blueColor]];
     }
     
     return self;
@@ -133,7 +133,7 @@
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    cell.backgroundColor = [UIColor redColor];
+    cell.backgroundColor = [UIColor darkGrayColor];
 }
 
 

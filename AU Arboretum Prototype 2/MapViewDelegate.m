@@ -364,9 +364,21 @@
 }
 
 
+// --------------------------------------------------------------
+// SEARCH BUTTON
+
 - (void)searchButton
 {
 	[self.viewDeckController toggleLeftViewAnimated:YES];
+}
+
+
+// --------------------------------------------------------------
+// BACK BUTTON
+
+-(void)backButton
+{
+	[self.navigationController popViewControllerAnimated:YES];
 }
 
 
@@ -378,28 +390,39 @@
     // Create an array to store the custom UI buttons
     NSMutableArray *customUIButtons = [NSMutableArray new];
 
-    // Create a search button
-//    UIBarButtonItem *searchButton = [[UIBarButtonItem alloc] initWithTitle:@"Search" style:UIBarButtonItemStyleDone target:self action:@selector(searchButton)];
+	UIBarButtonItem *leftSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
+	[leftSpace setWidth:10];
 	
-//	UIBarButtonItem *searchButton = [UIButton buttonWithType:UIButtonTypeCustom];
-	
-//	[searchButton setBackgroundImage: [UIImage imageNamed:@"ui_search_button.png"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
-	
-//	UIBarButtonItem *searchButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"ui_search_button.png"] style:UIButtonTypeCustom target:self action:@selector(searchButton)];
+	[customUIButtons addObject:leftSpace];
 
-    // Add the search button to the custom UI buttons array
-//    [customUIButtons addObjectarchButton];
+	UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
+	[backButton setImage: [UIImage imageNamed:@"ui_back_button.png"] forState:UIControlStateNormal];
 
-	UIButton *buttom = [UIButton buttonWithType:UIButtonTypeCustom];
-	[buttom setImage: [UIImage imageNamed:@"ui_search_button.png"] forState:UIControlStateNormal];
+	backButton.frame = CGRectMake(0, 0, 30, 26);
 	
-	buttom.frame = CGRectMake(0, 0, 30, 30);
-//	[self.navigationController popViewControllerAnimated:YES];
-	[buttom addTarget:self action:@selector(searchButton) forControlEvents:UIControlEventTouchUpInside];
+	[backButton addTarget:self action:@selector(backButton) forControlEvents:UIControlEventTouchUpInside];
 
-	UIBarButtonItem *customBarItem = [[UIBarButtonItem alloc] initWithCustomView:buttom];
+	UIBarButtonItem *backButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backButton];
 	
-	[customUIButtons addObject:customBarItem];
+	[customUIButtons addObject:backButtonItem];
+	
+
+	UIBarButtonItem *searchSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
+	[searchSpace setWidth:30];
+	
+	[customUIButtons addObject:searchSpace];
+
+	// Custom search button
+	UIButton *searchButton = [UIButton buttonWithType:UIButtonTypeCustom];
+	[searchButton setImage: [UIImage imageNamed:@"ui_search_button.png"] forState:UIControlStateNormal];
+	
+	searchButton.frame = CGRectMake(0, 0, 32, 26);
+	
+	[searchButton addTarget:self action:@selector(searchButton) forControlEvents:UIControlEventTouchUpInside];
+	UIBarButtonItem *searchButtonItem = [[UIBarButtonItem alloc] initWithCustomView:searchButton];
+	
+	[customUIButtons addObject:searchButtonItem];
+	
     
     // Set left bar button items to the custom UI buttons we created earlier
     self.navigationItem.leftBarButtonItems = customUIButtons;

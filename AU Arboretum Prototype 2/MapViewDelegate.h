@@ -62,6 +62,8 @@
 - (void)plotAnnotationsWithCommonName:(NSString *)givenCommonName;
 - (void)findAnnotationWithGivenTreeId:(NSInteger)givenTreeId;
 - (IBAction)hideShowAction:(id)sender;
+- (void)searchButton;
+- (void)backButton;
 
 
 @end
