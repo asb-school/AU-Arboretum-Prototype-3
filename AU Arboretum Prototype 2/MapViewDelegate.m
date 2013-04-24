@@ -68,7 +68,7 @@
 	[self.viewDeckController toggleLeftViewAnimated:YES];
 	
 	// Plot all annotations
-	[self plotAllAnnotations];
+	[self plotAnnotationsWithSet:[SetInformation getSetId]];
 }
 
 

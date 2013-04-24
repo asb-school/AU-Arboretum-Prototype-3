@@ -297,14 +297,13 @@
         {
             NSLog(@"An error has occured.");
         }
-//        const char *sql = "SELECT t.key, t.latitude, t.longitude, t.name, t.scientific_name FROM trees as t, set_membership as s WHERE t.key = s.treeID AND s.setID = %d",;
+
         
         NSString *queryString;
         
         
 		queryString = [NSString stringWithFormat:@"SELECT t.key, t.latitude, t.longitude, t.name, t.scientific_name FROM trees as t, set_membership as s WHERE t.key = s.treeID AND s.setID = %d", [setId intValue]];
         
-        NSLog(@"query: %@", queryString);
         
 		const char *sql = [queryString UTF8String];
 

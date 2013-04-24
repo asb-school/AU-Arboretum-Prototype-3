@@ -52,9 +52,11 @@
 {
     [super viewDidLoad];
 	
-    // Table view background color
-    [self.tableView setBackgroundColor: [UIColor darkGrayColor]];
-    [self.tableView setBackgroundView: nil];
+ 	// Table styling options
+	self.tableView.separatorStyle = UITableViewCellSelectionStyleNone;
+	self.tableView.backgroundColor = [UIColor colorWithRed:30/255.0f green:30/255.0f blue:30/255.0f alpha:1.0f];
+	self.tableView.backgroundView = nil;
+	self.tableView.rowHeight = 40;
     
 	// Set language strings
 	allTreesString = @"ALL TREES";
@@ -134,7 +136,7 @@
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    cell.backgroundColor = [UIColor darkGrayColor];
+//    cell.backgroundColor = [UIColor darkGrayColor];
 }
 
 
@@ -143,15 +145,41 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *simpleTableIdentifier = @"treeType";
+	static NSString *simpleTableIdentifier = @"treeType";
+	
+	NSInteger row = [indexPath row];
     
     UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
-    
+	
+	cell.imageView.image = [UIImage imageNamed:@"ui_button_1.png"];
+	
     if (cell == nil)
     {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
     
+	UIImageView *even = [[UIImageView alloc] initWithFrame:CGRectMake(20, 20, 300, 40)];
+	even.image = [UIImage imageNamed:@"ui_table_cell.png"];
+	
+//	even.backgroundColor = [UIColor clearColor];
+//	even.opaque = NO;
+	
+	UIImageView *odd = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 300, 40)];
+	odd.image = [UIImage imageNamed:@"ui_table_cell_odd.png"];
+	
+	if (row % 2)
+	{
+		cell.backgroundView = even;
+	}
+	else
+	{
+		cell.backgroundView = odd;
+	}
+	
+	cell.textLabel.opaque = NO;
+	cell.textLabel.backgroundColor = [UIColor clearColor];
+	cell.textLabel.textColor = [UIColor whiteColor];
+	cell.textLabel.font = [UIFont fontWithName:@"Helvetica Neue Medium" size:16];
     cell.textLabel.text = [tableData objectAtIndex:indexPath.row];
     return cell;
 }
