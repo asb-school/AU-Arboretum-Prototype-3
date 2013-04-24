@@ -38,12 +38,7 @@
         // Set delegates and data sources
         self.tableView.delegate = self;
         self.tableView.dataSource = self;
-		
-        UIView* bview = [[UIView alloc] init];
-        
-		// Table view background color
-		[self.tableView setBackgroundView: nil];
-		[self.tableView setBackgroundColor: [UIColor blueColor]];
+		      
     }
     
     return self;
@@ -57,6 +52,10 @@
 {
     [super viewDidLoad];
 	
+    // Table view background color
+    [self.tableView setBackgroundColor: [UIColor darkGrayColor]];
+    [self.tableView setBackgroundView: nil];
+    
 	// Set language strings
 	allTreesString = @"ALL TREES";
 	
