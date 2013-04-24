@@ -63,7 +63,7 @@
 // --------------------------------------------------------------
 // GET TREE ANNOTATIONS FOR A SPECIFIC COMMON NAME
 
-- (NSMutableArray *)getTreeAnnotationsForType:(NSString *)treeCommonName
+- (NSMutableArray *)getTreeAnnotationsForType:(NSString *)treeCommonName andSet:(NSNumber *)setId
 {
     // Define
     NSMutableArray *treeList = [NSMutableArray new];
@@ -74,7 +74,7 @@
     
     // Get a list of all trees and their coordinates for a
     // given scientific name
-    treeList = [treeDatabaseController getTreesWithCommonName:treeCommonName];
+    treeList = [treeDatabaseController getTreesWithCommonName:treeCommonName andSet:setId];
     
     // For each tree in the tree walk list create a new tree
 	// annotation and add it to the tree annotations array

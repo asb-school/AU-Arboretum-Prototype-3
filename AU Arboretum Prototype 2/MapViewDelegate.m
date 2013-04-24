@@ -113,7 +113,7 @@
 	NSMutableArray *returnedAnnotations = [NSMutableArray new];
 	
 	// Get tree annotations with the given common name
-	returnedAnnotations = [treeController getTreeAnnotationsForType:givenCommonName];
+	returnedAnnotations = [treeController getTreeAnnotationsForType:givenCommonName andSet:[SetInformation getSetId]];
 	
 	// Check if we have results
 	if (returnedAnnotations)

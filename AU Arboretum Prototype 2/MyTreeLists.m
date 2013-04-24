@@ -96,7 +96,7 @@
 }
 
 
-- (NSMutableArray *)getTreesWithCommonName:(NSString *)givenCommonName
+- (NSMutableArray *)getTreesWithCommonName:(NSString *)givenCommonName andSet:(NSNumber *)setId
 {
     NSMutableArray *treeArray = [[NSMutableArray alloc] init];
     @try {
@@ -114,7 +114,9 @@
         
         NSString *queryString;
 
-		queryString = [NSString stringWithFormat:@"SELECT key, latitude, longitude, name, scientific_name FROM trees WHERE name= '%@'", givenCommonName];
+//		queryString = [NSString stringWithFormat:@"SELECT key, latitude, longitude, name, scientific_name FROM trees WHERE name= '%@'", givenCommonName];
+		
+		queryString = [NSString stringWithFormat:@"SELECT t.key, t.latitude, t.longitude, t.name, t.scientific_name FROM trees as t, set_membership as s WHERE t.key = s.treeID AND t.name = '%@' AND s.setID = %d", givenCommonName, [setId intValue]];
         
 		const char *sql = [queryString UTF8String];
         
