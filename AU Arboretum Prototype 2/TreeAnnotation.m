@@ -20,10 +20,12 @@
 
 
 // --------------------------------------------------------------
-// SYNTHESIZE PROPERTIES (setters & getters)
+// SYNTHESIZE PROPERTIES
 
 @synthesize treeId;
 @synthesize coordinate;
+@synthesize title;
+@synthesize subtitle;
 
 
 // --------------------------------------------------------------
@@ -38,5 +40,6 @@
 
 	[self setCoordinate: temporaryCoordinate];
 }
+
 
 @end

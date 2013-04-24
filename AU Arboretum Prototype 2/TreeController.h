@@ -12,6 +12,8 @@
 
 #import <Foundation/Foundation.h>
 #import "TreeList.h"
+#import "TreeAnnotation.h"
+#import "MyTreeLists.h"
 
 
 // --------------------------------------------------------------
@@ -20,11 +22,11 @@
 @interface TreeController : NSObject
 {
 	// VARIABLES
-	TreeController *treeController;
 }
 
 // METHODS
 - (NSMutableArray *)getTreeAnnotations;
+- (NSMutableArray *)getTreeAnnotationsForType:(NSString *)treeCommonName;
 - (TreeList *)getSingleTreeInformation: (NSUInteger)givenTreeId;
 
 @end
