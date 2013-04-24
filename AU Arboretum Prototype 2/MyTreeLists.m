@@ -58,6 +58,109 @@
 }
 
 
+- (NSMutableArray *)getTreeTypes
+{
+	NSMutableArray *treeTypes = [[NSMutableArray alloc] init];
+    @try {
+        NSFileManager *fileMgr = [NSFileManager defaultManager];
+        NSString *dbPath = [[[NSBundle mainBundle] resourcePath ]stringByAppendingPathComponent:@"MyTreesDBnew.sqlite"];
+        BOOL success = [fileMgr fileExistsAtPath:dbPath];
+        if(!success)
+        {
+            NSLog(@"Cannot locate database file '%@'.", dbPath);
+        }
+        if(!(sqlite3_open([dbPath UTF8String], &db) == SQLITE_OK))
+        {
+            NSLog(@"An error has occured.");
+        }
+        const char *sql = "SELECT common_name_display FROM species";
+        sqlite3_stmt *sqlStatement;
+        if(sqlite3_prepare(db, sql, -1, &sqlStatement, NULL) != SQLITE_OK)
+        {
+            NSLog(@"Problem with prepare statement");
+        }
+        
+        //
+        while (sqlite3_step(sqlStatement)==SQLITE_ROW)
+		{
+			[treeTypes addObject: [NSString stringWithUTF8String:(char *) sqlite3_column_text(sqlStatement, 0)]];
+		}
+    }
+    @catch (NSException *exception) {
+        NSLog(@"An exception occured: %@", [exception reason]);
+    }
+    @finally {
+        return treeTypes;
+    }
+
+}
+
+
+- (NSMutableArray *)getTreesWithCommonName:(NSString *)givenCommonName
+{
+    NSMutableArray *treeArray = [[NSMutableArray alloc] init];
+    @try {
+        NSFileManager *fileMgr = [NSFileManager defaultManager];
+        NSString *dbPath = [[[NSBundle mainBundle] resourcePath ]stringByAppendingPathComponent:@"MyTreesDBnew.sqlite"];
+        BOOL success = [fileMgr fileExistsAtPath:dbPath];
+        if(!success)
+        {
+            NSLog(@"Cannot locate database file '%@'.", dbPath);
+        }
+        if(!(sqlite3_open([dbPath UTF8String], &db) == SQLITE_OK))
+        {
+            NSLog(@"An error has occured.");
+        }
+        
+        NSString *queryString;
+
+		queryString = [NSString stringWithFormat:@"SELECT key, latitude, longitude, name, scientific_name FROM trees WHERE name= '%@'", givenCommonName];
+        
+		const char *sql = [queryString UTF8String];
+        
+        sqlite3_stmt *sqlStatement;
+		
+        if(sqlite3_prepare(db, sql, -1, &sqlStatement, NULL) != SQLITE_OK)
+        {
+            NSLog(@"Problem with prepare statement");
+        }
+		
+//		sqlite3_bind_text(sqlStatement, 1, givenCommonName, -1, sql)
+        
+        //
+        while (sqlite3_step(sqlStatement)==SQLITE_ROW)
+		{
+		
+			TreeList *MyTreeCoordinates = [[TreeList alloc]init];
+			
+            MyTreeCoordinates.treeId = sqlite3_column_int(sqlStatement, 0);
+			
+			// ERROR! The latitude is actually the longitude
+            MyTreeCoordinates.lat = [NSNumber numberWithFloat:(float)sqlite3_column_double(sqlStatement, 2)];
+			
+			// ERROR! The longitude is actually the latitude
+            MyTreeCoordinates.lng = [NSNumber numberWithFloat:(float)sqlite3_column_double(sqlStatement, 1)];
+            
+            // Tree name
+            MyTreeCoordinates.tree = [NSString stringWithUTF8String:(char *) sqlite3_column_text(sqlStatement, 3)];
+            
+            // Scientific name
+            MyTreeCoordinates.scientificname = [NSString stringWithUTF8String:(char *)sqlite3_column_text(sqlStatement, 4)];
+						
+            [treeArray addObject:MyTreeCoordinates];
+        }
+    }
+    @catch (NSException *exception) {
+        NSLog(@"An exception occured: %@", [exception reason]);
+    }
+    @finally {
+        return treeArray;
+    }
+    
+}
+
+
+
 
 // Returns a single tree
 - (TreeList *)getSingleTree: (NSUInteger)givenTreeId
@@ -140,7 +243,7 @@
         {
             NSLog(@"An error has occured.");
         }
-        const char *sql = "SELECT key, latitude, longitude FROM  trees";
+        const char *sql = "SELECT key, latitude, longitude, name, scientific_name FROM  trees";
         sqlite3_stmt *sqlStatement;
         if(sqlite3_prepare(db, sql, -1, &sqlStatement, NULL) != SQLITE_OK)
         {
@@ -157,6 +260,12 @@
 			
 			// ERROR! The longitude is actually the latitude
             MyTreeCoordinates.lng = [NSNumber numberWithFloat:(float)sqlite3_column_double(sqlStatement, 1)];
+            
+            // Tree name
+            MyTreeCoordinates.tree = [NSString stringWithUTF8String:(char *) sqlite3_column_text(sqlStatement, 3)];
+            
+            // Scientific name
+            MyTreeCoordinates.scientificname = [NSString stringWithUTF8String:(char *)sqlite3_column_text(sqlStatement, 4)];
 						
             [treeCoordinatesArray addObject:MyTreeCoordinates];
         }
