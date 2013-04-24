@@ -35,7 +35,7 @@
 	IIViewDeckController *deckController = [[IIViewDeckController alloc] initWithCenterViewController:mainMenu leftViewController:left];
 	
 	// Set the size of the left pane
-	deckController.leftSize = 550;
+	deckController.leftSize = 490;
 	
 	// Disallow user from sliding left pane with a gesture (because we have a map we need to slide instead)
 	deckController.panningMode = IIViewDeckNoPanning;

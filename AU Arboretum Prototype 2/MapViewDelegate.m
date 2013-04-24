@@ -217,6 +217,9 @@
 
 - (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view
 {
+    // Hide search pane
+    [self.viewDeckController closeLeftViewAnimated:YES];
+    
     // Cancel hiding of display if an annotation is selected
     noFurtherAnnotationsSelected = FALSE;
     
@@ -378,6 +381,7 @@
 
 -(void)backButton
 {
+    [self.viewDeckController closeLeftViewAnimated:NO];
 	[self.navigationController popViewControllerAnimated:YES];
 }
 

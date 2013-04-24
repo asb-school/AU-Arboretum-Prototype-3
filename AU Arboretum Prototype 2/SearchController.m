@@ -39,6 +39,8 @@
         self.tableView.delegate = self;
         self.tableView.dataSource = self;
 		
+        UIView* bview = [[UIView alloc] init];
+        
 		// Table view background color
 		[self.tableView setBackgroundView: nil];
 		[self.tableView setBackgroundColor: [UIColor blueColor]];
