@@ -53,9 +53,9 @@
 	
 	// Create a new tree controller object
 	treeController = [TreeController new];
-	
-	// Plot all annotations
-	[self plotAllAnnotations];
+    
+	// Plot annotations with set id
+    [self plotAnnotationsWithSet:[SetInformation getSetId]];
 }
 
 
@@ -114,6 +114,33 @@
 	
 	// Get tree annotations with the given common name
 	returnedAnnotations = [treeController getTreeAnnotationsForType:givenCommonName];
+	
+	// Check if we have results
+	if (returnedAnnotations)
+	{
+		// If we have more than 0
+		if ([returnedAnnotations count] > 0)
+		{
+			// Clear the map of any annotations
+			[self.mapView removeAnnotations:[self.mapView annotations]];
+			
+			// Add the annotations to the map
+			[self.mapView addAnnotations:returnedAnnotations];
+		}
+	}
+}
+
+
+// --------------------------------------------------------------
+// PLOT ANNOTATIONS WITH SET ID
+
+- (void)plotAnnotationsWithSet:(NSNumber *)givenSetId
+{
+    // New container for returned annotations
+	NSMutableArray *returnedAnnotations = [NSMutableArray new];
+	
+	// Get tree annotations with the given common name
+	returnedAnnotations = [treeController getTreeAnnotationsForSet:givenSetId];
 	
 	// Check if we have results
 	if (returnedAnnotations)

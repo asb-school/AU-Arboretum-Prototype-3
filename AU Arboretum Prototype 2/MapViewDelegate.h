@@ -16,6 +16,7 @@
 #import "TreeController.h"
 #import "TreeAnnotation.h"
 #import "TreeList.h"
+#import "SetInformation.h"
 
 
 // --------------------------------------------------------------
@@ -52,15 +53,24 @@
 
 // METHODS
 - (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view;
-- (void)plotAllAnnotations;
+
+// Information handlers
 - (void)showInformationView;
 - (void)hideInformationViewAndClear:(BOOL)clearView;
 - (void)hideInformationViewOnTimeout;
 - (void)clearView;
+
+// Event notifications
 - (void)selectAllTreesNotification:(NSNotification *)notification;
 - (void)selectTreeNotification:(NSNotification *)notification;
+
+// Plot annotations
+- (void)plotAllAnnotations;
 - (void)plotAnnotationsWithCommonName:(NSString *)givenCommonName;
+- (void)plotAnnotationsWithSet:(NSNumber *)givenSetId;
 - (void)findAnnotationWithGivenTreeId:(NSInteger)givenTreeId;
+
+// UI Buttons
 - (IBAction)hideShowAction:(id)sender;
 - (void)searchButton;
 - (void)backButton;

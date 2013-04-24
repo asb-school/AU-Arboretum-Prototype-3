@@ -70,4 +70,24 @@
 	[super viewWillDisappear:animated];
 }
 
+
+// --------------------------------------------------------------
+// PREPARE FOR SEGUE
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Get segue identifier
+    NSString *identifier = segue.identifier;
+    
+    // Set set id to set information class
+    [SetInformation defineSetId: [NSNumber numberWithInt:[identifier intValue]]];
+}
+
+
+// --------------------------------------------------------------
+// VIEW DID UNLOAD
+
+- (void)viewDidUnload {
+    [super viewDidUnload];
+}
 @end

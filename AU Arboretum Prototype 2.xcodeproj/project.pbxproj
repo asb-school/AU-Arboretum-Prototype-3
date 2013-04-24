@@ -85,6 +85,7 @@
 		469DA3291726BF420027B133 /* IIViewDeckController.m in Sources */ = {isa = PBXBuildFile; fileRef = 469DA3251726BF420027B133 /* IIViewDeckController.m */; };
 		469DA32A1726BF420027B133 /* IIWrapController.m in Sources */ = {isa = PBXBuildFile; fileRef = 469DA3271726BF420027B133 /* IIWrapController.m */; };
 		469DA32C1726BF860027B133 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 469DA32B1726BF860027B133 /* QuartzCore.framework */; };
+		46AE5EF51727CE99004DB946 /* SetInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 46AE5EF41727CE99004DB946 /* SetInformation.m */; };
 		46E01CB81726C9E6009C68C5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46112DF116C91F5F0068A853 /* CoreGraphics.framework */; };
 		46E01CBC17273D8C009C68C5 /* ui_bottom_pane.png in Resources */ = {isa = PBXBuildFile; fileRef = 46E01CBA17273D8C009C68C5 /* ui_bottom_pane.png */; };
 		46E01CBE17274809009C68C5 /* ui_navigation_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 46E01CBD17274809009C68C5 /* ui_navigation_bar.png */; };
@@ -197,6 +198,8 @@
 		469DA3261726BF420027B133 /* IIWrapController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IIWrapController.h; sourceTree = "<group>"; };
 		469DA3271726BF420027B133 /* IIWrapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IIWrapController.m; sourceTree = "<group>"; };
 		469DA32B1726BF860027B133 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		46AE5EF31727CE99004DB946 /* SetInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetInformation.h; sourceTree = "<group>"; };
+		46AE5EF41727CE99004DB946 /* SetInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetInformation.m; sourceTree = "<group>"; };
 		46E01CBA17273D8C009C68C5 /* ui_bottom_pane.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ui_bottom_pane.png; sourceTree = "<group>"; };
 		46E01CBD17274809009C68C5 /* ui_navigation_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ui_navigation_bar.png; sourceTree = "<group>"; };
 		46E01CBF17274BF6009C68C5 /* ui_table_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ui_table_bar.png; sourceTree = "<group>"; };
@@ -281,6 +284,8 @@
 				469B984116DF135E00A8C849 /* TreeController.m */,
 				469B980D16DF0AD500A8C849 /* MapViewDelegate.h */,
 				469B980E16DF0AD500A8C849 /* MapViewDelegate.m */,
+				46AE5EF31727CE99004DB946 /* SetInformation.h */,
+				46AE5EF41727CE99004DB946 /* SetInformation.m */,
 				469DA31D171F9BB70027B133 /* annotationImageView.xib */,
 				46112DFC16C91F5F0068A853 /* AppDelegate.h */,
 				46112DFD16C91F5F0068A853 /* AppDelegate.m */,
@@ -585,6 +590,7 @@
 				469DA3291726BF420027B133 /* IIViewDeckController.m in Sources */,
 				469DA32A1726BF420027B133 /* IIWrapController.m in Sources */,
 				467ED2101726E253003BF980 /* SearchController.m in Sources */,
+				46AE5EF51727CE99004DB946 /* SetInformation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -27,6 +27,7 @@
 // METHODS
 - (NSMutableArray *)getTreeAnnotations;
 - (NSMutableArray *)getTreeAnnotationsForType:(NSString *)treeCommonName;
+- (NSMutableArray *)getTreeAnnotationsForSet:(NSNumber *)setId;
 - (TreeList *)getSingleTreeInformation: (NSUInteger)givenTreeId;
 
 @end

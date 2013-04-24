@@ -228,7 +228,6 @@
 
 
 
-
 - (NSMutableArray *) getMyCoordinates{
     NSMutableArray *treeCoordinatesArray = [[NSMutableArray alloc] init];
     @try {
@@ -266,7 +265,7 @@
             
             // Scientific name
             MyTreeCoordinates.scientificname = [NSString stringWithUTF8String:(char *)sqlite3_column_text(sqlStatement, 4)];
-						
+            
             [treeCoordinatesArray addObject:MyTreeCoordinates];
         }
     }
@@ -275,6 +274,72 @@
     }
     @finally {
         return treeCoordinatesArray;
+    }
+    
+    
+}
+
+
+
+
+- (NSMutableArray *)getTreesWithSet:(NSNumber *)setId
+{
+    NSMutableArray *treeArray = [[NSMutableArray alloc] init];
+    @try {
+        NSFileManager *fileMgr = [NSFileManager defaultManager];
+        NSString *dbPath = [[[NSBundle mainBundle] resourcePath ]stringByAppendingPathComponent:@"MyTreesDBnew.sqlite"];
+        BOOL success = [fileMgr fileExistsAtPath:dbPath];
+        if(!success)
+        {
+            NSLog(@"Cannot locate database file '%@'.", dbPath);
+        }
+        if(!(sqlite3_open([dbPath UTF8String], &db) == SQLITE_OK))
+        {
+            NSLog(@"An error has occured.");
+        }
+//        const char *sql = "SELECT t.key, t.latitude, t.longitude, t.name, t.scientific_name FROM trees as t, set_membership as s WHERE t.key = s.treeID AND s.setID = %d",;
+        
+        NSString *queryString;
+        
+        
+		queryString = [NSString stringWithFormat:@"SELECT t.key, t.latitude, t.longitude, t.name, t.scientific_name FROM trees as t, set_membership as s WHERE t.key = s.treeID AND s.setID = %d", [setId intValue]];
+        
+        NSLog(@"query: %@", queryString);
+        
+		const char *sql = [queryString UTF8String];
+
+        
+        sqlite3_stmt *sqlStatement;
+        if(sqlite3_prepare(db, sql, -1, &sqlStatement, NULL) != SQLITE_OK)
+        {
+            NSLog(@"Problem with prepare statement");
+        }
+        
+        //
+        while (sqlite3_step(sqlStatement)==SQLITE_ROW) {
+            TreeList *MyTreeCoordinates = [[TreeList alloc]init];
+            MyTreeCoordinates.treeId = sqlite3_column_int(sqlStatement, 0);
+			
+			// ERROR! The latitude is actually the longitude
+            MyTreeCoordinates.lat = [NSNumber numberWithFloat:(float)sqlite3_column_double(sqlStatement, 2)];
+			
+			// ERROR! The longitude is actually the latitude
+            MyTreeCoordinates.lng = [NSNumber numberWithFloat:(float)sqlite3_column_double(sqlStatement, 1)];
+            
+            // Tree name
+            MyTreeCoordinates.tree = [NSString stringWithUTF8String:(char *) sqlite3_column_text(sqlStatement, 3)];
+            
+            // Scientific name
+            MyTreeCoordinates.scientificname = [NSString stringWithUTF8String:(char *)sqlite3_column_text(sqlStatement, 4)];
+						
+            [treeArray addObject:MyTreeCoordinates];
+        }
+    }
+    @catch (NSException *exception) {
+        NSLog(@"An exception occured: %@", [exception reason]);
+    }
+    @finally {
+        return treeArray;
     }
     
     

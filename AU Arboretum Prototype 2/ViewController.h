@@ -13,7 +13,8 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 #import "SearchController.h"
-
+#import "MapViewDelegate.h"
+#import "SetInformation.h"
 
 // --------------------------------------------------------------
 // INTERFACE DEFINITION
