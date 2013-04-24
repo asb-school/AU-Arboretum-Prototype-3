@@ -16,6 +16,8 @@
 
 - (NSMutableArray *) getMyTrees;
 - (NSMutableArray *) getMyCoordinates;
+- (NSMutableArray *) getTreeTypes;
+- (NSMutableArray *) getTreesWithCommonName: (NSString *)givenCommonName;
 - (TreeList *)getSingleTree: (NSUInteger)givenTreeId;
 
 

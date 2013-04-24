@@ -11,9 +11,6 @@
 // IMPORTS
 
 #import "TreeController.h"
-#import "TreeAnnotation.h"
-#import "MyTreeLists.h"
-#import "TreeList.h"
 
 
 // --------------------------------------------------------------
@@ -49,6 +46,10 @@
 		
 		// Set coordinates of tree
 		[currentAnnotation setCoordinateWithLatitude: currentTree.lat andLongitude: currentTree.lng];
+        
+        // Set tree type            
+        currentAnnotation.title = currentTree.tree;
+        currentAnnotation.subtitle = currentTree.scientificname;
 		
 		// Add to tree annotation list
 		[treeWalkAnnotations addObject: currentAnnotation];
@@ -56,6 +57,48 @@
 	
 	// Return the tree walk list
 	return treeWalkAnnotations;
+}
+
+
+// --------------------------------------------------------------
+// GET TREE ANNOTATIONS FOR A SPECIFIC COMMON NAME
+
+- (NSMutableArray *)getTreeAnnotationsForType:(NSString *)treeCommonName
+{
+    // Define
+    NSMutableArray *treeList = [NSMutableArray new];
+    NSMutableArray *treeAnnotations = [NSMutableArray new];
+    
+    // Create a database controller
+    MyTreeLists *treeDatabaseController = [MyTreeLists new];
+    
+    // Get a list of all trees and their coordinates for a
+    // given scientific name
+    treeList = [treeDatabaseController getTreesWithCommonName:treeCommonName];
+    
+    // For each tree in the tree walk list create a new tree
+	// annotation and add it to the tree annotations array
+    for (TreeList *currentTree in treeList)
+    {
+        // Create a new annotation
+		TreeAnnotation *currentAnnotation = [TreeAnnotation new];
+		
+		// Set id of the tree
+		[currentAnnotation setTreeId: currentTree.treeId];
+		
+		// Set coordinates of tree
+		[currentAnnotation setCoordinateWithLatitude: currentTree.lat andLongitude: currentTree.lng];
+        
+        // Set tree type            
+        currentAnnotation.title = currentTree.tree;
+        currentAnnotation.subtitle = currentTree.scientificname;
+		
+		// Add to tree annotation list
+		[treeAnnotations addObject: currentAnnotation];
+    }
+    
+    // Return tree annotations list
+    return treeAnnotations;
 }
 
 
