@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>3A91B861-8DAB-4D7A-B414-3B9568B39005</string>
+	<key>IDESourceControlProjectName</key>
+	<string>AU Arboretum Prototype 2</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>87D8921628B10A8FDB8BF58C2EE3ED701AEAF126</key>
+		<string>https://github.com/asb-school/AU-Arboretum-Prototype-2.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>AU Arboretum Prototype 2.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>87D8921628B10A8FDB8BF58C2EE3ED701AEAF126</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/asb-school/AU-Arboretum-Prototype-2.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>87D8921628B10A8FDB8BF58C2EE3ED701AEAF126</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>87D8921628B10A8FDB8BF58C2EE3ED701AEAF126</string>
+			<key>IDESourceControlWCCName</key>
+			<string>AU-Arboretum-Prototype-2</string>
+		</dict>
+	</array>
+</dict>
+</plist>
